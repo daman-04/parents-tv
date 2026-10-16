@@ -47,8 +47,9 @@ class TvPlayerManager(
         .build()
 
     private var exoPlayer: ExoPlayer? = null
-    private var currentStreams: List<Stream> = emptyList()
+    private var currentStreams: MutableList<Stream> = mutableListOf()
     private var currentStreamIndex = 0
+    private var consecutiveFailures = 0
     private var behindLiveWindowRetries = 0
     private var streamRetryCount = 0
     private var playJob: Job? = null
@@ -75,15 +76,15 @@ class TvPlayerManager(
     }
 
     private fun initPlayer() {
-        // Optimized buffer for Live TV: prevents lag/stutter while maintaining fast channel startup
+        // Optimized buffer for Live TV: fast ~800ms start, stays tightly anchored to live edge
         val loadControl = DefaultLoadControl.Builder()
             .setBufferDurationsMs(
-                /* minBufferMs = */ 12000,
-                /* maxBufferMs = */ 25000,
-                /* bufferForPlaybackMs = */ 1200,
-                /* bufferForPlaybackAfterRebufferMs = */ 2500
+                /* minBufferMs = */ 4000,
+                /* maxBufferMs = */ 12000,
+                /* bufferForPlaybackMs = */ 800,
+                /* bufferForPlaybackAfterRebufferMs = */ 1500
             )
-            .setPrioritizeTimeOverSizeThresholds(false)
+            .setPrioritizeTimeOverSizeThresholds(true)
             .build()
 
         val trackParameters = TrackSelectionParameters.Builder(context)
@@ -103,7 +104,10 @@ class TvPlayerManager(
             override fun onPlaybackStateChanged(playbackState: Int) {
                 when (playbackState) {
                     Player.STATE_BUFFERING -> onPlaybackStateChanged(false, true)
-                    Player.STATE_READY -> onPlaybackStateChanged(true, false)
+                    Player.STATE_READY -> {
+                        consecutiveFailures = 0
+                        onPlaybackStateChanged(true, false)
+                    }
                     Player.STATE_ENDED -> onPlaybackStateChanged(false, false)
                     Player.STATE_IDLE -> onPlaybackStateChanged(false, false)
                 }
@@ -111,6 +115,19 @@ class TvPlayerManager(
 
             override fun onIsPlayingChanged(isPlaying: Boolean) {
                 onPlaybackStateChanged(isPlaying, exoPlayer?.playbackState == Player.STATE_BUFFERING)
+            }
+
+            override fun onTracksChanged(tracks: androidx.media3.common.Tracks) {
+                if (tracks.groups.isEmpty()) return
+                val hasVideo = tracks.groups.any { it.type == C.TRACK_TYPE_VIDEO }
+                val hasAudio = tracks.groups.any { it.type == C.TRACK_TYPE_AUDIO }
+
+                // Audio handling: if a source has video but no audio, play video-only without constantly switching
+                if (hasVideo && !hasAudio) {
+                    Log.i(TAG, "Stream #$currentStreamIndex has video but NO audio track. Playing video-only (no constant switching).")
+                } else if (hasAudio) {
+                    Log.d(TAG, "Audio Verification PASSED: Audio track present on stream #$currentStreamIndex")
+                }
             }
 
             override fun onPlayerError(error: PlaybackException) {
@@ -147,8 +164,9 @@ class TvPlayerManager(
 
     fun playStreams(streams: List<Stream>) {
         playJob?.cancel()
-        currentStreams = streams
+        currentStreams = streams.toMutableList()
         currentStreamIndex = 0
+        consecutiveFailures = 0
         behindLiveWindowRetries = 0
         streamRetryCount = 0
         tryPlayCurrentStream()
@@ -186,55 +204,34 @@ class TvPlayerManager(
     }
 
     private fun resolveStreamUrl(url: String): String {
-        if (!url.contains("damitv.st") || url.contains("tk=")) {
-            return url
-        }
-        val token = fetchDamitvToken()
-        return if (token != null) {
-            val sep = if (url.contains("?")) "&" else "?"
-            "$url${sep}tk=${token.first}&e=${token.second}"
-        } else {
-            url
-        }
+        return url
     }
 
-    private var cachedDamitvToken: Pair<String, Long>? = null
-
-    private fun fetchDamitvToken(): Pair<String, Long>? {
-        val now = System.currentTimeMillis() / 1000
-        val current = cachedDamitvToken
-        if (current != null && current.second > now + 300) {
-            return current
-        }
-        return try {
-            val conn = java.net.URL("https://damitv.st/papi/hls-token").openConnection() as java.net.HttpURLConnection
-            conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
-            conn.setRequestProperty("Referer", "https://damitv.st/")
-            conn.connectTimeout = 4000
-            conn.readTimeout = 4000
-            if (conn.responseCode == 200) {
-                val body = conn.inputStream.bufferedReader().use { it.readText() }
-                val json = org.json.JSONObject(body)
-                val tk = json.getString("tk")
-                val e = json.getLong("e")
-                val pair = tk to e
-                cachedDamitvToken = pair
-                pair
-            } else null
-        } catch (e: Exception) {
-            Log.w(TAG, "Could not fetch damitv hls-token: ${e.message}")
-            null
-        }
-    }
+    fun hasMultipleStreams(): Boolean = currentStreams.size > 1
 
     private fun handleStreamFailure(errorMsg: String) {
-        currentStreamIndex++
-        if (currentStreamIndex < currentStreams.size) {
-            Log.d(TAG, "Trying backup stream link #$currentStreamIndex...")
+        consecutiveFailures++
+        if (consecutiveFailures < currentStreams.size) {
+            currentStreamIndex = (currentStreamIndex + 1) % currentStreams.size
+            Log.d(TAG, "Trying backup stream link #$currentStreamIndex (attempt $consecutiveFailures/${currentStreams.size})...")
             tryPlayCurrentStream()
         } else {
+            consecutiveFailures = 0
             onPlaybackError(errorMsg)
         }
+    }
+
+    fun removeCurrentStream(): Boolean {
+        if (currentStreams.size > 1 && currentStreamIndex in currentStreams.indices) {
+            val bad = currentStreams.removeAt(currentStreamIndex)
+            Log.w(TAG, "Removed bad stream: ${bad.url}")
+            if (currentStreamIndex >= currentStreams.size) {
+                currentStreamIndex = 0
+            }
+            tryPlayCurrentStream()
+            return true
+        }
+        return false
     }
 
     fun getStreamServerStatus(): Pair<Int, Int> {

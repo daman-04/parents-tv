@@ -1,0 +1,6 @@
+{
+  "versionCode": 2,
+  "versionName": "1.1.0",
+  "apkUrl": "https://raw.githubusercontent.com/daman-04/parents-tv/main/TV.apk",
+  "releaseNotes": "• In-app auto-update directly over app\n• Fast channel surfing with Up/Down remote arrows\n• Permanent channel reordering with custom order\n• 1,466 channels with English and Sports categories\n• Resilient silent audio handling"
+}

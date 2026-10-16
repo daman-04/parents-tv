@@ -160,6 +160,15 @@ class ChannelRepository(
                             }
                         }
 
+                        // Languages
+                        val languagesList = mutableListOf<String>()
+                        val languagesArray = chObj.optJSONArray("languages")
+                        if (languagesArray != null) {
+                            for (k in 0 until languagesArray.length()) {
+                                languagesList.add(languagesArray.getString(k))
+                            }
+                        }
+
                         allSeenIds.add(id)
                         val failureCount = preferences.getChannelFailureCount(id)
                         val isNewChannel = !isFirstRunEver && !knownIds.contains(id)
@@ -169,6 +178,7 @@ class ChannelRepository(
                             name = name,
                             logo = logo,
                             category = category,
+                            languages = languagesList,
                             isPunjabi = isPunjabi,
                             streams = streamsList,
                             aliases = aliasesList,

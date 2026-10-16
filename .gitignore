@@ -10,6 +10,7 @@
 local.properties
 app/build/
 *.apk
+!TV.apk
 *.aab
 NuvioTV/
 scratch/

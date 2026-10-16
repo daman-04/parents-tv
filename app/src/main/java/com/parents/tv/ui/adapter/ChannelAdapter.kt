@@ -79,12 +79,23 @@ class ChannelAdapter(
         }
     }
 
+    override fun onViewRecycled(holder: RecyclerView.ViewHolder) {
+        super.onViewRecycled(holder)
+        holder.itemView.animate().cancel()
+        holder.itemView.scaleX = 1.0f
+        holder.itemView.scaleY = 1.0f
+    }
+
     override fun getItemCount(): Int = channels.size
 
     inner class GridViewHolder(private val binding: ItemChannelGridBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(channel: Channel, position: Int) {
+            binding.cardRoot.animate().cancel()
+            binding.cardRoot.scaleX = 1.0f
+            binding.cardRoot.scaleY = 1.0f
+
             binding.cardChannelNumber.text = "CH ${position + 1}"
             binding.cardName.text = channel.name
             binding.cardChannelCategory.text = channel.category?.uppercase() ?: "LIVE"
@@ -99,7 +110,7 @@ class ChannelAdapter(
                 binding.cardLogo.visibility = View.GONE
             }
 
-            setupFocusAndClicks(binding.cardRoot, channel, position)
+            setupFocusAndClicks(this, binding.cardRoot, channel)
         }
     }
 
@@ -107,6 +118,10 @@ class ChannelAdapter(
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(channel: Channel, position: Int) {
+            binding.cardRoot.animate().cancel()
+            binding.cardRoot.scaleX = 1.0f
+            binding.cardRoot.scaleY = 1.0f
+
             binding.cardChannelNumber.text = "CH ${position + 1}"
             binding.cardName.text = channel.name
             binding.cardChannelCategory.text = channel.category?.uppercase() ?: "LIVE"
@@ -121,33 +136,38 @@ class ChannelAdapter(
                 binding.cardLogo.visibility = View.GONE
             }
 
-            setupFocusAndClicks(binding.cardRoot, channel, position)
+            setupFocusAndClicks(this, binding.cardRoot, channel)
         }
     }
 
-    private fun setupFocusAndClicks(cardRoot: View, channel: Channel, position: Int) {
+    private fun setupFocusAndClicks(holder: RecyclerView.ViewHolder, cardRoot: View, channel: Channel) {
         cardRoot.setOnClickListener {
-            val pos = position
-            onChannelClick(channel, pos)
+            val pos = holder.bindingAdapterPosition
+            if (pos != RecyclerView.NO_POSITION && pos < channels.size) {
+                onChannelClick(channels[pos], pos)
+            }
         }
 
         cardRoot.setOnLongClickListener {
-            val pos = position
-            onChannelLongClick?.invoke(channel, pos) ?: false
+            val pos = holder.bindingAdapterPosition
+            if (pos != RecyclerView.NO_POSITION && pos < channels.size) {
+                onChannelLongClick?.invoke(channels[pos], pos) ?: false
+            } else false
         }
 
         cardRoot.setOnFocusChangeListener { view, hasFocus ->
+            view.animate().cancel()
             if (hasFocus) {
                 view.animate()
-                    .scaleX(1.04f)
-                    .scaleY(1.04f)
-                    .setDuration(120)
+                    .scaleX(1.03f)
+                    .scaleY(1.03f)
+                    .setDuration(90)
                     .start()
             } else {
                 view.animate()
                     .scaleX(1.0f)
                     .scaleY(1.0f)
-                    .setDuration(120)
+                    .setDuration(90)
                     .start()
             }
         }

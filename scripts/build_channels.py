@@ -80,6 +80,7 @@ def build():
     aliases_map = overrides.get("aliases", {})
     channel_order_map = overrides.get("channel_order", {})
     default_channel = overrides.get("default_channel", "DDPunjabi.in")
+    custom_streams_map = overrides.get("custom_streams", {})
 
     # Fetch data
     raw_channels = fetch_json("channels.json")
@@ -118,6 +119,10 @@ def build():
     # Filter target channels:
     # 1. Punjabi channels from ANY country
     # 2. All channels from India
+    # 3. High quality sports channels
+    # 4. Kids, animation, documentaries
+    # 5. International English news/entertainment
+    # 6. Any channel explicitly pinned or with custom streams in overrides
     candidate_channels = []
     
     for ch in raw_channels:
@@ -136,13 +141,33 @@ def build():
 
         is_punjabi = ("pan" in langs) or ("punjabi" in name.lower()) or ("punjab" in name.lower())
         is_india = (country == "IN")
+        
+        cat_lower_list = [c.lower() for c in categories]
+        name_lower = name.lower()
 
-        if not (is_punjabi or is_india):
+        is_sports = (
+            any("sport" in c for c in cat_lower_list) or
+            any(kw in name_lower for kw in ["sport", "cricket", "espn", "bein", "golf", "tennis", "fight", "racing", "wwe", "ufc"])
+        ) and ("eng" in langs or country in ("US", "GB", "CA", "AU", "NZ", "INT", "IN", "IE") or ch_id in pinned_channels)
+
+        is_kids = any(k in c for c in cat_lower_list for k in ["kid", "child", "animation"]) and (
+            "eng" in langs or "hin" in langs or country in ("IN", "US", "GB", "CA", "AU")
+        )
+
+        is_eng_intl = (
+            "eng" in langs and
+            country in ("US", "GB", "CA", "AU", "INT") and
+            any(c in ("news", "documentary", "movies", "entertainment") for c in cat_lower_list)
+        )
+
+        is_in_overrides = (ch_id in pinned_channels) or (ch_id in custom_streams_map)
+
+        if not (is_punjabi or is_india or is_sports or is_kids or is_eng_intl or is_in_overrides):
             continue
 
         # Must have at least one stream
         streams = channel_streams.get(ch_id, [])
-        if not streams:
+        if not streams and ch_id not in custom_streams_map:
             continue
 
         candidate_channels.append({
@@ -156,7 +181,25 @@ def build():
             "logo": channel_logos.get(ch_id)
         })
 
-    print(f"Total candidate channels found: {len(candidate_channels)} (Punjabi + India)")
+    # Include any custom stream channels from overrides that were not in raw_channels
+    added_ids = {c["id"] for c in candidate_channels}
+    for custom_id, st_list in custom_streams_map.items():
+        if custom_id not in added_ids and custom_id not in hidden_channels:
+            friendly_name = aliases_map.get(custom_id, [custom_id])[0]
+            if "." in friendly_name and friendly_name == custom_id:
+                friendly_name = custom_id.split(".")[0].replace("in", "").replace("us", "").replace("uk", "")
+            candidate_channels.append({
+                "id": custom_id,
+                "name": friendly_name,
+                "country": custom_id.split(".")[-1].upper() if "." in custom_id else "IN",
+                "languages": ["eng"],
+                "categories": ["Sports"] if ("sport" in custom_id.lower() or "cric" in custom_id.lower()) else ["General"],
+                "is_punjabi": False,
+                "streams": [s["url"] for s in st_list],
+                "logo": channel_logos.get(custom_id)
+            })
+
+    print(f"Total candidate channels found: {len(candidate_channels)} (Punjabi + India + Sports + Kids + English + Overrides)")
 
     # Test candidate streams using thread pool
     print("Verifying streams...")
@@ -170,7 +213,7 @@ def build():
     unique_urls = list(dict.fromkeys(urls_to_test))
     print(f"Checking {len(unique_urls)} unique stream URLs...")
 
-    with ThreadPoolExecutor(max_workers=16) as executor:
+    with ThreadPoolExecutor(max_workers=32) as executor:
         future_to_url = {executor.submit(check_stream, u): u for u in unique_urls}
         for future in as_completed(future_to_url):
             u = future_to_url[future]
@@ -224,33 +267,43 @@ def build():
     sections_map = {
         "punjabi": {"id": "punjabi", "title": "Punjabi", "channels": []},
         "sports": {"id": "sports", "title": "Sports", "channels": []},
-        "devotional": {"id": "devotional", "title": "Devotional", "channels": []},
-        "news": {"id": "news", "title": "News", "channels": []},
-        "music": {"id": "music", "title": "Music", "channels": []},
-        "hindi": {"id": "hindi", "title": "Hindi", "channels": []},
         "english": {"id": "english", "title": "English", "channels": []},
+        "news": {"id": "news", "title": "News", "channels": []},
+        "movies": {"id": "movies", "title": "Movies & Shows", "channels": []},
+        "devotional": {"id": "devotional", "title": "Devotional", "channels": []},
+        "music": {"id": "music", "title": "Music", "channels": []},
+        "kids": {"id": "kids", "title": "Kids & Infotainment", "channels": []},
+        "hindi": {"id": "hindi", "title": "Hindi", "channels": []},
         "other": {"id": "other", "title": "Other Channels", "channels": []}
     }
 
     for ch in final_channels:
         cat_lower = ch["category"].lower()
         name_lower = ch["name"].lower()
-        langs = ch["languages"]
+        langs = [l.lower() for l in ch["languages"]]
+        is_pb = ch["is_punjabi"] or "pan" in langs or "punjabi" in name_lower
 
-        if ch["is_punjabi"]:
+        if is_pb:
             sections_map["punjabi"]["channels"].append(ch)
-        elif "sport" in cat_lower or "sport" in name_lower:
+        elif "sport" in cat_lower or any(kw in name_lower for kw in ["sport", "cricket", "cric", "espn", "bein", "golf", "tennis", "fight", "racing", "wwe", "ufc"]) or (ch["id"] in pinned_channels and "sport" in ch["id"].lower()):
             sections_map["sports"]["channels"].append(ch)
-        elif "religious" in cat_lower or "devotional" in cat_lower:
+        elif any(k in cat_lower for k in ["relig", "devo"]) or any(k in name_lower for k in ["simran", "gurbani", "bhakti", "aastha", "sanskar", "fateh", "sadhna", "ishwar"]):
             sections_map["devotional"]["channels"].append(ch)
-        elif "news" in cat_lower:
-            sections_map["news"]["channels"].append(ch)
-        elif "music" in cat_lower:
+        elif any(k in cat_lower for k in ["kid", "child", "animation", "documentary", "educat", "science", "nature"]) or any(k in name_lower for k in ["discovery", "nat geo", "history", "pogo", "cartoon", "sonic", "hungama", "nickelodeon", "disney", "planet", "animax"]):
+            sections_map["kids"]["channels"].append(ch)
+        elif any(k in cat_lower for k in ["movie", "cinema", "series", "entertainment"]) or any(k in name_lower for k in ["cinema", "movies", "gold", "cineplex", "max", "action", "pictures", "bollywood"]):
+            sections_map["movies"]["channels"].append(ch)
+        elif "music" in cat_lower or any(k in name_lower for k in ["music", "9x", "mtv", "mastiii"]):
             sections_map["music"]["channels"].append(ch)
-        elif "hin" in langs:
-            sections_map["hindi"]["channels"].append(ch)
+        elif "news" in cat_lower or "news" in name_lower or "samachar" in name_lower:
+            if "eng" in langs and not ("hin" in langs):
+                sections_map["english"]["channels"].append(ch)
+            else:
+                sections_map["news"]["channels"].append(ch)
         elif "eng" in langs:
             sections_map["english"]["channels"].append(ch)
+        elif "hin" in langs:
+            sections_map["hindi"]["channels"].append(ch)
         else:
             sections_map["other"]["channels"].append(ch)
 
@@ -373,9 +426,9 @@ def build():
 </body>
 </html>'''
 
-    with open(os.path.join(public_dir, "index.html"), "w", encoding="utf-8") as f:
+    with open(os.path.join(public_dir, "dashboard.html"), "w", encoding="utf-8") as f:
         f.write(html_content)
-    print(f"Generated web dashboard at {os.path.join(public_dir, 'index.html')}")
+    print(f"Generated web dashboard at {os.path.join(public_dir, 'dashboard.html')}")
 
 if __name__ == "__main__":
     build()

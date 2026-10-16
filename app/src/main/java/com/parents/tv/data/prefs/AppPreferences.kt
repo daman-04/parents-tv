@@ -112,4 +112,18 @@ class AppPreferences(context: Context) {
     fun resetFailureCount(channelId: String) {
         prefs.edit().remove(PREF_PREFIX_FAILURE + channelId).apply()
     }
+
+    fun getCustomChannelOrder(): List<String> {
+        val raw = prefs.getString("custom_channel_order", "") ?: ""
+        if (raw.isEmpty()) return emptyList()
+        return raw.split(",").filter { it.isNotEmpty() }
+    }
+
+    fun saveCustomChannelOrder(orderedIds: List<String>) {
+        prefs.edit().putString("custom_channel_order", orderedIds.joinToString(",")).apply()
+    }
+
+    fun resetCustomChannelOrder() {
+        prefs.edit().remove("custom_channel_order").apply()
+    }
 }

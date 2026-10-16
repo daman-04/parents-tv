@@ -3,11 +3,13 @@
   "section_order": [
     "punjabi",
     "sports",
-    "devotional",
-    "news",
-    "music",
-    "hindi",
     "english",
+    "news",
+    "movies",
+    "devotional",
+    "music",
+    "kids",
+    "hindi",
     "other"
   ],
   "pinned_channels": [
@@ -35,6 +37,164 @@
     "SonySportsTen4.in",
     "DDSports.in"
   ],
+  "custom_streams": {
+    "PTCSimran.in": [
+      {
+        "url": "https://cdn.pishow.tv/ott/live/1503/master.m3u8",
+        "status": "working"
+      },
+      {
+        "url": "https://streams.tangotv.in/PTCSIMRAN/ORIGIN/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "StarSports1.in": [
+      {
+        "url": "https://edge.cowedd4855ws.sbs/premium267/index.m3u8",
+        "status": "working"
+      },
+      {
+        "url": "http://103.185.24.134:3001/StarSports1/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "StarSports2.in": [
+      {
+        "url": "https://edge.cowedd4855ws.sbs/premium268/index.m3u8",
+        "status": "working"
+      },
+      {
+        "url": "http://103.151.60.162:2122/play/a00v/index.m3u8",
+        "status": "working"
+      },
+      {
+        "url": "http://103.185.24.134:3001/StarSports2/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "StarSportsSelect1.in": [
+      {
+        "url": "http://103.151.60.162:2122/play/a026/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "StarSportsSelect2.in": [
+      {
+        "url": "http://103.151.60.162:2122/play/a027/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "SonySportsTen1.in": [
+      {
+        "url": "https://edge.cowedd4855ws.sbs/premium885/index.m3u8",
+        "status": "working"
+      },
+      {
+        "url": "http://103.185.24.134:3001/SonyTenSports1/index.m3u8",
+        "status": "working"
+      },
+      {
+        "url": "http://103.151.60.162:2122/play/a01c/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "SonySportsTen2.in": [
+      {
+        "url": "https://edge.cowedd4855ws.sbs/premium886/index.m3u8",
+        "status": "working"
+      },
+      {
+        "url": "http://103.151.60.162:2122/play/a01b/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "SonySportsTen3Hindi.in": [
+      {
+        "url": "https://edge.cowedd4855ws.sbs/premium887/index.m3u8",
+        "status": "working"
+      },
+      {
+        "url": "http://103.151.60.162:2122/play/a01t/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "SonySportsTen4.in": [
+      {
+        "url": "https://edge.cowedd4855ws.sbs/premium888/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "SonySportsTen5.in": [
+      {
+        "url": "https://edge.cowedd4855ws.sbs/premium889/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "WillowCricket.us": [
+      {
+        "url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV.m3u8",
+        "status": "working"
+      }
+    ],
+    "FoxCricket.au": [
+      {
+        "url": "https://edge.cowedd4855ws.sbs/premium369/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "AstroCricket.my": [
+      {
+        "url": "https://edge.cowedd4855ws.sbs/premium370/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "SkySportsCricket.uk": [
+      {
+        "url": "https://edge.cowedd4855ws.sbs/premium65/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "StarzPlayCricLife1.us": [
+      {
+        "url": "https://edge.cowedd4855ws.sbs/premium284/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "DDSports.in": [
+      {
+        "url": "https://mumbai-edge.smartplaytv.in/DDSportsHD/index.m3u8",
+        "status": "working"
+      },
+      {
+        "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "StarSports2Hindi.in": [
+      {
+        "url": "https://edge.cowedd4855ws.sbs/premium268/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "AlJazeeraEnglish.qa": [
+      {
+        "url": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",
+        "status": "working"
+      }
+    ],
+    "CGTNEnglish.cn": [
+      {
+        "url": "https://news.cgtn.com/resource/live/english/cgtn-news.m3u8",
+        "status": "working"
+      }
+    ],
+    "RedBullTV.at": [
+      {
+        "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8",
+        "status": "working"
+      }
+    ]
+  },
   "hidden_channels": [],
   "channel_order": {
     "punjabi": [
@@ -52,17 +212,21 @@
     ],
     "sports": [
       "StarSports1.in",
-      "StarSports2.in",
-      "StarSports3.in",
-      "StarSports2Hindi.in",
-      "StarSportsSelect1.in",
-      "StarSportsSelect2.in",
       "SonySportsTen1.in",
       "SonySportsTen2.in",
       "SonySportsTen3Hindi.in",
-      "SonySportsTen5.in",
-      "SonySportsTen4.in",
-      "DDSports.in"
+      "WillowCricket.us",
+      "Willow2Cricket.us",
+      "FoxCricket.au",
+      "AstroCricket.my",
+      "SkySportsCricket.uk",
+      "StarzPlayCricLife1.us",
+      "DDSports.in",
+      "StarSports2Hindi.in",
+      "StarSports2.in",
+      "StarSports3.in",
+      "StarSportsSelect1.in",
+      "StarSportsSelect2.in"
     ]
   },
   "aliases": {
@@ -159,6 +323,40 @@
     "NDTVIndia.in": [
       "NDTV India",
       "एनडीटीवी"
+    ],
+    "WillowCricket.us": [
+      "Willow Cricket",
+      "Willow",
+      "Cricket",
+      "Willow HD"
+    ],
+    "Willow2Cricket.us": [
+      "Willow 2",
+      "Willow Cricket 2"
+    ],
+    "FoxCricket.au": [
+      "Fox Cricket",
+      "Fox Cricket 501",
+      "Kayo Cricket"
+    ],
+    "AstroCricket.my": [
+      "Astro Cricket",
+      "Astro"
+    ],
+    "SkySportsCricket.uk": [
+      "Sky Sports Cricket",
+      "Sky Cricket"
+    ],
+    "StarzPlayCricLife1.us": [
+      "CricLife 1",
+      "CricLife",
+      "StarzPlay CricLife"
+    ],
+    "StarSports2Hindi.in": [
+      "Star Sports 2 Hindi",
+      "Star Sports Hindi",
+      "Star Sports 1 Hindi",
+      "Star Hindi"
     ]
   }
 }
