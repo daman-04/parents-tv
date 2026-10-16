@@ -1,0 +1,84 @@
+{
+  "default_channel": "DDPunjabi.in",
+  "section_order": [
+    "punjabi",
+    "devotional",
+    "news",
+    "music",
+    "hindi",
+    "english"
+  ],
+  "pinned_channels": [
+    "DDPunjabi.in",
+    "GTCPunjabi.in",
+    "AkaalChannel.uk",
+    "9XTashan.in",
+    "PTCPunjabi.in"
+  ],
+  "hidden_channels": [],
+  "channel_order": {
+    "punjabi": [
+      "DDPunjabi.in",
+      "GTCPunjabi.in",
+      "AkaalChannel.uk",
+      "9XTashan.in",
+      "PTCPunjabi.in"
+    ]
+  },
+  "aliases": {
+    "DDPunjabi.in": [
+      "DD Punjabi",
+      "Doordarshan Punjabi",
+      "ਡੀਡੀ ਪੰਜਾਬੀ",
+      "डीडी पंजाबी"
+    ],
+    "GTCPunjabi.in": [
+      "GTC Punjabi",
+      "ਜੀਟੀਸੀ",
+      "GTC"
+    ],
+    "AkaalChannel.uk": [
+      "Akaal Channel",
+      "Akaal TV",
+      "ਅਕਾਲ ਚੈਨਲ",
+      "Akal"
+    ],
+    "9XTashan.in": [
+      "9X Tashan",
+      "Tashan",
+      "ਟਸ਼ਨ",
+      "9X"
+    ],
+    "PTCPunjabi.in": [
+      "PTC Punjabi",
+      "PTC",
+      "ਪੀਟੀਸੀ ਪੰਜਾਬੀ",
+      "पीटीसी"
+    ],
+    "PTCNews.in": [
+      "PTC News",
+      "ਪੀਟੀਸੀ ਨਿਊਜ਼"
+    ],
+    "ZeePunjabi.in": [
+      "Zee Punjabi",
+      "ਜ਼ੀ ਪੰਜਾਬੀ"
+    ],
+    "AajTak.in": [
+      "Aaj Tak",
+      "Aajtak",
+      "आज तक"
+    ],
+    "ABPNews.in": [
+      "ABP News",
+      "एबीपी न्यूज़"
+    ],
+    "IndiaToday.in": [
+      "India Today",
+      "इंडिया टुडे"
+    ],
+    "NDTVIndia.in": [
+      "NDTV India",
+      "एनडीटीवी"
+    ]
+  }
+}

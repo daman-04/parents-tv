@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#0D0D0D</color>
+    <color name="surface_card">#1E1E1E</color>
+    <color name="surface_elevated">#262626</color>
+    <color name="surface_focused">#333333</color>
+    <color name="border_focused">#FFFFFF</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#D4D4D4</color>
+    <color name="accent_red">#E53935</color>
+    <color name="status_error">#CF6679</color>
+    <color name="status_warning">#FFB74D</color>
+    <color name="status_success">#4CAF50</color>
+    <color name="overlay_scrim">#D9000000</color>
+    <color name="banner_bg">#E61A1A1A</color>
+    <color name="badge_bg">#3D2D1A</color>
+</resources>
