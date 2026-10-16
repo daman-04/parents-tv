@@ -18,10 +18,11 @@ ParentsTV is an ultra-lightweight (1.9 MB), zero-ad, elder-friendly Live TV play
    - Open Downloader and grant storage permissions.
 
 3. **Download & Install:**
-   - In the URL field, enter the direct download link for the release APK:
+   - In the URL field, simply type this short link:
      ```
-     https://github.com/daman-04/parents-tv/releases/download/v1.0.0/ParentsTV.apk
+     tinyurl.com/2bvfnpdl
      ```
+     *(Or full link: `https://github.com/daman-04/parents-tv/releases/download/v1.0.0/ParentsTV.apk`)*
    - Downloader will immediately download the 1.9 MB file and prompt **Install**.
    - Click **Install**, then click **Open**!
 
