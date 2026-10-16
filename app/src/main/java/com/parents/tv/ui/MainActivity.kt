@@ -7,57 +7,26 @@ import android.os.Looper
 import android.view.KeyEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import coil.load
 import com.parents.tv.data.model.Channel
-import com.parents.tv.data.model.Stream
 import com.parents.tv.data.prefs.AppPreferences
+import com.parents.tv.data.repository.ChannelRepository
 import com.parents.tv.databinding.ActivityMainBinding
 import com.parents.tv.player.TvPlayerManager
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var playerManager: TvPlayerManager
     private lateinit var preferences: AppPreferences
+    private lateinit var repository: ChannelRepository
 
     private val handler = Handler(Looper.getMainLooper())
     private var errorTimer: CountDownTimer? = null
     private var currentChannelIndex = 0
-
-    // Initial reliable channels for Step 4 (Punjabi first)
-    private val channelList = listOf(
-        Channel(
-            id = "DDPunjabi.in",
-            name = "DD Punjabi",
-            category = "Punjabi Live",
-            streams = listOf(
-                Stream("https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/da821c24a59d4e57960497aeaca8fb33/index.m3u8")
-            )
-        ),
-        Channel(
-            id = "GTCPunjabi.in",
-            name = "GTC Punjabi",
-            category = "Punjabi Live",
-            streams = listOf(
-                Stream("https://cdn.ottlive.co.in/gtcpunjabi/index.m3u8")
-            )
-        ),
-        Channel(
-            id = "AkaalChannel.uk",
-            name = "Akaal Channel",
-            category = "Punjabi Devotional",
-            streams = listOf(
-                Stream("https://cdn-globecast.akamaized.net/live/eds/akaal_tv/hls1_smart_akaal/akaal_tv.m3u8")
-            )
-        ),
-        Channel(
-            id = "9XTashan.in",
-            name = "9X Tashan",
-            category = "Punjabi Music",
-            streams = listOf(
-                Stream("https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8")
-            )
-        )
-    )
+    private var channelList: MutableList<Channel> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,8 +34,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         preferences = AppPreferences(this)
+        repository = ChannelRepository(this, preferences)
 
-        // Initialize Player Manager (uses SurfaceView & 720p cap)
+        // Initialize Player Manager (uses SurfaceView, fast buffer & 720p cap)
         playerManager = TvPlayerManager(
             context = this,
             playerView = binding.playerView,
@@ -76,6 +46,10 @@ class MainActivity : AppCompatActivity() {
                     if (isPlaying) {
                         cancelErrorTimer()
                         binding.errorBannerCard.visibility = View.GONE
+                        val currentCh = channelList.getOrNull(currentChannelIndex)
+                        if (currentCh != null) {
+                            repository.recordChannelSuccess(currentCh.id)
+                        }
                     }
                 }
             },
@@ -86,13 +60,44 @@ class MainActivity : AppCompatActivity() {
             }
         )
 
-        // Restore last channel
-        val savedId = preferences.lastChannelId
-        val foundIndex = channelList.indexOfFirst { it.id == savedId }
-        currentChannelIndex = if (foundIndex != -1) foundIndex else preferences.lastChannelIndex.coerceIn(0, channelList.size - 1)
+        // Load channels immediately from cache or bundled assets (<15ms, never blocks)
+        val initialFeed = repository.loadInitialFeed()
+        channelList = repository.getAllChannels().toMutableList()
 
-        // Start video immediately on launch before any other UI
+        // Check network state
+        val isOnline = repository.isNetworkAvailable()
+        binding.offlineBanner.visibility = if (!isOnline) View.VISIBLE else View.GONE
+
+        // Restore last channel or fallback to default Punjabi channel
+        val savedId = preferences.lastChannelId ?: initialFeed.defaultChannel
+        val foundIndex = channelList.indexOfFirst { it.id == savedId }
+        currentChannelIndex = if (foundIndex != -1) {
+            foundIndex
+        } else {
+            preferences.lastChannelIndex.coerceIn(0, (channelList.size - 1).coerceAtLeast(0))
+        }
+
+        // Start video immediately on launch before any grid loading
         playChannel(currentChannelIndex)
+
+        // Background update check if online (> 24 hours stale)
+        if (isOnline) {
+            lifecycleScope.launch {
+                val hasUpdate = repository.refreshFeedIfStale()
+                if (hasUpdate) {
+                    val freshChannels = repository.getAllChannels()
+                    if (freshChannels.isNotEmpty()) {
+                        val activeChId = channelList.getOrNull(currentChannelIndex)?.id
+                        channelList.clear()
+                        channelList.addAll(freshChannels)
+                        if (activeChId != null) {
+                            val newIdx = channelList.indexOfFirst { it.id == activeChId }
+                            if (newIdx != -1) currentChannelIndex = newIdx
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private fun playChannel(index: Int) {
@@ -111,9 +116,8 @@ class MainActivity : AppCompatActivity() {
 
         showChannelInfo(channel, currentChannelIndex)
 
-        val streamUrl = channel.streams.firstOrNull()?.url
-        if (!streamUrl.isNullOrEmpty()) {
-            playerManager.playStream(streamUrl)
+        if (channel.streams.isNotEmpty()) {
+            playerManager.playStreams(channel.streams)
         } else {
             handleChannelFailure()
         }
@@ -123,6 +127,19 @@ class MainActivity : AppCompatActivity() {
         binding.channelBadge.text = "CH ${index + 1}"
         binding.channelName.text = channel.name
         binding.channelCategory.text = channel.category?.uppercase() ?: "LIVE TV"
+
+        // "New" badge indicator
+        binding.channelNewBadge.visibility = if (channel.isNew) View.VISIBLE else View.GONE
+
+        // Channel logo via Coil (fast, memory-cached, light)
+        if (!channel.logo.isNullOrEmpty()) {
+            binding.channelLogo.visibility = View.VISIBLE
+            binding.channelLogo.load(channel.logo) {
+                crossfade(false)
+            }
+        } else {
+            binding.channelLogo.visibility = View.GONE
+        }
 
         binding.channelInfoCard.visibility = View.VISIBLE
         binding.channelInfoCard.alpha = 1f
@@ -143,8 +160,13 @@ class MainActivity : AppCompatActivity() {
         binding.loadingIndicator.visibility = View.GONE
         binding.errorBannerCard.visibility = View.VISIBLE
 
+        val currentCh = channelList.getOrNull(currentChannelIndex)
+        if (currentCh != null) {
+            repository.recordChannelFailure(currentCh.id)
+        }
+
         cancelErrorTimer()
-        // PRD Section 5.1: If channel fails, move to next channel after 5 seconds
+        // PRD Section 5.1 & 6.4: If channel fails, move to next channel after 5 seconds
         errorTimer = object : CountDownTimer(5000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 val secondsLeft = (millisUntilFinished / 1000) + 1
@@ -182,8 +204,10 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
             KeyEvent.KEYCODE_DPAD_CENTER, KeyEvent.KEYCODE_ENTER, KeyEvent.KEYCODE_NUMPAD_ENTER -> {
-                val channel = channelList[currentChannelIndex]
-                showChannelInfo(channel, currentChannelIndex)
+                val channel = channelList.getOrNull(currentChannelIndex)
+                if (channel != null) {
+                    showChannelInfo(channel, currentChannelIndex)
+                }
                 return true
             }
             KeyEvent.KEYCODE_BACK -> {

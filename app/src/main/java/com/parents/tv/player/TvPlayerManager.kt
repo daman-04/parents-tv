@@ -1,6 +1,7 @@
 package com.parents.tv.player
 
 import android.content.Context
+import android.util.Log
 import androidx.annotation.OptIn
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
@@ -13,6 +14,7 @@ import androidx.media3.exoplayer.DefaultLoadControl
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.hls.HlsMediaSource
 import androidx.media3.ui.PlayerView
+import com.parents.tv.data.model.Stream
 
 @OptIn(UnstableApi::class)
 class TvPlayerManager(
@@ -21,11 +23,18 @@ class TvPlayerManager(
     private val onPlaybackStateChanged: (isPlaying: Boolean, isBuffering: Boolean) -> Unit,
     private val onPlaybackError: (errorMsg: String) -> Unit
 ) {
+    companion object {
+        private const val TAG = "TvPlayerManager"
+    }
+
     private var exoPlayer: ExoPlayer? = null
+    private var currentStreams: List<Stream> = emptyList()
+    private var currentStreamIndex = 0
+
     private val dataSourceFactory = DefaultHttpDataSource.Factory()
         .setUserAgent("Mozilla/5.0 (Linux; Android 9; Fire TV)")
-        .setConnectTimeoutMs(8000)
-        .setReadTimeoutMs(8000)
+        .setConnectTimeoutMs(7000)
+        .setReadTimeoutMs(7000)
         .setAllowCrossProtocolRedirects(true)
 
     init {
@@ -33,7 +42,6 @@ class TvPlayerManager(
     }
 
     private fun initPlayer() {
-        // Fast buffer tuning for older Fire TV Stick: start fast, low memory consumption
         val loadControl = DefaultLoadControl.Builder()
             .setBufferDurationsMs(
                 /* minBufferMs = */ 2000,
@@ -44,7 +52,6 @@ class TvPlayerManager(
             .setPrioritizeTimeOverSizeThresholds(true)
             .build()
 
-        // Cap maximum resolution to 720p (1280x720) to save decode CPU and memory
         val trackParameters = TrackSelectionParameters.Builder(context)
             .setMaxVideoSize(1280, 720)
             .setPreferredTextLanguage("pa")
@@ -59,39 +66,62 @@ class TvPlayerManager(
         player.videoScalingMode = C.VIDEO_SCALING_MODE_SCALE_TO_FIT
 
         player.addListener(object : Player.Listener {
-                    override fun onPlaybackStateChanged(playbackState: Int) {
-                        when (playbackState) {
-                            Player.STATE_BUFFERING -> onPlaybackStateChanged(false, true)
-                            Player.STATE_READY -> onPlaybackStateChanged(true, false)
-                            Player.STATE_ENDED -> onPlaybackStateChanged(false, false)
-                            Player.STATE_IDLE -> onPlaybackStateChanged(false, false)
-                        }
-                    }
+            override fun onPlaybackStateChanged(playbackState: Int) {
+                when (playbackState) {
+                    Player.STATE_BUFFERING -> onPlaybackStateChanged(false, true)
+                    Player.STATE_READY -> onPlaybackStateChanged(true, false)
+                    Player.STATE_ENDED -> onPlaybackStateChanged(false, false)
+                    Player.STATE_IDLE -> onPlaybackStateChanged(false, false)
+                }
+            }
 
-                    override fun onIsPlayingChanged(isPlaying: Boolean) {
-                        onPlaybackStateChanged(isPlaying, exoPlayer?.playbackState == Player.STATE_BUFFERING)
-                    }
+            override fun onIsPlayingChanged(isPlaying: Boolean) {
+                onPlaybackStateChanged(isPlaying, exoPlayer?.playbackState == Player.STATE_BUFFERING)
+            }
 
-                    override fun onPlayerError(error: PlaybackException) {
-                        val message = error.localizedMessage ?: "Playback error"
-                        onPlaybackError(message)
-                    }
-                })
+            override fun onPlayerError(error: PlaybackException) {
+                val message = error.localizedMessage ?: "Playback error"
+                Log.w(TAG, "Stream error on link $currentStreamIndex: $message")
+                handleStreamFailure(message)
+            }
+        })
 
         exoPlayer = player
         playerView.player = player
     }
 
-    fun playStream(streamUrl: String) {
-        val player = exoPlayer ?: return
+    fun playStreams(streams: List<Stream>) {
+        currentStreams = streams
+        currentStreamIndex = 0
+        tryPlayCurrentStream()
+    }
 
-        // Swap the stream on the existing player instance - never recreate player
+    private fun tryPlayCurrentStream() {
+        val player = exoPlayer ?: return
+        if (currentStreams.isEmpty() || currentStreamIndex >= currentStreams.size) {
+            onPlaybackError("No working stream links available")
+            return
+        }
+
+        val url = currentStreams[currentStreamIndex].url
+        Log.d(TAG, "Playing stream link [$currentStreamIndex/${currentStreams.size}]: $url")
+
         val mediaSource = HlsMediaSource.Factory(dataSourceFactory)
-            .createMediaSource(MediaItem.fromUri(streamUrl))
+            .createMediaSource(MediaItem.fromUri(url))
 
         player.setMediaSource(mediaSource)
         player.prepare()
         player.play()
+    }
+
+    private fun handleStreamFailure(errorMsg: String) {
+        currentStreamIndex++
+        if (currentStreamIndex < currentStreams.size) {
+            Log.d(TAG, "Trying backup stream link #$currentStreamIndex...")
+            tryPlayCurrentStream()
+        } else {
+            onPlaybackError(errorMsg)
+        }
     }
 
     fun pause() {
