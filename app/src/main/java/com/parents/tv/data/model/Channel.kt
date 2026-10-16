@@ -15,6 +15,7 @@ data class Channel(
     val streams: List<Stream> = emptyList(),
     val aliases: List<String> = emptyList(),
     var isNew: Boolean = false,
+    var isFavorite: Boolean = false,
     var failureCount: Int = 0
 )
 

@@ -1,31 +1,93 @@
 {
-  "default_channel": "DDPunjabi.in",
+  "default_channel": "PTCSimran.in",
   "section_order": [
     "punjabi",
+    "sports",
     "devotional",
     "news",
     "music",
     "hindi",
-    "english"
+    "english",
+    "other"
   ],
   "pinned_channels": [
+    "PTCSimran.in",
+    "PTCPunjabi.in",
+    "PTCNews.in",
+    "ZeePunjabi.in",
+    "PTCChakde.in",
+    "PTCMusic.in",
+    "PTCPunjabiGold.in",
     "DDPunjabi.in",
+    "9XTashan.in",
     "GTCPunjabi.in",
     "AkaalChannel.uk",
-    "9XTashan.in",
-    "PTCPunjabi.in"
+    "StarSports1.in",
+    "StarSports2.in",
+    "StarSports3.in",
+    "StarSports2Hindi.in",
+    "StarSportsSelect1.in",
+    "StarSportsSelect2.in",
+    "SonySportsTen1.in",
+    "SonySportsTen2.in",
+    "SonySportsTen3Hindi.in",
+    "SonySportsTen5.in",
+    "SonySportsTen4.in",
+    "DDSports.in"
   ],
   "hidden_channels": [],
   "channel_order": {
     "punjabi": [
+      "PTCSimran.in",
+      "PTCPunjabi.in",
+      "PTCNews.in",
+      "ZeePunjabi.in",
+      "PTCChakde.in",
+      "PTCMusic.in",
+      "PTCPunjabiGold.in",
       "DDPunjabi.in",
-      "GTCPunjabi.in",
-      "AkaalChannel.uk",
       "9XTashan.in",
-      "PTCPunjabi.in"
+      "GTCPunjabi.in",
+      "AkaalChannel.uk"
+    ],
+    "sports": [
+      "StarSports1.in",
+      "StarSports2.in",
+      "StarSports3.in",
+      "StarSports2Hindi.in",
+      "StarSportsSelect1.in",
+      "StarSportsSelect2.in",
+      "SonySportsTen1.in",
+      "SonySportsTen2.in",
+      "SonySportsTen3Hindi.in",
+      "SonySportsTen5.in",
+      "SonySportsTen4.in",
+      "DDSports.in"
     ]
   },
   "aliases": {
+    "PTCSimran.in": [
+      "PTC Simran",
+      "Simran",
+      "ਪੀਟੀਸੀ ਸਿਮਰਨ",
+      "ਸਿਮਰਨ",
+      "Gurbani",
+      "ਗੁਰਬਾਣੀ"
+    ],
+    "PTCPunjabi.in": [
+      "PTC Punjabi",
+      "PTC",
+      "ਪੀਟੀਸੀ ਪੰਜਾਬੀ",
+      "पीटीसी"
+    ],
+    "PTCNews.in": [
+      "PTC News",
+      "ਪੀਟੀਸੀ ਨਿਊਜ਼"
+    ],
+    "ZeePunjabi.in": [
+      "Zee Punjabi",
+      "ਜ਼ੀ ਪੰਜਾਬੀ"
+    ],
     "DDPunjabi.in": [
       "DD Punjabi",
       "Doordarshan Punjabi",
@@ -49,19 +111,37 @@
       "ਟਸ਼ਨ",
       "9X"
     ],
-    "PTCPunjabi.in": [
-      "PTC Punjabi",
-      "PTC",
-      "ਪੀਟੀਸੀ ਪੰਜਾਬੀ",
-      "पीटीसी"
+    "StarSports1.in": [
+      "Star Sports 1",
+      "Star Sports",
+      "Cricket"
     ],
-    "PTCNews.in": [
-      "PTC News",
-      "ਪੀਟੀਸੀ ਨਿਊਜ਼"
+    "StarSports2.in": [
+      "Star Sports 2"
     ],
-    "ZeePunjabi.in": [
-      "Zee Punjabi",
-      "ਜ਼ੀ ਪੰਜਾਬੀ"
+    "StarSports3.in": [
+      "Star Sports 3"
+    ],
+    "SonySportsTen1.in": [
+      "Sony Sports Ten 1",
+      "Sony Ten 1",
+      "Sony Sports"
+    ],
+    "SonySportsTen2.in": [
+      "Sony Sports Ten 2",
+      "Sony Ten 2"
+    ],
+    "SonySportsTen3Hindi.in": [
+      "Sony Sports Ten 3 Hindi",
+      "Sony Ten 3 Hindi"
+    ],
+    "SonySportsTen5.in": [
+      "Sony Sports Ten 5",
+      "Sony Ten 5"
+    ],
+    "DDSports.in": [
+      "DD Sports",
+      "Doordarshan Sports"
     ],
     "AajTak.in": [
       "Aaj Tak",

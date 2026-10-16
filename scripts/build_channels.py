@@ -179,21 +179,26 @@ def build():
             except Exception:
                 verified_streams[u] = "unverified"
 
+    custom_streams_map = overrides.get("custom_streams", {})
+
     # Assemble channels with tested streams
     final_channels = []
     for c in candidate_channels:
-        st_objs = []
-        for u in c["streams"]:
-            st_status = verified_streams.get(u, "unverified")
-            if st_status != "dead": # Filter out definitively dead links
-                st_objs.append({"url": u, "status": st_status})
-        
-        # If all links were dead, keep the first one as unverified rather than deleting the channel
-        if not st_objs and c["streams"]:
-            st_objs.append({"url": c["streams"][0], "status": "unverified"})
+        if c["id"] in custom_streams_map:
+            st_objs = custom_streams_map[c["id"]]
+        else:
+            st_objs = []
+            for u in c["streams"]:
+                st_status = verified_streams.get(u, "unverified")
+                if st_status != "dead": # Filter out definitively dead links
+                    st_objs.append({"url": u, "status": st_status})
+            
+            # If all links were dead, keep the first one as unverified rather than deleting the channel
+            if not st_objs and c["streams"]:
+                st_objs.append({"url": c["streams"][0], "status": "unverified"})
 
-        # Sort streams: working first, then unverified
-        st_objs.sort(key=lambda s: 0 if s["status"] == "working" else 1)
+            # Sort streams: working first, then unverified
+            st_objs.sort(key=lambda s: 0 if s["status"] == "working" else 1)
 
         aliases = aliases_map.get(c["id"], [])
         if not aliases:
@@ -215,9 +220,10 @@ def build():
         })
 
     # Group into sections per PRD section 5.2 & 6.3
-    # Punjabi first, Devotional, News, Music, Hindi, English, Others
+    # Punjabi first, Sports, Devotional, News, Music, Hindi, English, Others
     sections_map = {
         "punjabi": {"id": "punjabi", "title": "Punjabi", "channels": []},
+        "sports": {"id": "sports", "title": "Sports", "channels": []},
         "devotional": {"id": "devotional", "title": "Devotional", "channels": []},
         "news": {"id": "news", "title": "News", "channels": []},
         "music": {"id": "music", "title": "Music", "channels": []},
@@ -228,10 +234,13 @@ def build():
 
     for ch in final_channels:
         cat_lower = ch["category"].lower()
+        name_lower = ch["name"].lower()
         langs = ch["languages"]
 
         if ch["is_punjabi"]:
             sections_map["punjabi"]["channels"].append(ch)
+        elif "sport" in cat_lower or "sport" in name_lower:
+            sections_map["sports"]["channels"].append(ch)
         elif "religious" in cat_lower or "devotional" in cat_lower:
             sections_map["devotional"]["channels"].append(ch)
         elif "news" in cat_lower:

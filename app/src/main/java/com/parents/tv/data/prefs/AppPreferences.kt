@@ -14,7 +14,57 @@ class AppPreferences(context: Context) {
         private const val KEY_KNOWN_CHANNELS = "known_channel_ids"
         private const val KEY_DEFAULT_CHANNEL = "default_channel"
         private const val KEY_CUSTOM_FEED_URL = "custom_feed_url"
+        private const val KEY_FAVORITES = "favorite_channel_ids"
+        private const val KEY_RECENT_CHANNELS = "recent_channel_ids"
+        private const val KEY_ASPECT_RATIO = "aspect_ratio_mode"
         private const val PREF_PREFIX_FAILURE = "fail_cnt_"
+    }
+
+    var aspectRatioMode: Int
+        get() = prefs.getInt(KEY_ASPECT_RATIO, 0) // 0: Fit, 1: Zoom, 2: Stretch/Fill
+        set(value) = prefs.edit().putInt(KEY_ASPECT_RATIO, value).apply()
+
+    fun getChannelAspectRatio(channelId: String): Int {
+        return prefs.getInt("aspect_ratio_$channelId", aspectRatioMode)
+    }
+
+    fun setChannelAspectRatio(channelId: String, mode: Int) {
+        prefs.edit().putInt("aspect_ratio_$channelId", mode).apply()
+    }
+
+    fun getFavoriteChannelIds(): Set<String> {
+        return prefs.getStringSet(KEY_FAVORITES, emptySet()) ?: emptySet()
+    }
+
+    fun isFavorite(channelId: String): Boolean {
+        return getFavoriteChannelIds().contains(channelId)
+    }
+
+    fun toggleFavorite(channelId: String): Boolean {
+        val current = getFavoriteChannelIds().toMutableSet()
+        val isNowFav = if (current.contains(channelId)) {
+            current.remove(channelId)
+            false
+        } else {
+            current.add(channelId)
+            true
+        }
+        prefs.edit().putStringSet(KEY_FAVORITES, current).apply()
+        return isNowFav
+    }
+
+    fun getRecentChannelIds(): List<String> {
+        val raw = prefs.getString(KEY_RECENT_CHANNELS, "") ?: ""
+        if (raw.isEmpty()) return emptyList()
+        return raw.split(",").filter { it.isNotEmpty() }
+    }
+
+    fun recordRecentChannel(channelId: String) {
+        val current = getRecentChannelIds().toMutableList()
+        current.remove(channelId)
+        current.add(0, channelId)
+        val trimmed = current.take(6)
+        prefs.edit().putString(KEY_RECENT_CHANNELS, trimmed.joinToString(",")).apply()
     }
 
     var lastChannelId: String?
