@@ -101,6 +101,10 @@ class ChannelAdapter(
             binding.cardChannelCategory.text = channel.category?.uppercase() ?: "LIVE"
             binding.cardFavoriteStar.visibility = if (channel.isFavorite) View.VISIBLE else View.GONE
 
+            val isFocused = binding.cardRoot.hasFocus()
+            binding.cardName.setTextColor(if (isFocused) 0xFF0C0E17.toInt() else 0xFFFFFFFF.toInt())
+            binding.cardChannelCategory.setTextColor(if (isFocused) 0xFF4A526A.toInt() else 0xFFA2A8BE.toInt())
+
             if (!channel.logo.isNullOrEmpty()) {
                 binding.cardLogo.visibility = View.VISIBLE
                 binding.cardLogo.load(channel.logo) {
@@ -110,7 +114,19 @@ class ChannelAdapter(
                 binding.cardLogo.visibility = View.GONE
             }
 
-            setupFocusAndClicks(this, binding.cardRoot, channel)
+            setupClicks(this, binding.cardRoot)
+            binding.cardRoot.setOnFocusChangeListener { view, hasFocus ->
+                view.animate().cancel()
+                if (hasFocus) {
+                    view.animate().scaleX(1.02f).scaleY(1.02f).setDuration(80).start()
+                    binding.cardName.setTextColor(0xFF0C0E17.toInt())
+                    binding.cardChannelCategory.setTextColor(0xFF4A526A.toInt())
+                } else {
+                    view.animate().scaleX(1.0f).scaleY(1.0f).setDuration(80).start()
+                    binding.cardName.setTextColor(0xFFFFFFFF.toInt())
+                    binding.cardChannelCategory.setTextColor(0xFFA2A8BE.toInt())
+                }
+            }
         }
     }
 
@@ -127,6 +143,10 @@ class ChannelAdapter(
             binding.cardChannelCategory.text = channel.category?.uppercase() ?: "LIVE"
             binding.cardFavoriteStar.visibility = if (channel.isFavorite) View.VISIBLE else View.GONE
 
+            val isFocused = binding.cardRoot.hasFocus()
+            binding.cardName.setTextColor(if (isFocused) 0xFF0C0E17.toInt() else 0xFFFFFFFF.toInt())
+            binding.cardChannelCategory.setTextColor(if (isFocused) 0xFF4A526A.toInt() else 0xFFA2A8BE.toInt())
+
             if (!channel.logo.isNullOrEmpty()) {
                 binding.cardLogo.visibility = View.VISIBLE
                 binding.cardLogo.load(channel.logo) {
@@ -136,11 +156,23 @@ class ChannelAdapter(
                 binding.cardLogo.visibility = View.GONE
             }
 
-            setupFocusAndClicks(this, binding.cardRoot, channel)
+            setupClicks(this, binding.cardRoot)
+            binding.cardRoot.setOnFocusChangeListener { view, hasFocus ->
+                view.animate().cancel()
+                if (hasFocus) {
+                    view.animate().scaleX(1.02f).scaleY(1.02f).setDuration(80).start()
+                    binding.cardName.setTextColor(0xFF0C0E17.toInt())
+                    binding.cardChannelCategory.setTextColor(0xFF4A526A.toInt())
+                } else {
+                    view.animate().scaleX(1.0f).scaleY(1.0f).setDuration(80).start()
+                    binding.cardName.setTextColor(0xFFFFFFFF.toInt())
+                    binding.cardChannelCategory.setTextColor(0xFFA2A8BE.toInt())
+                }
+            }
         }
     }
 
-    private fun setupFocusAndClicks(holder: RecyclerView.ViewHolder, cardRoot: View, channel: Channel) {
+    private fun setupClicks(holder: RecyclerView.ViewHolder, cardRoot: View) {
         cardRoot.setOnClickListener {
             val pos = holder.bindingAdapterPosition
             if (pos != RecyclerView.NO_POSITION && pos < channels.size) {
@@ -153,23 +185,6 @@ class ChannelAdapter(
             if (pos != RecyclerView.NO_POSITION && pos < channels.size) {
                 onChannelLongClick?.invoke(channels[pos], pos) ?: false
             } else false
-        }
-
-        cardRoot.setOnFocusChangeListener { view, hasFocus ->
-            view.animate().cancel()
-            if (hasFocus) {
-                view.animate()
-                    .scaleX(1.03f)
-                    .scaleY(1.03f)
-                    .setDuration(90)
-                    .start()
-            } else {
-                view.animate()
-                    .scaleX(1.0f)
-                    .scaleY(1.0f)
-                    .setDuration(90)
-                    .start()
-            }
         }
     }
 }

@@ -155,7 +155,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="▲▼ Next/Prev  •  ◀ Recall  •  ▶ Favorites  •  ☰ Options  •  OK Menu"
+                android:text="▲▼ Change Channel  •  ◀ Channels Drawer  •  ☰ Options"
                 android:textColor="@color/text_secondary"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -203,172 +203,172 @@
     </LinearLayout>
 
     <!-- ======================================================== -->
-    <!-- FULL TV CHANNEL OVERLAY MENU (Step 7: Remote Grid/List)   -->
+    <!-- LEFT FROSTED GLASS CHANNEL DRAWER (450dp, Apple Liquid Glass) -->
     <!-- ======================================================== -->
-    <LinearLayout
+    <FrameLayout
         android:id="@+id/channel_menu_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E60D0D0D"
-        android:orientation="vertical"
-        android:paddingStart="48dp"
-        android:paddingTop="28dp"
-        android:paddingEnd="48dp"
-        android:paddingBottom="20dp"
+        android:background="@color/glass_scrim"
+        android:clickable="true"
+        android:focusable="false"
         android:visibility="gone">
 
-        <!-- Top Header: Logo / Search / View Mode / Aspect Ratio -->
+        <!-- 450dp Frosted Glass Drawer -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:id="@+id/channel_drawer"
+            android:layout_width="450dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/glass_drawer_background"
+            android:clickable="true"
+            android:focusable="false"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="22dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Top Header Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TV"
-                android:textColor="@color/accent_red"
-                android:textSize="26sp"
-                android:textStyle="bold" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/badge_background"
+                    android:paddingStart="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="4dp"
+                    android:text="LIVE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:text="Channels"
+                    android:textColor="@color/text_primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- Reorder Button -->
+                <TextView
+                    android:id="@+id/btn_edit_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pill_focus_selector"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingStart="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="6dp"
+                    android:text="↕ Order"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Hidden bindings to preserve compatibility with existing code -->
+                <TextView
+                    android:id="@+id/btn_aspect_ratio"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/btn_toggle_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone" />
+            </LinearLayout>
 
             <!-- Search Input Box -->
             <EditText
                 android:id="@+id/search_input"
-                android:layout_width="380dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/search_box_background"
-                android:hint="🔍 Search (hold mic on remote)..."
+                android:hint="🔍 Search channels..."
                 android:imeOptions="actionSearch"
                 android:inputType="text"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:textColor="@color/text_primary"
-                android:textColorHint="#888888"
-                android:textSize="18sp"
                 android:maxLines="1"
-                android:nextFocusDown="@+id/channels_recycler_view"
-                android:nextFocusRight="@+id/btn_aspect_ratio" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1" />
-
-            <!-- Aspect Ratio Button -->
-            <TextView
-                android:id="@+id/btn_aspect_ratio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/pill_focus_selector"
-                android:clickable="true"
-                android:focusable="true"
-                android:paddingStart="18dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="18dp"
-                android:paddingBottom="8dp"
-                android:text="📐 Aspect: Fit"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
                 android:textColor="@color/text_primary"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textColorHint="#949CB2"
+                android:textSize="16sp"
+                android:nextFocusDown="@+id/category_recycler_view" />
 
-            <!-- Edit Channel Order Button -->
+            <!-- Reorder Mode Instructions Banner -->
             <TextView
-                android:id="@+id/btn_edit_order"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/pill_focus_selector"
-                android:clickable="true"
-                android:focusable="true"
-                android:paddingStart="18dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="18dp"
-                android:paddingBottom="8dp"
-                android:text="↕ Edit Order"
-                android:textColor="@color/text_primary"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <!-- Grid / List View Toggle Button -->
-            <TextView
-                android:id="@+id/btn_toggle_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/pill_focus_selector"
-                android:clickable="true"
-                android:focusable="true"
-                android:paddingStart="18dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="18dp"
-                android:paddingBottom="8dp"
-                android:text="☷ Grid View"
-                android:textColor="@color/text_primary"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <!-- Reorder Mode Instructions Banner -->
-        <TextView
-            android:id="@+id/reorder_mode_banner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="#2E7D32"
-            android:gravity="center"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:text="↕ REORDER MODE: Highlight a channel, press OK to grab, use ▲/▼ to move, press OK to place"
-            android:textColor="@color/text_primary"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:visibility="gone" />
-
-        <!-- Category / Language Tabs -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/category_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="horizontal" />
-
-        <!-- Channels Grid / List -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="12dp"
-            android:layout_weight="1">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/channels_recycler_view"
+                android:id="@+id/reorder_mode_banner"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false" />
-
-            <!-- Empty Search Results Text -->
-            <TextView
-                android:id="@+id/empty_message"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="No channels found. Try another search or category."
-                android:textColor="@color/text_secondary"
-                android:textSize="24sp"
+                android:layout_marginTop="8dp"
+                android:background="#2E7D32"
+                android:gravity="center"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="↕ REORDER MODE: OK to grab, ▲/▼ to move"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold"
                 android:visibility="gone" />
-        </FrameLayout>
 
-        <!-- Remote Key Hints Footer -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="▲▼◀▶ Navigate  •  OK Watch  •  Hold OK ★ Toggle Favorite  •  BACK Return to Video"
-            android:textColor="@color/text_secondary"
-            android:textSize="16sp" />
-    </LinearLayout>
+            <!-- Category / Language Tabs -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/category_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal" />
+
+            <!-- Channels Vertical List inside Drawer -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/channels_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingBottom="8dp" />
+
+                <!-- Empty Search Results Text -->
+                <TextView
+                    android:id="@+id/empty_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="No channels found"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <!-- Remote Key Hints Footer -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="▶ / BACK Close  •  OK Watch  •  Hold OK ★"
+                android:textColor="@color/text_tertiary"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </FrameLayout>
 
     <!-- ======================================================== -->
     <!-- QUICK OPTIONS MODAL DIALOG (3-Lines Remote Menu Button)  -->
@@ -377,7 +377,7 @@
         android:id="@+id/quick_options_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#CC000000"
+        android:background="@color/glass_scrim"
         android:clickable="true"
         android:focusable="true"
         android:visibility="gone">
@@ -397,7 +397,7 @@
         android:id="@+id/update_dialog_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#DD000000"
+        android:background="@color/glass_scrim"
         android:clickable="true"
         android:focusable="true"
         android:visibility="gone">

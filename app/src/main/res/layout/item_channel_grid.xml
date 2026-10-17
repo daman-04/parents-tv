@@ -40,7 +40,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:text="PUNJABI"
-            android:textColor="@color/text_secondary"
+            android:textColor="@color/glass_card_text_secondary"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -69,7 +69,6 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginEnd="14dp"
-            android:background="#262626"
             android:contentDescription="Channel Logo"
             android:scaleType="fitCenter" />
 
@@ -81,7 +80,7 @@
             android:ellipsize="end"
             android:maxLines="2"
             android:text="PTC Simran"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/glass_card_text_primary"
             android:textSize="22sp"
             android:textStyle="bold" />
     </LinearLayout>

@@ -12,7 +12,17 @@
     <color name="status_error">#CF6679</color>
     <color name="status_warning">#FFB74D</color>
     <color name="status_success">#4CAF50</color>
-    <color name="overlay_scrim">#D9000000</color>
-    <color name="banner_bg">#E61A1A1A</color>
-    <color name="badge_bg">#3D2D1A</color>
+    <color name="glass_drawer_bg">#CC11131F</color>
+    <color name="glass_drawer_stroke">#38FFFFFF</color>
+    <color name="glass_card_bg">#18FFFFFF</color>
+    <color name="glass_card_stroke">#29FFFFFF</color>
+    <color name="glass_card_focused_bg">#FFFFFF</color>
+    <color name="glass_card_focused_stroke">#FFFFFF</color>
+    <color name="glass_focused_text">#0C0E17</color>
+    <color name="glass_pill_bg">#20FFFFFF</color>
+    <color name="glass_pill_stroke">#30FFFFFF</color>
+    <color name="glass_scrim">#4D000000</color>
+    <color name="glass_badge_bg">#2BFFFFFF</color>
+    <color name="glass_badge_stroke">#3DFFFFFF</color>
+    <color name="text_tertiary">#A2A8BE</color>
 </resources>

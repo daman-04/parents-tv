@@ -35,7 +35,7 @@
         android:layout_height="1dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#333333" />
+        android:background="#33FFFFFF" />
 
     <!-- Option 1: Aspect Ratio -->
     <LinearLayout
@@ -55,8 +55,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:duplicateParentState="true"
             android:text="📐 Screen Aspect Ratio"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/glass_card_text_primary"
             android:textSize="19sp"
             android:textStyle="bold" />
 
@@ -65,8 +66,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
+            android:duplicateParentState="true"
             android:text="Fit (Auto 4:3 / 16:9)"
-            android:textColor="@color/text_secondary"
+            android:textColor="@color/glass_card_text_secondary"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -89,8 +91,9 @@
             android:id="@+id/tv_opt_favorite_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:duplicateParentState="true"
             android:text="★ Add to Favorites"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/glass_card_text_primary"
             android:textSize="19sp"
             android:textStyle="bold" />
 
@@ -99,8 +102,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
+            android:duplicateParentState="true"
             android:text="Pin to Favorites tab for 1-click access"
-            android:textColor="@color/text_secondary"
+            android:textColor="@color/glass_card_text_secondary"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -129,8 +133,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:duplicateParentState="true"
                 android:text="⬆ Move Up"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/glass_card_text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -139,8 +144,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
+                android:duplicateParentState="true"
                 android:text="Move channel earlier"
-                android:textColor="@color/text_secondary"
+                android:textColor="@color/glass_card_text_secondary"
                 android:textSize="13sp" />
         </LinearLayout>
 
@@ -162,8 +168,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:duplicateParentState="true"
                 android:text="⬇ Move Down"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/glass_card_text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -172,8 +179,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
+                android:duplicateParentState="true"
                 android:text="Move channel later"
-                android:textColor="@color/text_secondary"
+                android:textColor="@color/glass_card_text_secondary"
                 android:textSize="13sp" />
         </LinearLayout>
     </LinearLayout>
@@ -196,8 +204,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:duplicateParentState="true"
             android:text="🔄 Switch Stream Server"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/glass_card_text_primary"
             android:textSize="19sp"
             android:textStyle="bold" />
 
@@ -206,8 +215,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
+            android:duplicateParentState="true"
             android:text="Server 1 of 3 (Active)"
-            android:textColor="@color/text_secondary"
+            android:textColor="@color/glass_card_text_secondary"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -229,8 +239,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:duplicateParentState="true"
             android:text="🔲 Menu View Style"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/glass_card_text_primary"
             android:textSize="19sp"
             android:textStyle="bold" />
 
@@ -239,8 +250,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:text="Grid View (4 tiles per row)"
-            android:textColor="@color/text_secondary"
+            android:duplicateParentState="true"
+            android:text="Left Drawer (Compact List)"
+            android:textColor="@color/glass_card_text_secondary"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -262,8 +274,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:duplicateParentState="true"
             android:text="🔍 Search Channels"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/glass_card_text_primary"
             android:textSize="19sp"
             android:textStyle="bold" />
 
@@ -272,8 +285,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
+            android:duplicateParentState="true"
             android:text="Voice typing or search by channel name"
-            android:textColor="@color/text_secondary"
+            android:textColor="@color/glass_card_text_secondary"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -296,8 +310,9 @@
             android:id="@+id/tv_opt_update_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:duplicateParentState="true"
             android:text="🔄 Check for App Updates"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/glass_card_text_primary"
             android:textSize="19sp"
             android:textStyle="bold" />
 
@@ -306,8 +321,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:text="Current: v1.0.0 • Click to check &amp; update in-app"
-            android:textColor="@color/text_secondary"
+            android:duplicateParentState="true"
+            android:text="Current: v1.1.0 • Click to check &amp; update in-app"
+            android:textColor="@color/glass_card_text_secondary"
             android:textSize="15sp" />
     </LinearLayout>
 

@@ -5,14 +5,17 @@
 
 set -e
 
-APK_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/ParentsTV.apk"
+APK_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/TV.apk"
 if [ ! -f "$APK_PATH" ]; then
-    APK_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/app/build/outputs/apk/release/app-release.apk"
+    APK_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/app/build/outputs/apk/debug/app-debug.apk"
+fi
+if [ ! -f "$APK_PATH" ]; then
+    APK_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/ParentsTV.apk"
 fi
 
 if [ ! -f "$APK_PATH" ]; then
-    echo "❌ Error: Could not find ParentsTV.apk"
-    echo "Please build the APK first with: ./gradlew assembleRelease"
+    echo "❌ Error: Could not find TV.apk"
+    echo "Please build the APK first with: ./gradlew assembleDebug"
     exit 1
 fi
 
@@ -36,11 +39,7 @@ if [ -z "$TARGET_IP" ]; then
         echo "✅ Detected already connected device: $CONNECTED"
         TARGET="$CONNECTED"
     else
-        read -p "Enter Fire TV / Android TV IP address (e.g. 192.168.1.100): " TARGET_IP
-        if [ -z "$TARGET_IP" ]; then
-            echo "❌ No IP address provided. Exiting."
-            exit 1
-        fi
+        TARGET_IP="192.168.29.130"
         TARGET="$TARGET_IP:5555"
     fi
 else
@@ -55,13 +54,14 @@ fi
 if [[ "$TARGET" == *:* ]]; then
     echo "📡 Connecting to Fire TV at $TARGET..."
     adb connect "$TARGET"
-    sleep 1
+    sleep 2
 fi
 
 echo "📦 Installing ParentsTV ($APK_PATH) to $TARGET..."
 adb -s "$TARGET" install -r -d "$APK_PATH"
 
 echo "🚀 Launching ParentsTV on your TV..."
+adb -s "$TARGET" shell am start -n com.parents.tv.debug/com.parents.tv.ui.MainActivity 2>/dev/null || \
 adb -s "$TARGET" shell am start -n com.parents.tv/com.parents.tv.ui.MainActivity
 
 echo ""

@@ -8,6 +8,9 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.KeyEvent
 import android.view.View
+import android.view.ViewParent
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
@@ -16,6 +19,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
+import com.parents.tv.R
 import com.parents.tv.data.model.Channel
 import com.parents.tv.data.prefs.AppPreferences
 import com.parents.tv.data.repository.ChannelRepository
@@ -51,9 +55,10 @@ class MainActivity : AppCompatActivity() {
     private var isManuallyPaused = false
     private var channelList: MutableList<Channel> = mutableListOf()
     private var activeCategoryTabId = "punjabi"
-    private var isGridMode = true
+    private var isGridMode = false
     private var isReorderMode = false
     private var pickedReorderChannel: Channel? = null
+    private var isDrawerAnimating = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
         preferences = AppPreferences(this)
         repository = ChannelRepository(this, preferences)
-        isGridMode = preferences.viewMode == "grid"
+        isGridMode = false // Compact 450dp side drawer uses list layout
 
         // Initialize Player Manager (uses SurfaceView, fast buffer & 720p cap)
         playerManager = TvPlayerManager(
@@ -182,6 +187,14 @@ class MainActivity : AppCompatActivity() {
         updateRecyclerViewLayoutManager()
         binding.channelsRecyclerView.adapter = channelAdapter
 
+        // Clicking scrim outside drawer closes the drawer
+        binding.channelMenuContainer.setOnClickListener {
+            hideChannelMenu()
+        }
+        binding.channelDrawer.setOnClickListener {
+            // Consume click on drawer itself
+        }
+
         // Category Tabs Setup
         categoryTabAdapter = CategoryTabAdapter(
             tabs = emptyList(),
@@ -268,11 +281,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateRecyclerViewLayoutManager() {
-        if (isGridMode) {
-            binding.channelsRecyclerView.layoutManager = GridLayoutManager(this, 4)
-        } else {
-            binding.channelsRecyclerView.layoutManager = LinearLayoutManager(this)
-        }
+        binding.channelsRecyclerView.layoutManager = LinearLayoutManager(this)
     }
 
     private fun updateViewModeButtonText() {
@@ -458,7 +467,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showChannelMenu(focusSearch: Boolean = false) {
-        if (binding.channelMenuContainer.visibility == View.VISIBLE) {
+        if (binding.channelMenuContainer.visibility == View.VISIBLE && !isDrawerAnimating) {
             if (focusSearch) {
                 binding.searchInput.requestFocus()
             }
@@ -471,21 +480,37 @@ class MainActivity : AppCompatActivity() {
         refreshCategoryTabs()
         loadChannelsForActiveTab()
 
+        val slideIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_left)
+        binding.channelDrawer.startAnimation(slideIn)
+
         if (focusSearch) {
             binding.searchInput.requestFocus()
             val imm = getSystemService(INPUT_METHOD_SERVICE) as? InputMethodManager
             imm?.showSoftInput(binding.searchInput, InputMethodManager.SHOW_IMPLICIT)
         } else {
-            // Focus the first channel tile or category tab
+            // Smoothly focus the current playing channel or the first channel tile
             binding.channelsRecyclerView.post {
-                binding.channelsRecyclerView.findViewHolderForAdapterPosition(0)?.itemView?.requestFocus()
-                    ?: binding.categoryRecyclerView.findViewHolderForAdapterPosition(0)?.itemView?.requestFocus()
+                val currentCh = channelList.getOrNull(currentChannelIndex)
+                val targetPos = if (currentCh != null) {
+                    val pos = channelList.indexOfFirst { it.id == currentCh.id }
+                    if (pos >= 0) pos else 0
+                } else 0
+                binding.channelsRecyclerView.scrollToPosition(targetPos)
+                binding.channelsRecyclerView.postDelayed({
+                    val vh = binding.channelsRecyclerView.findViewHolderForAdapterPosition(targetPos)
+                    if (vh != null) {
+                        vh.itemView.requestFocus()
+                    } else {
+                        binding.channelsRecyclerView.findViewHolderForAdapterPosition(0)?.itemView?.requestFocus()
+                            ?: binding.categoryRecyclerView.findViewHolderForAdapterPosition(0)?.itemView?.requestFocus()
+                    }
+                }, 80)
             }
         }
     }
 
     private fun hideChannelMenu() {
-        if (binding.channelMenuContainer.visibility == View.GONE) return
+        if (binding.channelMenuContainer.visibility == View.GONE || isDrawerAnimating) return
 
         // Hide keyboard if search had focus
         val imm = getSystemService(INPUT_METHOD_SERVICE) as? InputMethodManager
@@ -494,7 +519,17 @@ class MainActivity : AppCompatActivity() {
         binding.searchInput.setText("")
         binding.categoryRecyclerView.visibility = View.VISIBLE
 
-        binding.channelMenuContainer.visibility = View.GONE
+        isDrawerAnimating = true
+        val slideOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_left)
+        slideOut.setAnimationListener(object : Animation.AnimationListener {
+            override fun onAnimationStart(animation: Animation?) {}
+            override fun onAnimationEnd(animation: Animation?) {
+                binding.channelMenuContainer.visibility = View.GONE
+                isDrawerAnimating = false
+            }
+            override fun onAnimationRepeat(animation: Animation?) {}
+        })
+        binding.channelDrawer.startAnimation(slideOut)
 
         // Re-show brief info of currently playing channel
         val ch = channelList.getOrNull(currentChannelIndex)
@@ -725,14 +760,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         dialog.btnOptViewMode.setOnClickListener {
-            isGridMode = !isGridMode
-            preferences.viewMode = if (isGridMode) "grid" else "list"
-            channelAdapter.setGridMode(isGridMode)
-            updateRecyclerViewLayoutManager()
-            updateViewModeButtonText()
-            updateQuickOptionsDialogContent(currentCh)
-            val modeStr = if (isGridMode) "Grid View (4 tiles)" else "List View"
-            Toast.makeText(this, "Menu Style: $modeStr", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Channel Drawer is optimized in List Mode", Toast.LENGTH_SHORT).show()
         }
 
         dialog.btnOptSearch.setOnClickListener {
@@ -810,7 +838,7 @@ class MainActivity : AppCompatActivity() {
         dialog.tvOptMoveUpSub.text = "Current: CH ${currentChannelIndex + 1} (Move earlier)"
         dialog.tvOptMoveDownSub.text = "Current: CH ${currentChannelIndex + 1} (Move later)"
 
-        dialog.tvOptViewModeValue.text = if (isGridMode) "Grid View (4 tiles per row)" else "List View (large text)"
+        dialog.tvOptViewModeValue.text = "Left Drawer (Compact List)"
 
         val currentVersionName = try {
             packageManager.getPackageInfo(packageName, 0).versionName ?: "1.1.0"
@@ -822,6 +850,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun hideQuickOptionsDialog() {
         binding.quickOptionsContainer.visibility = View.GONE
+    }
+
+    private fun isViewDescendantOf(view: View, parent: View): Boolean {
+        var p: ViewParent? = view.parent
+        while (p != null) {
+            if (p === parent) return true
+            p = p.parent
+        }
+        return false
     }
 
     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
@@ -851,13 +888,26 @@ class MainActivity : AppCompatActivity() {
                 return super.dispatchKeyEvent(event)
             }
 
-            // 2. If Channel Menu is OPEN
+            // 2. If Channel Menu (Drawer) is OPEN
             if (binding.channelMenuContainer.visibility == View.VISIBLE) {
                 if (keyCode == KeyEvent.KEYCODE_BACK) {
                     if (binding.searchInput.text.isNotEmpty()) {
                         binding.searchInput.setText("")
                         return true
                     }
+                    hideChannelMenu()
+                    return true
+                }
+                if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
+                    val focused = currentFocus
+                    val inTabs = focused != null && isViewDescendantOf(focused, binding.categoryRecyclerView)
+                    if (inTabs) {
+                        val nextRight = focused?.focusSearch(View.FOCUS_RIGHT)
+                        if (nextRight != null && isViewDescendantOf(nextRight, binding.categoryRecyclerView)) {
+                            return super.dispatchKeyEvent(event)
+                        }
+                    }
+                    // Pressing RIGHT dismisses the drawer and returns to full video
                     hideChannelMenu()
                     return true
                 }
