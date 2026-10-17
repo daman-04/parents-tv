@@ -20,9 +20,22 @@ class ChannelAdapter(
     private val onChannelLongClick: ((Channel, Int) -> Boolean)? = null
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
+    private var currentPlayingId: String? = null
+
     companion object {
         const val VIEW_TYPE_GRID = 1
         const val VIEW_TYPE_LIST = 2
+    }
+
+    fun setCurrentPlayingChannelId(id: String?) {
+        val oldId = currentPlayingId
+        if (oldId != id) {
+            currentPlayingId = id
+            val oldIdx = channels.indexOfFirst { it.id == oldId }
+            val newIdx = channels.indexOfFirst { it.id == id }
+            if (oldIdx != -1) notifyItemChanged(oldIdx)
+            if (newIdx != -1) notifyItemChanged(newIdx)
+        }
     }
 
     fun setChannels(newChannels: List<Channel>) {
@@ -47,6 +60,8 @@ class ChannelAdapter(
         channels = newChannels
         diffResult.dispatchUpdatesTo(this)
     }
+
+    fun getChannels(): List<Channel> = channels
 
     fun setGridMode(isGrid: Boolean) {
         if (isGridMode != isGrid) {
@@ -141,7 +156,8 @@ class ChannelAdapter(
             binding.cardChannelNumber.text = "CH ${position + 1}"
             binding.cardName.text = channel.name
             binding.cardChannelCategory.text = channel.category?.uppercase() ?: "LIVE"
-            binding.cardFavoriteStar.visibility = if (channel.isFavorite) View.VISIBLE else View.GONE
+            val isPlaying = channel.id == currentPlayingId
+            binding.cardPlayingIndicator.visibility = if (isPlaying) View.VISIBLE else View.GONE
 
             val isFocused = binding.cardRoot.hasFocus()
             binding.cardName.setTextColor(if (isFocused) 0xFF0C0E17.toInt() else 0xFFFFFFFF.toInt())

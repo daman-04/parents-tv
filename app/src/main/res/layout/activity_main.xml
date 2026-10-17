@@ -6,14 +6,21 @@
     android:background="@color/bg_dark"
     android:keepScreenOn="true">
 
-    <!-- Media3 ExoPlayer on SurfaceView for high-speed hardware decoding -->
-    <androidx.media3.ui.PlayerView
-        android:id="@+id/player_view"
+    <!-- Media3 ExoPlayer wrapped in BlurTarget for real-time dynamic Glassmorphism -->
+    <eightbitlab.com.blurview.BlurTarget
+        android:id="@+id/blur_target"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:surface_type="surface_view"
-        app:use_controller="false"
-        app:resize_mode="fit" />
+        android:layout_height="match_parent">
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/player_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:surface_type="texture_view"
+            app:use_controller="false"
+            app:resize_mode="fit" />
+
+    </eightbitlab.com.blurview.BlurTarget>
 
     <!-- Center Buffering / Loading Spinner -->
     <ProgressBar
@@ -50,8 +57,8 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Bottom Left Channel Info Card (shown for 3.5s on channel change) -->
-    <LinearLayout
+    <!-- Bottom Left Floating Glass Capsule (shown for 3.5s on channel change) -->
+    <eightbitlab.com.blurview.BlurView
         android:id="@+id/channel_info_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,107 +66,112 @@
         android:layout_marginStart="56dp"
         android:layout_marginBottom="48dp"
         android:background="@drawable/banner_background"
-        android:orientation="horizontal"
-        android:paddingStart="24dp"
-        android:paddingTop="20dp"
-        android:paddingEnd="32dp"
-        android:paddingBottom="20dp"
         android:elevation="8dp">
-
-        <!-- Channel Logo -->
-        <ImageView
-            android:id="@+id/channel_logo"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="20dp"
-            android:background="#262626"
-            android:contentDescription="Channel Logo"
-            android:scaleType="fitCenter"
-            android:visibility="gone" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:paddingStart="22dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="18dp">
+
+            <!-- Channel Logo -->
+            <ImageView
+                android:id="@+id/channel_logo"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="18dp"
+                android:background="#262626"
+                android:contentDescription="Channel Logo"
+                android:scaleType="fitCenter"
+                android:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/channel_badge"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/badge_background"
-                    android:paddingStart="12dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="4dp"
-                    android:text="CH 1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/channel_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/badge_background"
+                        android:paddingStart="12dp"
+                        android:paddingTop="3dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="3dp"
+                        android:text="CH 1"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/channel_new_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="#1565C0"
+                        android:paddingStart="9dp"
+                        android:paddingTop="3dp"
+                        android:paddingEnd="9dp"
+                        android:paddingBottom="3dp"
+                        android:text="NEW"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/channel_favorite_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="★ FAVORITE"
+                        android:textColor="#FFD700"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/channel_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:text="PUNJABI LIVE"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/channel_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="PTC Simran"
                     android:textColor="@color/text_primary"
-                    android:textSize="20sp"
+                    android:textSize="32sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/channel_new_badge"
+                    android:id="@+id/remote_hints"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:background="#1565C0"
-                    android:paddingStart="10dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="4dp"
-                    android:text="NEW"
-                    android:textColor="@color/text_primary"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/channel_favorite_indicator"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="★ FAVORITE"
-                    android:textColor="#FFD700"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/channel_category"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="14dp"
-                    android:text="PUNJABI LIVE"
+                    android:layout_marginTop="6dp"
+                    android:text="▲▼ Change Channel  •  ◀ Channels Drawer  •  ☰ Options"
                     android:textColor="@color/text_secondary"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="16sp" />
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/channel_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="PTC Simran"
-                android:textColor="@color/text_primary"
-                android:textSize="34sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/remote_hints"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="▲▼ Change Channel  •  ◀ Channels Drawer  •  ☰ Options"
-                android:textColor="@color/text_secondary"
-                android:textSize="18sp" />
         </LinearLayout>
-    </LinearLayout>
+    </eightbitlab.com.blurview.BlurView>
 
     <!-- Error Banner Card (shown when all stream links fail) -->
     <LinearLayout
@@ -203,7 +215,7 @@
     </LinearLayout>
 
     <!-- ======================================================== -->
-    <!-- LEFT FROSTED GLASS CHANNEL DRAWER (450dp, Apple Liquid Glass) -->
+    <!-- LEFT GLASSMORPHISM CHANNEL DRAWER (500dp, 2-Pane UX)     -->
     <!-- ======================================================== -->
     <FrameLayout
         android:id="@+id/channel_menu_container"
@@ -214,160 +226,167 @@
         android:focusable="false"
         android:visibility="gone">
 
-        <!-- 450dp Frosted Glass Drawer -->
-        <LinearLayout
+        <!-- 500dp Frosted Glass Drawer with real BlurView -->
+        <eightbitlab.com.blurview.BlurView
             android:id="@+id/channel_drawer"
-            android:layout_width="450dp"
+            android:layout_width="500dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="@drawable/glass_drawer_background"
             android:clickable="true"
-            android:focusable="false"
-            android:orientation="vertical"
-            android:paddingStart="20dp"
-            android:paddingTop="22dp"
-            android:paddingEnd="16dp"
-            android:paddingBottom="16dp">
+            android:focusable="false">
 
-            <!-- Top Header Row -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="14dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/badge_background"
-                    android:paddingStart="12dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="4dp"
-                    android:text="LIVE"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:text="Channels"
-                    android:textColor="@color/text_primary"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <!-- Reorder Button -->
-                <TextView
-                    android:id="@+id/btn_edit_order"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/pill_focus_selector"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:paddingStart="12dp"
-                    android:paddingTop="6dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="6dp"
-                    android:text="↕ Order"
-                    android:textColor="@color/text_primary"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <!-- Hidden bindings to preserve compatibility with existing code -->
-                <TextView
-                    android:id="@+id/btn_aspect_ratio"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/btn_toggle_view"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:visibility="gone" />
-            </LinearLayout>
-
-            <!-- Search Input Box -->
-            <EditText
-                android:id="@+id/search_input"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/search_box_background"
-                android:hint="🔍 Search channels..."
-                android:imeOptions="actionSearch"
-                android:inputType="text"
-                android:maxLines="1"
-                android:paddingStart="14dp"
-                android:paddingEnd="14dp"
-                android:textColor="@color/text_primary"
-                android:textColorHint="#949CB2"
-                android:textSize="16sp"
-                android:nextFocusDown="@+id/category_recycler_view" />
-
-            <!-- Reorder Mode Instructions Banner -->
-            <TextView
-                android:id="@+id/reorder_mode_banner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="#2E7D32"
-                android:gravity="center"
-                android:paddingTop="6dp"
-                android:paddingBottom="6dp"
-                android:text="↕ REORDER MODE: OK to grab, ▲/▼ to move"
-                android:textColor="@color/text_primary"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                android:visibility="gone" />
-
-            <!-- Category / Language Tabs -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/category_recycler_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:orientation="horizontal" />
-
-            <!-- Channels Vertical List inside Drawer -->
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/channels_recycler_view"
+                <!-- Header Row -->
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:clipToPadding="false"
-                    android:paddingBottom="8dp" />
-
-                <!-- Empty Search Results Text -->
-                <TextView
-                    android:id="@+id/empty_message"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="No channels found"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="18sp"
-                    android:visibility="gone" />
-            </FrameLayout>
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-            <!-- Remote Key Hints Footer -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:gravity="center"
-                android:text="▶ / BACK Close  •  OK Watch  •  Hold OK ★"
-                android:textColor="@color/text_tertiary"
-                android:textSize="13sp" />
-        </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/badge_background"
+                        android:paddingStart="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="3dp"
+                        android:text="LIVE TV"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/drawer_header_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="Channels"
+                        android:textColor="@color/text_primary"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/btn_drawer_options"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pill_focus_selector"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingStart="12dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="5dp"
+                        android:text="☰ Options"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Dummy views to preserve data binding compatibility -->
+                    <TextView
+                        android:id="@+id/btn_edit_order"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/btn_aspect_ratio"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/btn_toggle_view"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/search_input"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/reorder_mode_banner"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- 2-Pane Content: Categories on Left (135dp), Channels on Right -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <!-- Pane 1: Category Rail -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/category_recycler_view"
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="4dp" />
+
+                    <!-- Vertical Divider Line -->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="#20FFFFFF" />
+
+                    <!-- Pane 2: Channels Vertical List -->
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/channels_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clipToPadding="false"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="6dp" />
+
+                        <!-- Empty Channels Message -->
+                        <TextView
+                            android:id="@+id/empty_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="No channels found"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- Navigation Hint Footer -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="◀ Categories  •  ▶ Video  •  OK Watch  •  Hold OK ★"
+                    android:textColor="@color/text_tertiary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </eightbitlab.com.blurview.BlurView>
     </FrameLayout>
 
     <!-- ======================================================== -->

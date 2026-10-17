@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Focused: Luminous White Glass with subtle specular glow -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="14dp" />
+            <solid android:color="#FFFFFF" />
+            <stroke android:width="1.5dp" android:color="#FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- Selected Category (when focus is in channel list): Frosted Glass with Red Brand Accent Border -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="14dp" />
+            <solid android:color="#38FFFFFF" />
+            <stroke android:width="1.8dp" android:color="#E53935" />
+        </shape>
+    </item>
+
+    <!-- Normal: Translucent Glass Capsule -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="14dp" />
+            <solid android:color="#14FFFFFF" />
+            <stroke android:width="1dp" android:color="#20FFFFFF" />
+        </shape>
+    </item>
+</selector>

@@ -30,6 +30,8 @@ class CategoryTabAdapter(
         notifyItemChanged(selectedIndex)
     }
 
+    fun getSelectedIndex(): Int = selectedIndex
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TabViewHolder {
         val binding = ItemCategoryTabBinding.inflate(
             LayoutInflater.from(parent.context), parent, false

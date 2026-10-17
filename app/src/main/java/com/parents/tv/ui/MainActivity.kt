@@ -121,6 +121,23 @@ class MainActivity : AppCompatActivity() {
             preferences.lastChannelIndex.coerceIn(0, (channelList.size - 1).coerceAtLeast(0))
         }
 
+        // Setup dynamic real-time Glassmorphism with BlurView
+        try {
+            val blurRadius = 16f
+            val overlayColor = android.graphics.Color.parseColor("#330F1322")
+            binding.channelDrawer.setupWith(binding.blurTarget)
+                .setBlurRadius(blurRadius)
+                .setOverlayColor(overlayColor)
+                .setBlurAutoUpdate(true)
+
+            binding.channelInfoCard.setupWith(binding.blurTarget)
+                .setBlurRadius(12f)
+                .setOverlayColor(overlayColor)
+                .setBlurAutoUpdate(true)
+        } catch (e: Throwable) {
+            android.util.Log.w("MainActivity", "BlurView setup skipped", e)
+        }
+
         // Setup the Channel Menu & Grid Overlay
         setupChannelMenu()
 
@@ -195,18 +212,23 @@ class MainActivity : AppCompatActivity() {
             // Consume click on drawer itself
         }
 
-        // Category Tabs Setup
+        // Options button in drawer header
+        binding.btnDrawerOptions.setOnClickListener {
+            hideChannelMenu()
+            showQuickOptionsDialog()
+        }
+
+        // Category Tabs Setup (Vertical Left Rail)
         categoryTabAdapter = CategoryTabAdapter(
             tabs = emptyList(),
             selectedIndex = 0,
             onTabClick = { tab, _ ->
                 activeCategoryTabId = tab.id
-                binding.searchInput.setText("")
                 loadChannelsForActiveTab()
             }
         )
         binding.categoryRecyclerView.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.categoryRecyclerView.adapter = categoryTabAdapter
         refreshCategoryTabs()
 
@@ -483,6 +505,9 @@ class MainActivity : AppCompatActivity() {
         val slideIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_left)
         binding.channelDrawer.startAnimation(slideIn)
 
+        val currentCh = channelList.getOrNull(currentChannelIndex)
+        channelAdapter.setCurrentPlayingChannelId(currentCh?.id)
+
         if (focusSearch) {
             binding.searchInput.requestFocus()
             val imm = getSystemService(INPUT_METHOD_SERVICE) as? InputMethodManager
@@ -490,9 +515,8 @@ class MainActivity : AppCompatActivity() {
         } else {
             // Smoothly focus the current playing channel or the first channel tile
             binding.channelsRecyclerView.post {
-                val currentCh = channelList.getOrNull(currentChannelIndex)
                 val targetPos = if (currentCh != null) {
-                    val pos = channelList.indexOfFirst { it.id == currentCh.id }
+                    val pos = channelAdapter.getChannels().indexOfFirst { it.id == currentCh.id }
                     if (pos >= 0) pos else 0
                 } else 0
                 binding.channelsRecyclerView.scrollToPosition(targetPos)
@@ -561,6 +585,9 @@ class MainActivity : AppCompatActivity() {
         preferences.lastChannelId = channel.id
         preferences.lastChannelIndex = currentChannelIndex
         preferences.recordRecentChannel(channel.id)
+
+        // Mark active playing channel in drawer
+        channelAdapter.setCurrentPlayingChannelId(channel.id)
 
         // Apply saved individual aspect ratio for this channel
         val chAspectRatio = preferences.getChannelAspectRatio(channel.id)
@@ -898,20 +925,42 @@ class MainActivity : AppCompatActivity() {
                     hideChannelMenu()
                     return true
                 }
+                if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT) {
+                    val focused = currentFocus
+                    // If focus is in channels list, shift focus left to active category in rail
+                    if (focused != null && isViewDescendantOf(focused, binding.channelsRecyclerView)) {
+                        val selIdx = categoryTabAdapter.getSelectedIndex()
+                        val vh = binding.categoryRecyclerView.findViewHolderForAdapterPosition(selIdx)
+                        if (vh != null) {
+                            vh.itemView.requestFocus()
+                        } else {
+                            binding.categoryRecyclerView.findViewHolderForAdapterPosition(0)?.itemView?.requestFocus()
+                                ?: binding.categoryRecyclerView.requestFocus()
+                        }
+                        return true
+                    }
+                    if (focused != null && isViewDescendantOf(focused, binding.categoryRecyclerView)) {
+                        return true
+                    }
+                }
                 if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
                     val focused = currentFocus
-                    val inTabs = focused != null && isViewDescendantOf(focused, binding.categoryRecyclerView)
-                    if (inTabs) {
-                        val nextRight = focused?.focusSearch(View.FOCUS_RIGHT)
-                        if (nextRight != null && isViewDescendantOf(nextRight, binding.categoryRecyclerView)) {
-                            return super.dispatchKeyEvent(event)
+                    // If focus is in category rail, shift focus right to channel list
+                    if (focused != null && isViewDescendantOf(focused, binding.categoryRecyclerView)) {
+                        val vh = binding.channelsRecyclerView.findViewHolderForAdapterPosition(0)
+                        if (vh != null) {
+                            vh.itemView.requestFocus()
+                        } else {
+                            binding.channelsRecyclerView.requestFocus()
                         }
+                        return true
                     }
                     // Pressing RIGHT dismisses the drawer and returns to full video
                     hideChannelMenu()
                     return true
                 }
                 if (keyCode == KeyEvent.KEYCODE_MENU) {
+                    hideChannelMenu()
                     showQuickOptionsDialog()
                     return true
                 }
