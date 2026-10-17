@@ -221,7 +221,7 @@
         android:id="@+id/channel_menu_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/glass_scrim"
+        android:background="@drawable/glass_scrim_gradient"
         android:clickable="true"
         android:focusable="false"
         android:visibility="gone">

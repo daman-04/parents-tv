@@ -161,7 +161,7 @@ class ChannelAdapter(
 
             val isFocused = binding.cardRoot.hasFocus()
             binding.cardName.setTextColor(if (isFocused) 0xFF0C0E17.toInt() else 0xFFFFFFFF.toInt())
-            binding.cardChannelCategory.setTextColor(if (isFocused) 0xFF4A526A.toInt() else 0xFFA2A8BE.toInt())
+            binding.cardChannelCategory.setTextColor(if (isFocused) 0xFF334155.toInt() else 0xFFCBD5E1.toInt())
 
             if (!channel.logo.isNullOrEmpty()) {
                 binding.cardLogo.visibility = View.VISIBLE
@@ -178,11 +178,11 @@ class ChannelAdapter(
                 if (hasFocus) {
                     view.animate().scaleX(1.02f).scaleY(1.02f).setDuration(80).start()
                     binding.cardName.setTextColor(0xFF0C0E17.toInt())
-                    binding.cardChannelCategory.setTextColor(0xFF4A526A.toInt())
+                    binding.cardChannelCategory.setTextColor(0xFF334155.toInt())
                 } else {
                     view.animate().scaleX(1.0f).scaleY(1.0f).setDuration(80).start()
                     binding.cardName.setTextColor(0xFFFFFFFF.toInt())
-                    binding.cardChannelCategory.setTextColor(0xFFA2A8BE.toInt())
+                    binding.cardChannelCategory.setTextColor(0xFFCBD5E1.toInt())
                 }
             }
         }

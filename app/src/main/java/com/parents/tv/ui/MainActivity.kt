@@ -123,15 +123,15 @@ class MainActivity : AppCompatActivity() {
 
         // Setup dynamic real-time Glassmorphism with BlurView
         try {
-            val blurRadius = 16f
-            val overlayColor = android.graphics.Color.parseColor("#330F1322")
+            val blurRadius = 24f
+            val overlayColor = android.graphics.Color.parseColor("#4D0A0E1A")
             binding.channelDrawer.setupWith(binding.blurTarget)
                 .setBlurRadius(blurRadius)
                 .setOverlayColor(overlayColor)
                 .setBlurAutoUpdate(true)
 
             binding.channelInfoCard.setupWith(binding.blurTarget)
-                .setBlurRadius(12f)
+                .setBlurRadius(16f)
                 .setOverlayColor(overlayColor)
                 .setBlurAutoUpdate(true)
         } catch (e: Throwable) {
