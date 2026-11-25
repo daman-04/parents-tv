@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-24T12:03:00.954966+00:00",
+  "generated": "2026-11-25T10:55:23.761012+00:00",
   "default_channel": "PTCSimran.in",
-  "total_channels": 1549,
+  "total_channels": 1567,
   "sections": [
     {
       "id": "punjabi",
@@ -261,8 +261,8 @@
           "logo": "https://i.imgur.com/K81vNbk.png",
           "category": "Religious",
           "languages": [
-            "pan",
-            "eng"
+            "eng",
+            "pan"
           ],
           "is_punjabi": true,
           "streams": [
@@ -594,9 +594,9 @@
           "logo": "https://i.imgur.com/xNCDWHR.png",
           "category": "General",
           "languages": [
+            "eng",
             "hin",
-            "pan",
-            "eng"
+            "pan"
           ],
           "is_punjabi": true,
           "streams": [
@@ -653,8 +653,8 @@
           "logo": "https://i.imgur.com/2TqlNsI.png",
           "category": "Entertainment",
           "languages": [
-            "pan",
-            "urd"
+            "urd",
+            "pan"
           ],
           "is_punjabi": true,
           "streams": [
@@ -765,13 +765,13 @@
           "logo": "https://i.imgur.com/EO6cYUI.png",
           "category": "Religious",
           "languages": [
-            "eng",
-            "hin",
-            "zho",
-            "tgl",
+            "pan",
             "urd",
+            "hin",
             "ara",
-            "pan"
+            "tgl",
+            "eng",
+            "zho"
           ],
           "is_punjabi": true,
           "streams": [
@@ -1019,6 +1019,25 @@
           ]
         },
         {
+          "id": "MoviePunjab.in",
+          "name": "Movie Punjab",
+          "logo": "https://papaji.freetvindia.com/media/900_FreeTV_Movie_punjab.png",
+          "category": "Movies",
+          "languages": [
+            "pan"
+          ],
+          "is_punjabi": true,
+          "streams": [
+            {
+              "url": "https://mumt01.tangotv.in/O5aw8Zn3MOVIEPUNJAB/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Movie Punjab"
+          ]
+        },
+        {
           "id": "NamdhariTV.in",
           "name": "Namdhari TV",
           "logo": "https://i.imgur.com/NalsXTo.png",
@@ -1136,11 +1155,11 @@
           "logo": "https://i.imgur.com/V2jREQ5.png",
           "category": "General",
           "languages": [
+            "pan",
             "msa",
-            "eng",
-            "zho",
             "tam",
-            "pan"
+            "eng",
+            "zho"
           ],
           "is_punjabi": true,
           "streams": [
@@ -1664,9 +1683,9 @@
           "logo": "https://yt3.googleusercontent.com/ytc/APkrFKZYgQTsDhkbaqmPRCPZIf0UgZqF1wa6aG2eo8ti=s176-c-k-c0x00ffffff-no-rj-mo",
           "category": "Religious",
           "languages": [
-            "eng",
+            "urd",
             "pan",
-            "urd"
+            "eng"
           ],
           "is_punjabi": true,
           "streams": [
@@ -1696,25 +1715,6 @@
           ],
           "aliases": [
             "Jus Punjabi"
-          ]
-        },
-        {
-          "id": "MoviePunjab.in",
-          "name": "Movie Punjab",
-          "logo": "https://papaji.freetvindia.com/media/900_FreeTV_Movie_punjab.png",
-          "category": "Movies",
-          "languages": [
-            "pan"
-          ],
-          "is_punjabi": true,
-          "streams": [
-            {
-              "url": "https://mumt01.tangotv.in/O5aw8Zn3MOVIEPUNJAB/index.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Movie Punjab"
           ]
         },
         {
@@ -1786,8 +1786,8 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1/images/LOGO_HD/image.png",
           "category": "Sports",
           "languages": [
-            "kan",
-            "eng"
+            "eng",
+            "kan"
           ],
           "is_punjabi": false,
           "streams": [
@@ -1812,8 +1812,8 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_1_HD/images/LOGO_HD/image.png",
           "category": "Sports",
           "languages": [
-            "mal",
-            "eng"
+            "eng",
+            "mal"
           ],
           "is_punjabi": false,
           "streams": [
@@ -1890,14 +1890,14 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DD_SPORTS/images/LOGO_HD/image.png",
           "category": "Sports",
           "languages": [
+            "tel",
             "kan",
-            "eng",
-            "hin",
             "sgn",
+            "ben",
+            "hin",
             "tam",
             "bho",
-            "ben",
-            "tel"
+            "eng"
           ],
           "is_punjabi": false,
           "streams": [
@@ -1943,10 +1943,10 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_2/images/LOGO_HD/image.png",
           "category": "Sports",
           "languages": [
+            "eng",
             "hin",
-            "tel",
             "tam",
-            "eng"
+            "tel"
           ],
           "is_punjabi": false,
           "streams": [
@@ -1973,10 +1973,10 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_SELECT_1/images/LOGO_HD/image.png",
           "category": "Sports",
           "languages": [
+            "eng",
             "hin",
             "mal",
-            "ben",
-            "eng"
+            "ben"
           ],
           "is_punjabi": false,
           "streams": [
@@ -2035,9 +2035,9 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_5_HD/images/LOGO_HD/image.png",
           "category": "Sports",
           "languages": [
-            "ben",
+            "eng",
             "mal",
-            "eng"
+            "ben"
           ],
           "is_punjabi": false,
           "streams": [
@@ -2319,8 +2319,8 @@
           "logo": "https://images.pluto.tv/channels/685029cda1e091e16ff57fc8/colorLogoPNG_1750246109707.png",
           "category": "Sports",
           "languages": [
-            "dan",
-            "eng"
+            "eng",
+            "dan"
           ],
           "is_punjabi": false,
           "streams": [
@@ -2385,8 +2385,8 @@
           "logo": "https://i.imgur.com/DiIei9F.png",
           "category": "Sports",
           "languages": [
-            "fra",
-            "eng"
+            "eng",
+            "fra"
           ],
           "is_punjabi": false,
           "streams": [
@@ -2433,8 +2433,8 @@
           "category": "Sports",
           "languages": [
             "nld",
-            "fra",
             "por",
+            "fra",
             "eng"
           ],
           "is_punjabi": false,
@@ -2552,6 +2552,10 @@
             },
             {
               "url": "http://212.5.144.156:8080/espn/index.m3u8",
+              "status": "working"
+            },
+            {
+              "url": "http://tvsen7.aynascope.net/espn/index.m3u8",
               "status": "unverified"
             }
           ],
@@ -2752,26 +2756,26 @@
           "logo": "https://i.imgur.com/olQJgm7.png",
           "category": "Sports",
           "languages": [
-            "rom",
-            "spa",
-            "deu",
-            "ces",
-            "srp",
-            "pol",
-            "por",
-            "hun",
-            "ukr",
-            "bul",
-            "fra",
-            "dan",
-            "rus",
             "fin",
+            "bul",
             "ell",
-            "ita",
+            "hun",
+            "tur",
             "slv",
-            "eng",
             "nld",
-            "tur"
+            "rus",
+            "ita",
+            "ces",
+            "fra",
+            "pol",
+            "deu",
+            "spa",
+            "srp",
+            "dan",
+            "por",
+            "eng",
+            "rom",
+            "ukr"
           ],
           "is_punjabi": false,
           "streams": [
@@ -2798,26 +2802,26 @@
           "logo": "https://i.imgur.com/f56dHgR.png",
           "category": "Sports",
           "languages": [
-            "rom",
-            "spa",
-            "deu",
-            "ces",
-            "pol",
-            "por",
-            "hun",
-            "ukr",
-            "bul",
-            "fra",
-            "dan",
-            "rus",
             "fin",
+            "bul",
             "ell",
-            "srb",
-            "ita",
+            "hun",
+            "tur",
             "slv",
-            "eng",
             "nld",
-            "tur"
+            "rus",
+            "ita",
+            "ces",
+            "srb",
+            "fra",
+            "pol",
+            "deu",
+            "spa",
+            "dan",
+            "por",
+            "eng",
+            "rom",
+            "ukr"
           ],
           "is_punjabi": false,
           "streams": [
@@ -2836,29 +2840,6 @@
           ],
           "aliases": [
             "Eurosport 2"
-          ]
-        },
-        {
-          "id": "Eurosport4K.fr",
-          "name": "Eurosport 4K",
-          "logo": "https://i.imgur.com/0o3zjC7.png",
-          "category": "Sports",
-          "languages": [
-            "slv",
-            "eng",
-            "fra",
-            "ron",
-            "rus"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://vip-acasatv.online:25463/lrZuGxAuP3/6782859900/5449.m3u8",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "Eurosport 4K"
           ]
         },
         {
@@ -2905,8 +2886,8 @@
           "logo": "https://i.imgur.com/qBVqtYd.png",
           "category": "Sports",
           "languages": [
-            "tur",
-            "eng"
+            "eng",
+            "tur"
           ],
           "is_punjabi": false,
           "streams": [
@@ -2925,8 +2906,8 @@
           "logo": "https://images.pluto.tv/channels/68ac5403de4a734954b5ab75/colorLogoPNG_1756124331035.png",
           "category": "Sports",
           "languages": [
-            "dan",
-            "eng"
+            "eng",
+            "dan"
           ],
           "is_punjabi": false,
           "streams": [
@@ -2946,11 +2927,11 @@
           "category": "Sports",
           "languages": [
             "deu",
+            "spa",
+            "por",
             "ita",
             "eng",
-            "fra",
-            "por",
-            "spa"
+            "fra"
           ],
           "is_punjabi": false,
           "streams": [
@@ -3115,8 +3096,8 @@
           "logo": "https://i.imgur.com/mRsnztA.png",
           "category": "Sports",
           "languages": [
-            "pol",
-            "eng"
+            "eng",
+            "pol"
           ],
           "is_punjabi": false,
           "streams": [
@@ -3200,8 +3181,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/FOX_Deportes_logo.png/960px-FOX_Deportes_logo.png",
           "category": "Sports",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -3262,9 +3243,9 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Fubo_Sports_Network_2023_Logo.webp/960px-Fubo_Sports_Network_2023_Logo.webp.png",
           "category": "Sports",
           "languages": [
-            "spa",
+            "eng",
             "zho",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -3306,8 +3287,8 @@
           "logo": "https://i.imgur.com/tS7Ub7i.png",
           "category": "Sports",
           "languages": [
-            "deu",
-            "eng"
+            "eng",
+            "deu"
           ],
           "is_punjabi": false,
           "streams": [
@@ -3356,6 +3337,33 @@
           ],
           "aliases": [
             "Golf Channel"
+          ]
+        },
+        {
+          "id": "GolfChannelLatinAmerica.us",
+          "name": "Golf Channel Latin America",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golf_Channel_Logo_2018.png/960px-Golf_Channel_Logo_2018.png",
+          "category": "Sports",
+          "languages": [
+            "spa"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "http://15.204.246.24:8080/GolfChannelHD/index.m3u8",
+              "status": "working"
+            },
+            {
+              "url": "http://72.1.184.5:8089/play/a0cw/index.m3u8",
+              "status": "unverified"
+            },
+            {
+              "url": "http://143.14.178.35/TCM-HD/index.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "Golf Channel Latin America"
           ]
         },
         {
@@ -3425,8 +3433,8 @@
           "logo": "https://i.imgur.com/R1hGX1d.png",
           "category": "Sports",
           "languages": [
-            "ara",
-            "eng"
+            "eng",
+            "ara"
           ],
           "is_punjabi": false,
           "streams": [
@@ -3464,8 +3472,8 @@
           "logo": "https://i.imgur.com/M1Ee79b.png",
           "category": "Sports",
           "languages": [
-            "fra",
-            "eng"
+            "eng",
+            "fra"
           ],
           "is_punjabi": false,
           "streams": [
@@ -3526,8 +3534,8 @@
           "logo": "https://i.imgur.com/QhdxNsB.png",
           "category": "Sports",
           "languages": [
-            "rus",
-            "eng"
+            "eng",
+            "rus"
           ],
           "is_punjabi": false,
           "streams": [
@@ -3632,12 +3640,12 @@
               "status": "working"
             },
             {
-              "url": "https://amg00556-amg00556c3-firetv-us-6060.playouts.now.amagi.tv/playlist.m3u8",
+              "url": "http://rezofoot.tv/NBATV/index.m3u8",
               "status": "working"
             },
             {
-              "url": "http://rezofoot.tv/NBATV/index.m3u8",
-              "status": "unverified"
+              "url": "https://amg00556-amg00556c3-firetv-us-6060.playouts.now.amagi.tv/playlist.m3u8",
+              "status": "working"
             }
           ],
           "aliases": [
@@ -3714,6 +3722,25 @@
           ]
         },
         {
+          "id": "NHLAntenaPlay.ro",
+          "name": "NHL AntenaPlay",
+          "logo": "https://assets.antenaplay.ro/2024/10/25/SN0nevshXwKDcZ2Tw1jm.png",
+          "category": "Sports",
+          "languages": [
+            "eng"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://stream1.antenaplay.ro/promo/nhl-2911/chunklist.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "NHL AntenaPlay"
+          ]
+        },
+        {
           "id": "NHLNetwork.us",
           "name": "NHL Network",
           "logo": "https://i.imgur.com/UNZ8bef.png",
@@ -3761,16 +3788,12 @@
           "logo": "https://i.imgur.com/2ByDyzL.png",
           "category": "Sports",
           "languages": [
+            "eng",
             "fra",
-            "ita",
-            "eng"
+            "ita"
           ],
           "is_punjabi": false,
           "streams": [
-            {
-              "url": "https://cdn78-at.azotosolutions.com/cdnedge39/Canale2/master.m3u8",
-              "status": "working"
-            },
             {
               "url": "https://a-cdn.klowdtv.com/live2/nautical_720p/playlist.m3u8",
               "status": "working"
@@ -3778,6 +3801,10 @@
             {
               "url": "https://streams2.sofast.tv/vglive-sk-231198/index.m3u8",
               "status": "working"
+            },
+            {
+              "url": "https://cdn78-at.azotosolutions.com/cdnedge39/Canale2/master.m3u8",
+              "status": "unverified"
             }
           ],
           "aliases": [
@@ -3790,8 +3817,8 @@
           "logo": "https://i.imgur.com/1omi7p8.png",
           "category": "Sports",
           "languages": [
-            "ara",
-            "eng"
+            "eng",
+            "ara"
           ],
           "is_punjabi": false,
           "streams": [
@@ -4051,8 +4078,8 @@
           "logo": "https://images.pluto.tv/channels/68dfa3e2cc3c6cd904052c41/colorLogoPNG_1761838923264.png",
           "category": "Sports",
           "languages": [
-            "swe",
-            "eng"
+            "eng",
+            "swe"
           ],
           "is_punjabi": false,
           "streams": [
@@ -4071,8 +4098,8 @@
           "logo": "https://images.pluto.tv/channels/686faf533ffa5e0c912688e7/colorLogoPNG_1762169254016.png",
           "category": "Sports",
           "languages": [
-            "swe",
-            "eng"
+            "eng",
+            "swe"
           ],
           "is_punjabi": false,
           "streams": [
@@ -4091,11 +4118,11 @@
           "logo": "https://images.pluto.tv/channels/68ac55bb3efb41cd979a65ec/colorLogoPNG_1760517441951.png",
           "category": "Sports",
           "languages": [
-            "eng",
             "swe",
-            "dan",
             "fin",
-            "nor"
+            "dan",
+            "nor",
+            "eng"
           ],
           "is_punjabi": false,
           "streams": [
@@ -4141,10 +4168,10 @@
           "logo": "https://images.pluto.tv/channels/6357f3de3643ba0007bc0b50/colorLogoPNG_1746816938506.png",
           "category": "Sports",
           "languages": [
+            "eng",
             "dan",
-            "nor",
             "swe",
-            "eng"
+            "nor"
           ],
           "is_punjabi": false,
           "streams": [
@@ -4328,8 +4355,8 @@
           "logo": "https://i.imgur.com/5pMo7dL.png",
           "category": "Sports",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -4352,10 +4379,10 @@
           "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Red_Bull_TV.png",
           "category": "Sports",
           "languages": [
-            "spa",
-            "deu",
+            "eng",
             "por",
-            "eng"
+            "deu",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -4397,8 +4424,8 @@
           "logo": "https://i.imgur.com/ZtoZQUV.png",
           "category": "Sports",
           "languages": [
-            "kat",
-            "eng"
+            "eng",
+            "kat"
           ],
           "is_punjabi": false,
           "streams": [
@@ -4509,8 +4536,8 @@
           "logo": "https://i.imgur.com/bVQBF6R.png",
           "category": "Sports",
           "languages": [
-            "deu",
-            "eng"
+            "eng",
+            "deu"
           ],
           "is_punjabi": false,
           "streams": [
@@ -4858,9 +4885,9 @@
           "logo": "https://i.imgur.com/FabFP5A.png",
           "category": "Sports",
           "languages": [
+            "eng",
             "fra",
-            "rus",
-            "eng"
+            "rus"
           ],
           "is_punjabi": false,
           "streams": [
@@ -4941,6 +4968,14 @@
             {
               "url": "https://tvsen5.aynaott.com/willowhd/index.m3u8",
               "status": "working"
+            },
+            {
+              "url": "http://tvsen5.aynascope.net/willowhd/index.m3u8",
+              "status": "unverified"
+            },
+            {
+              "url": "http://tvsen7.aynascope.net/rEBp38Ax/index.m3u8",
+              "status": "unverified"
             }
           ],
           "aliases": [
@@ -5008,10 +5043,10 @@
           "category": "Sports",
           "languages": [
             "deu",
+            "spa",
             "ita",
             "eng",
-            "fra",
-            "spa"
+            "fra"
           ],
           "is_punjabi": false,
           "streams": [
@@ -5084,8 +5119,8 @@
           "logo": "https://i.imgur.com/V562tpO.png",
           "category": "Sports",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -5151,9 +5186,9 @@
           "category": "Sports",
           "languages": [
             "nld",
+            "eng",
             "fra",
-            "por",
-            "eng"
+            "por"
           ],
           "is_punjabi": false,
           "streams": [
@@ -5173,9 +5208,9 @@
           "category": "Sports",
           "languages": [
             "nld",
+            "eng",
             "fra",
-            "por",
-            "eng"
+            "por"
           ],
           "is_punjabi": false,
           "streams": [
@@ -5334,6 +5369,29 @@
           ]
         },
         {
+          "id": "Eurosport4K.fr",
+          "name": "Eurosport 4K",
+          "logo": "https://i.imgur.com/0o3zjC7.png",
+          "category": "Sports",
+          "languages": [
+            "slv",
+            "ron",
+            "rus",
+            "eng",
+            "fra"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://vip-acasatv.online:25463/lrZuGxAuP3/6782859900/5449.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "Eurosport 4K"
+          ]
+        },
+        {
           "id": "FoxSports2.us",
           "name": "Fox Sports 2",
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/FS2_logo_2015.svg/960px-FS2_logo_2015.svg.png",
@@ -5353,33 +5411,6 @@
           ]
         },
         {
-          "id": "GolfChannelLatinAmerica.us",
-          "name": "Golf Channel Latin America",
-          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golf_Channel_Logo_2018.png/960px-Golf_Channel_Logo_2018.png",
-          "category": "Sports",
-          "languages": [
-            "spa"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "http://15.204.246.24:8080/GolfChannelHD/index.m3u8",
-              "status": "unverified"
-            },
-            {
-              "url": "http://72.1.184.5:8089/play/a0cw/index.m3u8",
-              "status": "unverified"
-            },
-            {
-              "url": "http://143.14.178.35/TCM-HD/index.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Golf Channel Latin America"
-          ]
-        },
-        {
           "id": "MMATV.us",
           "name": "MMA TV",
           "logo": "https://i.imgur.com/Qxco1eW.png",
@@ -5396,25 +5427,6 @@
           ],
           "aliases": [
             "MMA TV"
-          ]
-        },
-        {
-          "id": "NHLAntenaPlay.ro",
-          "name": "NHL AntenaPlay",
-          "logo": "https://assets.antenaplay.ro/2024/10/25/SN0nevshXwKDcZ2Tw1jm.png",
-          "category": "Sports",
-          "languages": [
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://stream1.antenaplay.ro/promo/nhl-12-1411/chunklist.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "NHL AntenaPlay"
           ]
         },
         {
@@ -5461,8 +5473,8 @@
           "logo": "https://i.imgur.com/2jIItAy.png",
           "category": "Sports",
           "languages": [
-            "tur",
-            "eng"
+            "eng",
+            "tur"
           ],
           "is_punjabi": false,
           "streams": [
@@ -5500,8 +5512,8 @@
           "logo": "https://scontent.flwo7-1.fna.fbcdn.net/v/t39.30808-6/364716463_853281776306116_3365262792418742642_n.jpg?stp=dst-webp_p843x403_q70&_nc_cat=109&ccb=1-7&_nc_sid=cc3e7e&_nc_ohc=cdryMbRE2MwQ7kNvwFeyihF&_nc_oc=Adqncj9xKrtg2aNKgZmuX6LGZlSfpAmh_HQEEkBciEg1tXwQqFuMtohNjM8-Z8hU_Ho&_nc_zt=23&_nc_ht=scontent.flwo7-1.fna&_nc_gid=nGCZSHk6GKFYzjwKY-aGWw&_nc_ss=7b289&oh=00_AQFswjCYfEBKcXRO2DpTL1Dz7arAN-82K47gi8qtwljzrw&oe=6A862750",
           "category": "Sports",
           "languages": [
-            "ukr",
-            "eng"
+            "eng",
+            "ukr"
           ],
           "is_punjabi": false,
           "streams": [
@@ -5520,8 +5532,8 @@
           "logo": "https://i.imgur.com/zlJK7ca.png",
           "category": "Sports",
           "languages": [
-            "rus",
-            "eng"
+            "eng",
+            "rus"
           ],
           "is_punjabi": false,
           "streams": [
@@ -5540,8 +5552,8 @@
           "logo": "https://i.imgur.com/ouHunnK.png",
           "category": "Sports",
           "languages": [
-            "rus",
-            "eng"
+            "eng",
+            "rus"
           ],
           "is_punjabi": false,
           "streams": [
@@ -5560,8 +5572,8 @@
           "logo": "https://i.imgur.com/CsEElsJ.png",
           "category": "Sports",
           "languages": [
-            "ara",
-            "eng"
+            "eng",
+            "ara"
           ],
           "is_punjabi": false,
           "streams": [
@@ -5808,9 +5820,9 @@
           "logo": "https://i.imgur.com/ORCu0w0.png",
           "category": "Sports",
           "languages": [
-            "kir",
+            "eng",
             "rus",
-            "eng"
+            "kir"
           ],
           "is_punjabi": false,
           "streams": [
@@ -5829,9 +5841,9 @@
           "logo": "https://i.imgur.com/aBY7QK4.png",
           "category": "Sports",
           "languages": [
-            "ukr",
+            "eng",
             "rus",
-            "eng"
+            "ukr"
           ],
           "is_punjabi": false,
           "streams": [
@@ -5983,8 +5995,8 @@
           "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpbjHW_j4DfsuAn4278ebtzhibMvY7KSOyow&s",
           "category": "Sports",
           "languages": [
-            "deu",
-            "eng"
+            "eng",
+            "deu"
           ],
           "is_punjabi": false,
           "streams": [
@@ -6004,10 +6016,10 @@
           "category": "Sports",
           "languages": [
             "msa",
+            "ara",
             "eng",
             "fra",
-            "tur",
-            "ara"
+            "tur"
           ],
           "is_punjabi": false,
           "streams": [
@@ -6382,8 +6394,8 @@
           "logo": null,
           "category": "News",
           "languages": [
-            "vie",
-            "eng"
+            "eng",
+            "vie"
           ],
           "is_punjabi": false,
           "streams": [
@@ -6459,8 +6471,8 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BHARAT_EXPRESS/images/LOGO_HD/image.png",
           "category": "News",
           "languages": [
-            "eng",
-            "urd"
+            "urd",
+            "eng"
           ],
           "is_punjabi": false,
           "streams": [
@@ -6933,12 +6945,12 @@
           "is_punjabi": false,
           "streams": [
             {
-              "url": "https://tvsen6.aynaott.com/cnn/index.m3u8",
+              "url": "http://212.5.144.156:8080/cnn/index.m3u8",
               "status": "working"
             },
             {
-              "url": "http://212.5.144.156:8080/cnn/index.m3u8",
-              "status": "unverified"
+              "url": "https://tvsen6.aynaott.com/cnn/index.m3u8",
+              "status": "working"
             },
             {
               "url": "https://p13.usnlive.com/stream/cnn.m3u8",
@@ -6974,9 +6986,9 @@
           "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/CNN-International-Logo.svg/960px-CNN-International-Logo.svg.png",
           "category": "News",
           "languages": [
+            "eng",
             "kor",
-            "spa",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -7252,11 +7264,15 @@
           "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD-Mizoram_2000_X_1125_transpharent.png",
           "category": "News",
           "languages": [
-            "lus",
-            "eng"
+            "eng",
+            "lus"
           ],
           "is_punjabi": false,
           "streams": [
+            {
+              "url": "https://fta.ektv.in/live/381/master.m3u8",
+              "status": "working"
+            },
             {
               "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/eea48c6b61074052a2fa8532ff795ff1/index.m3u8",
               "status": "working"
@@ -7291,9 +7307,9 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DD_URDU/images/LOGO_HD/image.png",
           "category": "General",
           "languages": [
+            "urd",
             "hin",
-            "eng",
-            "urd"
+            "eng"
           ],
           "is_punjabi": false,
           "streams": [
@@ -7404,8 +7420,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/HLN_%28TV_network%29_2017_logo.svg/960px-HLN_%28TV_network%29_2017_logo.svg.png",
           "category": "News",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -7424,8 +7440,8 @@
           "logo": "https://ibb.co/Ng5nkX6F",
           "category": "General",
           "languages": [
-            "hin",
-            "eng"
+            "eng",
+            "hin"
           ],
           "is_punjabi": false,
           "streams": [
@@ -7803,9 +7819,9 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOOD_TIMES/images/LOGO_HD/image.png",
           "category": "Lifestyle",
           "languages": [
+            "eng",
             "hin",
-            "tam",
-            "eng"
+            "tam"
           ],
           "is_punjabi": false,
           "streams": [
@@ -7859,9 +7875,9 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/NTD_Logo_with_symbol.svg/960px-NTD_Logo_with_symbol.svg.png",
           "category": "News",
           "languages": [
-            "zho",
+            "eng",
             "man",
-            "eng"
+            "zho"
           ],
           "is_punjabi": false,
           "streams": [
@@ -7888,9 +7904,9 @@
           "logo": "https://i.imgur.com/MfyRQCs.png",
           "category": "News",
           "languages": [
-            "spa",
+            "eng",
             "ara",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -7928,6 +7944,25 @@
           ],
           "aliases": [
             "News12 Bronx"
+          ]
+        },
+        {
+          "id": "News12Brooklyn.us",
+          "name": "News12 Brooklyn",
+          "logo": "https://i.imgur.com/fvcOzzK.png",
+          "category": "News",
+          "languages": [
+            "eng"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12KH_A1/index_new.m3u8?omap=https",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "News12 Brooklyn"
           ]
         },
         {
@@ -8027,6 +8062,44 @@
           ],
           "aliases": [
             "News12 Westchester"
+          ]
+        },
+        {
+          "id": "News12PlusConnecticut.us",
+          "name": "News12+ Connecticut",
+          "logo": "https://i.ibb.co/n8m2mcsV/news12plus-CT.jpg",
+          "category": "News",
+          "languages": [
+            "eng"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_CT_A1/index_new.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "News12+ Connecticut"
+          ]
+        },
+        {
+          "id": "News12PlusHudsonValley.us",
+          "name": "News12+ Hudson Valley",
+          "logo": "https://i.ibb.co/cKkdC203/news12plus-HV.jpg",
+          "category": "News",
+          "languages": [
+            "eng"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_WC_A1/index_new.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "News12+ Hudson Valley"
           ]
         },
         {
@@ -8258,8 +8331,8 @@
           "logo": "https://i.imgur.com/08ZUI9k.png",
           "category": "Comedy",
           "languages": [
-            "deu",
-            "eng"
+            "eng",
+            "deu"
           ],
           "is_punjabi": false,
           "streams": [
@@ -8278,8 +8351,8 @@
           "logo": "https://i.imgur.com/8m8gy0n.png",
           "category": "News",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -8398,8 +8471,8 @@
           "logo": "https://i.imgur.com/DG0x4UD.png",
           "category": "News",
           "languages": [
-            "gom",
-            "eng"
+            "eng",
+            "gom"
           ],
           "is_punjabi": false,
           "streams": [
@@ -8522,8 +8595,8 @@
           "logo": "https://i.imgur.com/8FZsNyK.png",
           "category": "News",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -8569,8 +8642,8 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SANSAD_TV_SYMHYP_1_HD/images/LOGO_HD/LOGO_HD_image.png",
           "category": "Legislative",
           "languages": [
-            "hin",
-            "eng"
+            "eng",
+            "hin"
           ],
           "is_punjabi": false,
           "streams": [
@@ -8597,8 +8670,8 @@
           "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/SANSAD2_HINDI_2000_X_1125_Transpharent.png",
           "category": "Legislative",
           "languages": [
-            "hin",
-            "eng"
+            "eng",
+            "hin"
           ],
           "is_punjabi": false,
           "streams": [
@@ -8862,12 +8935,12 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TRAVELXP/images/LOGO_HD/image.png",
           "category": "Travel",
           "languages": [
-            "ces",
-            "eng",
+            "ben",
             "hin",
-            "tam",
             "rus",
-            "ben"
+            "tam",
+            "ces",
+            "eng"
           ],
           "is_punjabi": false,
           "streams": [
@@ -9152,25 +9225,6 @@
           ]
         },
         {
-          "id": "News12Brooklyn.us",
-          "name": "News12 Brooklyn",
-          "logo": "https://i.imgur.com/fvcOzzK.png",
-          "category": "News",
-          "languages": [
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12KH_A1/index_new.m3u8?omap=https",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "News12 Brooklyn"
-          ]
-        },
-        {
           "id": "News12Conneticut.us",
           "name": "News12 Conneticut",
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png",
@@ -9187,44 +9241,6 @@
           ],
           "aliases": [
             "News12 Conneticut"
-          ]
-        },
-        {
-          "id": "News12PlusConnecticut.us",
-          "name": "News12+ Connecticut",
-          "logo": "https://i.ibb.co/n8m2mcsV/news12plus-CT.jpg",
-          "category": "News",
-          "languages": [
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_CT_A1/index_new.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "News12+ Connecticut"
-          ]
-        },
-        {
-          "id": "News12PlusHudsonValley.us",
-          "name": "News12+ Hudson Valley",
-          "logo": "https://i.ibb.co/cKkdC203/news12plus-HV.jpg",
-          "category": "News",
-          "languages": [
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_WC_A1/index_new.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "News12+ Hudson Valley"
           ]
         }
       ]
@@ -9323,25 +9339,6 @@
           ],
           "aliases": [
             "6 TV Telugu"
-          ]
-        },
-        {
-          "id": "9PlusNews.in",
-          "name": "9 Plus News",
-          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/9plusnews.png",
-          "category": "News",
-          "languages": [
-            "tel"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://stream.ottlive.co.in/9plusnews/index.m3u8",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "9 Plus News"
           ]
         },
         {
@@ -9504,8 +9501,8 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ABP_NEWS/images/LOGO_HD/image.png",
           "category": "News",
           "languages": [
-            "hin",
-            "eng"
+            "eng",
+            "hin"
           ],
           "is_punjabi": false,
           "streams": [
@@ -10104,6 +10101,10 @@
           "is_punjabi": false,
           "streams": [
             {
+              "url": "https://tvsen3.aynaott.com/m94BZDYb/index.m3u8",
+              "status": "working"
+            },
+            {
               "url": "https://idvd.multitvsolution.com/idvo/bharatsamachar.m3u8",
               "status": "working"
             },
@@ -10168,25 +10169,6 @@
           ],
           "aliases": [
             "Big TV 24x7"
-          ]
-        },
-        {
-          "id": "C10.in",
-          "name": "C-10",
-          "logo": "https://papaji.freetvindia.com/media/channels/C-10.png",
-          "category": "News",
-          "languages": [
-            "hin"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://samitaorigin.tangotv.in/C10/SAMITAORIGIN/index.m3u8",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "C-10"
           ]
         },
         {
@@ -12130,6 +12112,10 @@
             {
               "url": "https://mumt07.tangotv.in/zHjX9OFlNEWS1INDIA/index.m3u8",
               "status": "working"
+            },
+            {
+              "url": "https://tvsen6.aynaott.com/TaVfw58T/index.m3u8",
+              "status": "working"
             }
           ],
           "aliases": [
@@ -12203,6 +12189,10 @@
             {
               "url": "https://stream.ottlive.co.in/news24/index.m3u8",
               "status": "working"
+            },
+            {
+              "url": "http://tvsen5.aynascope.net/News24/index.m3u8",
+              "status": "unverified"
             }
           ],
           "aliases": [
@@ -12247,54 +12237,12 @@
               "status": "working"
             },
             {
-              "url": "https://mumt07.tangotv.in/zHjX9OFlNEWS7TAMIL/index.m3u8",
-              "status": "working"
-            },
-            {
               "url": "https://segment.yuppcdn.net/240122/news7/playlist.m3u8",
               "status": "working"
             }
           ],
           "aliases": [
             "News 7 Tamil"
-          ]
-        },
-        {
-          "id": "NewsCapitalGujarat.in",
-          "name": "News Capital Gujarat",
-          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/NewsCapital_Gujarat.png",
-          "category": "News",
-          "languages": [
-            "guj"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://newscapital.com/hls/main4/stream.m3u8",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "News Capital Gujarat"
-          ]
-        },
-        {
-          "id": "NewsCapitalMarket.in",
-          "name": "News Capital Market",
-          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/NewsCapitalMarket.png",
-          "category": "Business",
-          "languages": [
-            "guj"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://newscapital.com/hls/stream.m3u8?token=Nc360PermanentSecureKey987",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "News Capital Market"
           ]
         },
         {
@@ -12322,25 +12270,6 @@
           ],
           "aliases": [
             "News Daily 24"
-          ]
-        },
-        {
-          "id": "NewsHour.in",
-          "name": "News Hour",
-          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/channel/b83af98cdfd7d995b46178788a835bff.png",
-          "category": "News",
-          "languages": [
-            "hin"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://mumt07.tangotv.in/zHjX9OFlNEWSHOUR/index.m3u8",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "News Hour"
           ]
         },
         {
@@ -12550,12 +12479,12 @@
           "is_punjabi": false,
           "streams": [
             {
-              "url": "https://live.newsnation81.com/newsnation81/newsnation81/index.m3u8",
+              "url": "https://newsnation18.akamaized.net/newsnation18/master.m3u8",
               "status": "working"
             },
             {
-              "url": "https://newsnation18.akamaized.net/newsnation18/master.m3u8",
-              "status": "working"
+              "url": "https://live.newsnation81.com/newsnation81/newsnation81/index.m3u8",
+              "status": "unverified"
             }
           ],
           "aliases": [
@@ -12729,8 +12658,8 @@
           "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/News18JKLH.png",
           "category": "News",
           "languages": [
-            "hin",
-            "urd"
+            "urd",
+            "hin"
           ],
           "is_punjabi": false,
           "streams": [
@@ -12985,8 +12914,8 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NORTH_EAST_LIVE/images/LOGO_HD/image.png",
           "category": "News",
           "languages": [
-            "hin",
-            "eng"
+            "eng",
+            "hin"
           ],
           "is_punjabi": false,
           "streams": [
@@ -13024,25 +12953,6 @@
           ],
           "aliases": [
             "Onkar News"
-          ]
-        },
-        {
-          "id": "OnlyBharat.in",
-          "name": "Only Bharat",
-          "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AMV_NETWORK/images/LOGO_HD/image.png",
-          "category": "News",
-          "languages": [
-            "hin"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://mumt07.tangotv.in/zHjX9OFlONLYBHARAT/index.m3u8",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "Only Bharat"
           ]
         },
         {
@@ -13084,10 +12994,6 @@
           "streams": [
             {
               "url": "https://cdn.pishow.tv/ott/live/247/master.m3u8",
-              "status": "working"
-            },
-            {
-              "url": "https://mumt06.tangotv.in/qYyB8fXVPOWERTV/index.m3u8",
               "status": "working"
             },
             {
@@ -13174,29 +13080,6 @@
           ],
           "aliases": [
             "Pratham Khabar 24x7"
-          ]
-        },
-        {
-          "id": "PrathamNews.in",
-          "name": "Pratham News",
-          "logo": "https://papaji.freetvindia.com/media/channels/Pratham_news.png",
-          "category": "News",
-          "languages": [
-            "hin"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://samitaorigin.tangotv.in/PRATHAMNEWS/SAMITAORIGIN/index.m3u8",
-              "status": "working"
-            },
-            {
-              "url": "https://mumt03.tangotv.in/Dsly5z3HPRATHAMNEWS/index.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Pratham News"
           ]
         },
         {
@@ -13389,6 +13272,25 @@
           ],
           "aliases": [
             "Puthiya Thalaimurai Express"
+          ]
+        },
+        {
+          "id": "RaatdinBangla.in",
+          "name": "Raatdin Bangla",
+          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/raatdinbangla.png",
+          "category": "News",
+          "languages": [
+            "ben"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://server.playontv.in/raatdinbangla/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Raatdin Bangla"
           ]
         },
         {
@@ -14525,6 +14427,10 @@
             {
               "url": "https://fta.ektv.in/live/734/master.m3u8",
               "status": "working"
+            },
+            {
+              "url": "https://vistaarnews.com/livetv-stream/test.m3u8",
+              "status": "unverified"
             }
           ],
           "aliases": [
@@ -14799,6 +14705,139 @@
           ]
         },
         {
+          "id": "9PlusNews.in",
+          "name": "9 Plus News",
+          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/9plusnews.png",
+          "category": "News",
+          "languages": [
+            "tel"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://stream.ottlive.co.in/9plusnews/index.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "9 Plus News"
+          ]
+        },
+        {
+          "id": "C10.in",
+          "name": "C-10",
+          "logo": "https://papaji.freetvindia.com/media/channels/C-10.png",
+          "category": "News",
+          "languages": [
+            "hin"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://samitaorigin.tangotv.in/C10/SAMITAORIGIN/index.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "C-10"
+          ]
+        },
+        {
+          "id": "NewsCapitalGujarat.in",
+          "name": "News Capital Gujarat",
+          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/NewsCapital_Gujarat.png",
+          "category": "News",
+          "languages": [
+            "guj"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://newscapital.com/hls/main4/stream.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "News Capital Gujarat"
+          ]
+        },
+        {
+          "id": "NewsCapitalMarket.in",
+          "name": "News Capital Market",
+          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/NewsCapitalMarket.png",
+          "category": "Business",
+          "languages": [
+            "guj"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://newscapital.com/hls/stream.m3u8?token=Nc360PermanentSecureKey987",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "News Capital Market"
+          ]
+        },
+        {
+          "id": "NewsHour.in",
+          "name": "News Hour",
+          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/channel/b83af98cdfd7d995b46178788a835bff.png",
+          "category": "News",
+          "languages": [
+            "hin"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://mumt07.tangotv.in/zHjX9OFlNEWSHOUR/index.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "News Hour"
+          ]
+        },
+        {
+          "id": "OnlyBharat.in",
+          "name": "Only Bharat",
+          "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AMV_NETWORK/images/LOGO_HD/image.png",
+          "category": "News",
+          "languages": [
+            "hin"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://mumt07.tangotv.in/zHjX9OFlONLYBHARAT/index.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "Only Bharat"
+          ]
+        },
+        {
+          "id": "PrathamNews.in",
+          "name": "Pratham News",
+          "logo": "https://papaji.freetvindia.com/media/channels/Pratham_news.png",
+          "category": "News",
+          "languages": [
+            "hin"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://mumt03.tangotv.in/Dsly5z3HPRATHAMNEWS/index.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "Pratham News"
+          ]
+        },
+        {
           "id": "RDXGoa.in",
           "name": "RDX Goa",
           "logo": "https://rdxgoa.com/news/wp-content/uploads/2018/07/cropped-RDX-NW-LOGO-8-1.png",
@@ -14815,25 +14854,6 @@
           ],
           "aliases": [
             "RDX Goa"
-          ]
-        },
-        {
-          "id": "RaatdinBangla.in",
-          "name": "Raatdin Bangla",
-          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/raatdinbangla.png",
-          "category": "News",
-          "languages": [
-            "ben"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://server.playontv.in/raatdinbangla/index.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Raatdin Bangla"
           ]
         },
         {
@@ -14861,8 +14881,8 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/TIMESPLAY/LIVECHANNEL/6904ba3e39f3b175376a61dd/images/LOGO_HD/LOGO_HD_fJ-zWhRuW_TimesNow1_1.png",
           "category": "News",
           "languages": [
-            "hin",
-            "eng"
+            "eng",
+            "hin"
           ],
           "is_punjabi": false,
           "streams": [
@@ -15188,9 +15208,9 @@
           "logo": "https://i.imgur.com/Peo1QiZ.png",
           "category": "Movies",
           "languages": [
+            "eng",
             "bul",
-            "pol",
-            "eng"
+            "pol"
           ],
           "is_punjabi": false,
           "streams": [
@@ -15200,10 +15220,6 @@
             },
             {
               "url": "http://88.212.15.50/live/test_black/playlist.m3u8",
-              "status": "working"
-            },
-            {
-              "url": "http://141.94.193.53/axn_black/index.m3u8",
               "status": "working"
             }
           ],
@@ -15236,11 +15252,11 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/AXN_White_logo_%282015%29.svg/1280px-AXN_White_logo_%282015%29.svg.png",
           "category": "Entertainment",
           "languages": [
-            "eng",
-            "bul",
-            "czh",
             "pol",
-            "por"
+            "bul",
+            "por",
+            "czh",
+            "eng"
           ],
           "is_punjabi": false,
           "streams": [
@@ -15336,8 +15352,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Adult_Swim_2003_logo.svg/960px-Adult_Swim_2003_logo.svg.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -15405,6 +15421,10 @@
             {
               "url": "https://samitaorigin.tangotv.in/ALLTIMEMOVIES/SAMITAORIGIN/index.m3u8",
               "status": "working"
+            },
+            {
+              "url": "https://tvsen6.aynaott.com/a2cKGQtB/index.m3u8",
+              "status": "working"
             }
           ],
           "aliases": [
@@ -15454,6 +15474,25 @@
           ]
         },
         {
+          "id": "AmericanHorrors.us",
+          "name": "American Horrors",
+          "logo": "https://image.roku.com/developer_channels/prod/16f5571a82819e8992a748c70b256cbe63105f4b546b73d129668dc2cb701d91.png",
+          "category": "Movies",
+          "languages": [
+            "eng"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "http://107.167.7.162:8081/playlist/amhor/playlist.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "American Horrors"
+          ]
+        },
+        {
           "id": "AmritaTV.in",
           "name": "Amrita TV",
           "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Amrita%20TV.png",
@@ -15486,8 +15525,8 @@
           "logo": "https://cdn.pixabay.com/photo/2021/06/26/18/11/live-6366830_960_720.png",
           "category": "Movies",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -15755,8 +15794,8 @@
           "logo": "https://images.pluto.tv/channels/5ff768b6a4c8b80008498610/colorLogoPNG_1756804608228.png",
           "category": "Entertainment",
           "languages": [
-            "por",
-            "eng"
+            "eng",
+            "por"
           ],
           "is_punjabi": false,
           "streams": [
@@ -16092,8 +16131,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Buzzr_logo.svg/960px-Buzzr_logo.svg.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -16131,6 +16170,25 @@
           ],
           "aliases": [
             "CBS en espanol"
+          ]
+        },
+        {
+          "id": "CCTVKunnamkulam.in",
+          "name": "CCTV Kunnamkulam",
+          "logo": "https://i.ibb.co/ndPywxZ/cctv-logo.jpg",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://96vd9q4kyxq7-hls-live.5centscdn.com/livestream/f25aeb3e9210967d546a077de6e105e4.sdp/playlist.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "CCTV Kunnamkulam"
           ]
         },
         {
@@ -16196,8 +16254,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Charge%21_Logo_2020.svg/960px-Charge%21_Logo_2020.svg.png",
           "category": "Movies",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -16258,8 +16316,8 @@
           "logo": "https://i.imgur.com/bZWoDTg.png",
           "category": "Movies",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -16320,9 +16378,9 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/CinecanalLA.png/960px-CinecanalLA.png",
           "category": "Movies",
           "languages": [
-            "spa",
+            "eng",
             "por",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -16331,12 +16389,12 @@
               "status": "working"
             },
             {
-              "url": "http://190.61.47.54:8000/play/a02z/index.m3u8",
+              "url": "http://15.204.246.24:8080/CinecanalHD/index.m3u8",
               "status": "working"
             },
             {
-              "url": "http://15.204.246.24:8080/CinecanalHD/index.m3u8",
-              "status": "unverified"
+              "url": "http://190.61.47.54:8000/play/a02z/index.m3u8",
+              "status": "working"
             }
           ],
           "aliases": [
@@ -16349,8 +16407,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cinemax_2016.svg/960px-Cinemax_2016.svg.png",
           "category": "Movies",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -16388,8 +16446,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Cinemax_Hits_Logo.png/960px-Cinemax_Hits_Logo.png",
           "category": "Movies",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -16446,6 +16504,44 @@
           ],
           "aliases": [
             "Circle"
+          ]
+        },
+        {
+          "id": "CityChannelHD.in",
+          "name": "City Channel HD",
+          "logo": "https://play-lh.googleusercontent.com/jVbypmZKBHnQD2xcN_p_6CitA-oxAzm_iU5HePN8mmAppOwH5BJaV5taGNdbsIpUyqM",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://live.skystream.in/live/citytv2924/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "City Channel HD"
+          ]
+        },
+        {
+          "id": "CityVisionKannur.in",
+          "name": "City Vision Kannur",
+          "logo": "https://play-lh.googleusercontent.com/eO1Si1pAb0f-4E5ZTHqOCvIrcVEtNBOgex-Y6lRQTYaV04mbjQpm4oJKmv42CIM5L12bdbmH6Voh7dXZk6ZW=w240-h480",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://live.skystream.in/live/citykannurcity/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "City Vision Kannur"
           ]
         },
         {
@@ -16763,6 +16859,10 @@
           "is_punjabi": false,
           "streams": [
             {
+              "url": "https://fta.ektv.in/live/680/master.m3u8",
+              "status": "working"
+            },
+            {
               "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/c313674ffced4c9a90f1bba436df2b9b/index.m3u8",
               "status": "working"
             }
@@ -16888,6 +16988,44 @@
           ],
           "aliases": [
             "Dating Disasters"
+          ]
+        },
+        {
+          "id": "DrishyaTV.in",
+          "name": "Drishya TV",
+          "logo": "https://play-lh.googleusercontent.com/P1gCOSlZjwEzxi6wy4zcvqYwBf6SdTXiGhnuIAIW8lNu9Ka-v28vXz2vUFqwFXQH6mCeFkQdphJVjYK0Qj30hQ=w240-h480-rw",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://live.skystream.in/live/drishya5060/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Drishya TV"
+          ]
+        },
+        {
+          "id": "DrisyaTV.in",
+          "name": "Drisya TV",
+          "logo": "https://play-lh.googleusercontent.com/8O2ugQ2n4Y3Mt8j4sfTd52RizgIJwbu7U1mtF3Fk1hDbXc3yIGgvFqriLoO2InOX0ajgwaITdnGJV_w6HRac0Q",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://live.skystream.in/live/drishyakarunagapally/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Drisya TV"
           ]
         },
         {
@@ -17192,8 +17330,8 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_EPIC/images/LOGO_HD/image.png",
           "category": "Entertainment",
           "languages": [
-            "hin",
-            "eng"
+            "eng",
+            "hin"
           ],
           "is_punjabi": false,
           "streams": [
@@ -17212,8 +17350,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e0/WMBC_logo.jpg",
           "category": "Entertainment",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -17445,25 +17583,6 @@
           ]
         },
         {
-          "id": "GameShowNetwork.us",
-          "name": "Game Show Network",
-          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Game_Show_Network_2018.svg/960px-Game_Show_Network_2018.svg.png",
-          "category": "Entertainment",
-          "languages": [
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://a-cdn.klowdtv.com/live2/gsn_720p/playlist.m3u8",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "Game Show Network"
-          ]
-        },
-        {
           "id": "GangaurTV.in",
           "name": "Gangaur TV",
           "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Gangaur.png",
@@ -17684,8 +17803,8 @@
           "logo": "https://www.tvinsider.com/wp-content/uploads/2020/09/gettv.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -17911,8 +18030,8 @@
           "logo": "https://i.imgur.com/bQdkyF9.png",
           "category": "Movies",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -18041,6 +18160,25 @@
           ]
         },
         {
+          "id": "IndiaTalkies.in",
+          "name": "India Talkies",
+          "logo": "https://papaji.freetvindia.com/media/FreeTV_India_Talkies.png",
+          "category": "Movies",
+          "languages": [
+            "hin"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://samitaorigin.tangotv.in/INDIATALKIES/SAMITAORIGIN/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "India Talkies"
+          ]
+        },
+        {
           "id": "IndywoodTV.in",
           "name": "Indywood TV",
           "logo": "https://i.ibb.co/jT3NCPp/logo-tv.png",
@@ -18163,6 +18301,25 @@
           ]
         },
         {
+          "id": "KCNKasargod.in",
+          "name": "KCN Kasargod",
+          "logo": "https://play-lh.googleusercontent.com/sfxGAj8et5iKbygQ7Plp6gSvsvLodM4b7HU0K_1dx_etJMo3FUEIkf0z7KdWTEb-Gwhx5Vz9bQjpB8g_oz6jry0=w240-h480",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://live.skystream.in/live/kcnksrgod/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "KCN Kasargod"
+          ]
+        },
+        {
           "id": "KMCTTV391.us",
           "name": "KMCT-TV 39.1",
           "logo": "https://upload.wikimedia.org/wikipedia/en/d/d9/KMCT_Monroe%27s_Christian_Television_logo.png",
@@ -18232,6 +18389,44 @@
           ]
         },
         {
+          "id": "KasargodVision.in",
+          "name": "Kasargod Vision",
+          "logo": "https://coakerala.com/wp-content/uploads/2014/11/KSD-VISION-district-channel.jpg",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://live.skystream.in/live/kasaragodvsn/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Kasargod Vision"
+          ]
+        },
+        {
+          "id": "KeralaTodayTV.in",
+          "name": "Kerala Today TV",
+          "logo": "https://play-lh.googleusercontent.com/JpdLqTP2IiQDuLkr_jw0QeeDHfHOPd-vk00pnPF06f95Jca01t7v2BbrSENDeNuHktB2t0EbSfk_XyXvvUAumQ",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://live.skystream.in/live/krlatoday/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Kerala Today TV"
+          ]
+        },
+        {
           "id": "KeralaVision.in",
           "name": "Kerala Vision",
           "logo": "https://i.imgur.com/SWNjyyp.png",
@@ -18275,6 +18470,10 @@
             {
               "url": "https://mumt01.tangotv.in/O5aw8Zn3KHUSHBOOTVBANGLA/index.m3u8",
               "status": "working"
+            },
+            {
+              "url": "https://tvsen6.aynaott.com/mzwbzfZ4/index.m3u8",
+              "status": "working"
             }
           ],
           "aliases": [
@@ -18287,8 +18486,8 @@
           "logo": "https://i.imgur.com/zZ0lBGs.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -18491,8 +18690,8 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MTV/images/LOGO_HD/image.png",
           "category": "Entertainment",
           "languages": [
-            "hin",
-            "eng"
+            "eng",
+            "hin"
           ],
           "is_punjabi": false,
           "streams": [
@@ -18538,9 +18737,9 @@
           "logo": "https://images.pluto.tv/channels/64f8a2a23a0d700008a6ed7b/colorLogoPNG.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
+            "eng",
             "por",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -18586,9 +18785,9 @@
           "logo": "https://images.pluto.tv/channels/5f1212fb81e85c00077ae9ef/colorLogoPNG_1759263027326.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
+            "eng",
             "por",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -18615,9 +18814,9 @@
           "logo": "https://images.pluto.tv/channels/6493f4f566e485000853d640/colorLogoPNG.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
+            "eng",
             "por",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -18644,9 +18843,9 @@
           "logo": "https://images.pluto.tv/channels/68641eb4852dfe78698c3390/colorLogoPNG_1751392300412.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
+            "eng",
             "por",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -18669,8 +18868,8 @@
           "logo": "https://i.imgur.com/vQWWfyW.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -18788,6 +18987,44 @@
           ],
           "aliases": [
             "Mahua Play"
+          ]
+        },
+        {
+          "id": "MalabarPlus.in",
+          "name": "Malabar Plus",
+          "logo": "https://i.ibb.co/p6kf0FfH/1000151556.png",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "http://cloud.logichost.in:1935/live/mplus/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Malabar Plus"
+          ]
+        },
+        {
+          "id": "MalappuramCableVision.in",
+          "name": "Malappuram Cable Vision",
+          "logo": "https://cdn.aptoide.com/imgs/f/c/d/fcdcdfe7f3ced7623f252e9ea0080374_icon.png",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "http://cloud.logichost.in:1935/live/mcvlive/playlist.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Malappuram Cable Vision"
           ]
         },
         {
@@ -19007,8 +19244,8 @@
           "logo": "https://cdn.vaughnsoft.net/profile/1792355588/mega_extremo.jpg",
           "category": "Movies",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -19089,10 +19326,10 @@
           "category": "Movies",
           "languages": [
             "deu",
-            "eng",
-            "fra",
+            "spa",
             "por",
-            "spa"
+            "eng",
+            "fra"
           ],
           "is_punjabi": false,
           "streams": [
@@ -19119,9 +19356,9 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/MovieSphere_Gold_2025_logo.svg/500px-MovieSphere_Gold_2025_logo.svg.png",
           "category": "Movies",
           "languages": [
-            "spa",
+            "eng",
             "zho",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -19132,6 +19369,26 @@
           ],
           "aliases": [
             "MovieSphere Gold"
+          ]
+        },
+        {
+          "id": "MoviesNow.in",
+          "name": "Movies Now",
+          "logo": "https://xstreamcp-assets-msp.streamready.in/assets/TIMESPLAY/LIVECHANNEL/6904ba4839f3b175376a61e2/images/LOGO_HD/LOGO_HD_hAgaZac_j_MoviesNow1_1.png",
+          "category": "Movies",
+          "languages": [
+            "eng",
+            "tam"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "http://27.124.71.27/Movies_Now/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Movies Now"
           ]
         },
         {
@@ -19235,6 +19492,25 @@
           ]
         },
         {
+          "id": "NVision.in",
+          "name": "N Vision",
+          "logo": "https://livetv.ashokadigital.net/upload/logo/1739890627_WhatsApp_Image_2025-02-18_at_8.25.19_PM__1_-removebg-preview.png",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://ipcloud.live/nvision/nvisionhd/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "N Vision"
+          ]
+        },
+        {
           "id": "NBCLX.us",
           "name": "NBCLX",
           "logo": "https://i.imgur.com/5iT7hEa.png",
@@ -19312,6 +19588,25 @@
           ],
           "aliases": [
             "NH Tamil Gold"
+          ]
+        },
+        {
+          "id": "NMMediaChannelHD.in",
+          "name": "NM Media Channel HD",
+          "logo": "https://play-lh.googleusercontent.com/bS6HNpsLqv-Irw64TaPYqk3o8AlMiA96GJjD8qUfIzgtoeC23CCLrGW5iReGh1jMlP7djBZhxsJ_2wFLWpHB",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://live.skystream.in/live/newmedia2924/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "NM Media Channel HD"
           ]
         },
         {
@@ -19399,6 +19694,25 @@
           ]
         },
         {
+          "id": "NewVisionHD.in",
+          "name": "New Vision HD",
+          "logo": "https://i.ibb.co/Sw4cdy9b/new-vision-hd.jpg",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://live.skystream.in/live/newvision2924/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "New Vision HD"
+          ]
+        },
+        {
           "id": "Newsmax2.us",
           "name": "Newsmax 2",
           "logo": "https://provider-static.plex.tv/epg/cms/production/f3f74374-7cf6-4fdc-8056-7ef9e8eb989b/N2_logo_color.png",
@@ -19472,13 +19786,36 @@
           ]
         },
         {
+          "id": "OliTV.in",
+          "name": "Oli TV",
+          "logo": "https://i.ibb.co/XfvTQyJn/main-removebg-preview.png",
+          "category": "Entertainment",
+          "languages": [
+            "tam"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://live.olidigital.in/olitv/olitv/index.m3u8",
+              "status": "working"
+            },
+            {
+              "url": "https://hlslive.olidigital.in/olitv/olitv/index.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "Oli TV"
+          ]
+        },
+        {
           "id": "OmideIranTV.us",
           "name": "Omid e Iran TV",
           "logo": "https://i.imgur.com/CeMf68L.png",
           "category": "Entertainment",
           "languages": [
-            "fas",
-            "eng"
+            "eng",
+            "fas"
           ],
           "is_punjabi": false,
           "streams": [
@@ -19570,8 +19907,8 @@
           "logo": "https://static.wixstatic.com/media/c9b69f_9ffbf08345cc48419be872e9b4d6a562~mv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/c9b69f_9ffbf08345cc48419be872e9b4d6a562~mv2.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -19735,6 +20072,25 @@
           ],
           "aliases": [
             "People Are Awesome"
+          ]
+        },
+        {
+          "id": "PeriyarVision.in",
+          "name": "Periyar Vision",
+          "logo": "https://play-lh.googleusercontent.com/Oh0y8uEVV7LIlMBig3mi5xthzsUeOMWXxkHh6CpNf8uousEVwTCCEgLnNIYPPOd5aWw5f7lAWOqPqP93y2H7",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://stream.onecloudlive.in/periyarvision/periyarvision/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Periyar Vision"
           ]
         },
         {
@@ -20059,8 +20415,8 @@
           "logo": "https://images.pluto.tv/channels/67922858b83355184c699699/colorLogoPNG.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -20125,8 +20481,8 @@
           "logo": "https://images.pluto.tv/channels/66166cb1307fa30008f275e7/colorLogoPNG.png",
           "category": "Series",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -20520,8 +20876,8 @@
           "logo": "https://i.imgur.com/pbyd1g2.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -20563,8 +20919,8 @@
           "logo": "https://admin.worldlivetv.stream/upload/files/thumbnail/vuth_1676133370_91639_20154.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -20690,6 +21046,10 @@
             {
               "url": "http://23.237.104.106:8080/USA_SYFY/index.m3u8",
               "status": "working"
+            },
+            {
+              "url": "http://tvsen7.aynascope.net/syfy/index.m3u8",
+              "status": "unverified"
             }
           ],
           "aliases": [
@@ -20925,8 +21285,8 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SET/images/LOGO_HD/image.png",
           "category": "Entertainment",
           "languages": [
-            "hin",
-            "eng"
+            "eng",
+            "hin"
           ],
           "is_punjabi": false,
           "streams": [
@@ -20983,8 +21343,8 @@
           "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/SonyPAL.png",
           "category": "Entertainment",
           "languages": [
-            "hin",
-            "eng"
+            "eng",
+            "hin"
           ],
           "is_punjabi": false,
           "streams": [
@@ -21033,6 +21393,25 @@
           ],
           "aliases": [
             "South Station"
+          ]
+        },
+        {
+          "id": "SouthVision.in",
+          "name": "South Vision",
+          "logo": "https://play-lh.googleusercontent.com/R8Z8juih4xjZthHZeKnFqJTLFmf-GZfRLvcVHdeX7VNw568mvI6mES5LVbvTlPOSO8qoAjDE01fGy93XKkliyg=w512-h512",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://live.skystream.in/live/southvsnklm/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "South Vision"
           ]
         },
         {
@@ -21258,8 +21637,8 @@
           "logo": "https://d229kpbsb5jevy.cloudfront.net/yupptvnew/content/common/logos/channel/logos/iuxvzu.png",
           "category": "Entertainment",
           "languages": [
-            "tam",
-            "eng"
+            "eng",
+            "tam"
           ],
           "is_punjabi": false,
           "streams": [
@@ -21381,29 +21760,6 @@
           ],
           "aliases": [
             "Suriya TV"
-          ]
-        },
-        {
-          "id": "SuriyanTV.in",
-          "name": "Suriyan TV",
-          "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Suriyan-tv-logo_2000_X_1125_Transpharent.png",
-          "category": "Movies",
-          "languages": [
-            "tam"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://hlslive.olidigital.in/suriyantv/suriyantv/index.m3u8",
-              "status": "working"
-            },
-            {
-              "url": "https://stream.sscloud7.com/live/suriyantv/index.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Suriyan TV"
           ]
         },
         {
@@ -21587,9 +21943,9 @@
           "logo": "https://i.imgur.com/xeTtup8.png",
           "category": "Entertainment",
           "languages": [
+            "eng",
             "fra",
-            "acf",
-            "eng"
+            "acf"
           ],
           "is_punjabi": false,
           "streams": [
@@ -21829,6 +22185,25 @@
           ]
         },
         {
+          "id": "UTVHD24x7.in",
+          "name": "UTV HD 24x7",
+          "logo": "https://i.ibb.co/BVR60w26/utv-hd-24x7.jpg",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://em4qj6nedyvg-hls-live.wmncdn.net/utv/ab2de115318ae40bdd434e193a2f2e7f.sdp/playlist.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "UTV HD 24x7"
+          ]
+        },
+        {
           "id": "UndercoverBossGlobal.us",
           "name": "Undercover Boss Global",
           "logo": "https://i.imgur.com/O9lwu23.png",
@@ -22010,25 +22385,6 @@
           ],
           "aliases": [
             "Vissa TV"
-          ]
-        },
-        {
-          "id": "WWONTVChannel48.us",
-          "name": "WWON-TV Channel 48",
-          "logo": "https://i.imgur.com/l4qHAq6.png",
-          "category": "Entertainment",
-          "languages": [
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://tv2.fastcast4u.com:3943/stream/play.m3u8",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "WWON-TV Channel 48"
           ]
         },
         {
@@ -22217,8 +22573,8 @@
           "logo": "https://i.imgur.com/QNGYhNw.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -22491,25 +22847,6 @@
           ]
         },
         {
-          "id": "AmericanHorrors.us",
-          "name": "American Horrors",
-          "logo": "https://image.roku.com/developer_channels/prod/16f5571a82819e8992a748c70b256cbe63105f4b546b73d129668dc2cb701d91.png",
-          "category": "Movies",
-          "languages": [
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "http://107.167.7.162:8081/playlist/amhor/playlist.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "American Horrors"
-          ]
-        },
-        {
           "id": "CTBPerthMoviesChannel.au",
           "name": "CTB Perth Movies Channel",
           "logo": "https://i.imgur.com/VB8gtCy.jpeg",
@@ -22605,13 +22942,32 @@
           ]
         },
         {
+          "id": "GameShowNetwork.us",
+          "name": "Game Show Network",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Game_Show_Network_2018.svg/960px-Game_Show_Network_2018.svg.png",
+          "category": "Entertainment",
+          "languages": [
+            "eng"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://a-cdn.klowdtv.com/live2/gsn_720p/playlist.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "Game Show Network"
+          ]
+        },
+        {
           "id": "HBO.us",
           "name": "HBO",
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/HBO_logo.svg/960px-HBO_logo.svg.png",
           "category": "Movies",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -22630,8 +22986,8 @@
           "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/HBO_Hits_Logo.svg/960px-HBO_Hits_Logo.svg.png",
           "category": "Movies",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -22642,25 +22998,6 @@
           ],
           "aliases": [
             "HBO Hits"
-          ]
-        },
-        {
-          "id": "IndiaTalkies.in",
-          "name": "India Talkies",
-          "logo": "https://papaji.freetvindia.com/media/FreeTV_India_Talkies.png",
-          "category": "Movies",
-          "languages": [
-            "hin"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://samitaorigin.tangotv.in/INDIATALKIES/SAMITAORIGIN/index.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "India Talkies"
           ]
         },
         {
@@ -22688,9 +23025,9 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/960px-Logo_Lifetime_2020.svg.png",
           "category": "Entertainment",
           "languages": [
+            "eng",
             "tha",
-            "ind",
-            "eng"
+            "ind"
           ],
           "is_punjabi": false,
           "streams": [
@@ -22701,68 +23038,6 @@
           ],
           "aliases": [
             "Lifetime Asia"
-          ]
-        },
-        {
-          "id": "MoviesNow.in",
-          "name": "Movies Now",
-          "logo": "https://xstreamcp-assets-msp.streamready.in/assets/TIMESPLAY/LIVECHANNEL/6904ba4839f3b175376a61e2/images/LOGO_HD/LOGO_HD_hAgaZac_j_MoviesNow1_1.png",
-          "category": "Movies",
-          "languages": [
-            "tam",
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "http://27.124.71.27/Movies_Now/index.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Movies Now"
-          ]
-        },
-        {
-          "id": "NVision.in",
-          "name": "N Vision",
-          "logo": "https://livetv.ashokadigital.net/upload/logo/1739890627_WhatsApp_Image_2025-02-18_at_8.25.19_PM__1_-removebg-preview.png",
-          "category": "Entertainment",
-          "languages": [
-            "mal"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://ipcloud.live/nvision/nvisionhd/index.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "N Vision"
-          ]
-        },
-        {
-          "id": "OliTV.in",
-          "name": "Oli TV",
-          "logo": "https://i.ibb.co/XfvTQyJn/main-removebg-preview.png",
-          "category": "Entertainment",
-          "languages": [
-            "tam"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://hlslive.olidigital.in/olitv/olitv/index.m3u8",
-              "status": "unverified"
-            },
-            {
-              "url": "https://live.olidigital.in/olitv/olitv/index.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Oli TV"
           ]
         },
         {
@@ -22861,6 +23136,29 @@
           ]
         },
         {
+          "id": "SuriyanTV.in",
+          "name": "Suriyan TV",
+          "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Suriyan-tv-logo_2000_X_1125_Transpharent.png",
+          "category": "Movies",
+          "languages": [
+            "tam"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://hlslive.olidigital.in/suriyantv/suriyantv/index.m3u8",
+              "status": "unverified"
+            },
+            {
+              "url": "https://stream.sscloud7.com/live/suriyantv/index.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "Suriyan TV"
+          ]
+        },
+        {
           "id": "TalkinLiveClassicsTV.us",
           "name": "Talkin Live Classics TV",
           "logo": "https://play-lh.googleusercontent.com/qt4POaxei89y6DP7sRJlRNv-yo4jlG3HuVO2Jb54Rf6T7aJ-j7RLG2z4aY9YrU5d0Q=w240-h480-rw",
@@ -22877,6 +23175,25 @@
           ],
           "aliases": [
             "Talkin Live Classics TV"
+          ]
+        },
+        {
+          "id": "Thanima.in",
+          "name": "Thanima",
+          "logo": "https://play-lh.googleusercontent.com/cEXeXLHYTRthQoC8y_7SIr5hWU1gVpuRUc139KMbm-HqdllHs1IYig3voRgXrxG5XmELu95FBhLMEqyjNljHgog",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://live.skystream.in/live/thanimatvtvm/index.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "Thanima"
           ]
         },
         {
@@ -22915,6 +23232,63 @@
           ],
           "aliases": [
             "Universal Comedy"
+          ]
+        },
+        {
+          "id": "WWONTVChannel48.us",
+          "name": "WWON-TV Channel 48",
+          "logo": "https://i.imgur.com/l4qHAq6.png",
+          "category": "Entertainment",
+          "languages": [
+            "eng"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://tv2.fastcast4u.com:3943/stream/play.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "WWON-TV Channel 48"
+          ]
+        },
+        {
+          "id": "WayanadVisionMovies.in",
+          "name": "Wayanad Vision Movies",
+          "logo": "https://play-lh.googleusercontent.com/UxJ6sG6LdpaAXZOvR8EJyYa9PVx3gZWzetMe6MKHeguGSyyDHBDzKX5gN6Z75cQCni609w3YyuLSlE5qWPhG-Q",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://online.wayanadvision.in/hls/wvmovies.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "Wayanad Vision Movies"
+          ]
+        },
+        {
+          "id": "WayanadVisionPlus.in",
+          "name": "Wayanad Vision Plus",
+          "logo": "https://i.ibb.co/zTZk83Z3/wayand-vision-plus.jpg",
+          "category": "Entertainment",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://online.wayanadvision.in/hls/streaming1.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "Wayanad Vision Plus"
           ]
         },
         {
@@ -23289,15 +23663,15 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ANGEL_TV/images/LOGO_HD/image.png",
           "category": "Religious",
           "languages": [
-            "eng",
-            "zho",
-            "heb",
-            "tam",
-            "nep",
-            "por",
-            "rus",
             "spa",
-            "ind"
+            "nep",
+            "heb",
+            "por",
+            "ind",
+            "rus",
+            "tam",
+            "eng",
+            "zho"
           ],
           "is_punjabi": false,
           "streams": [
@@ -23400,6 +23774,10 @@
             {
               "url": "https://ott.bhagyam.net/hls/bhagyamweb/index-1409148900-now.m3u8",
               "status": "working"
+            },
+            {
+              "url": "https://bhagyam.iptv.pics/bhagyam/index.m3u8",
+              "status": "unverified"
             }
           ],
           "aliases": [
@@ -23587,6 +23965,10 @@
           "streams": [
             {
               "url": "http://media3.smc-host.com:1935/cycnow.com/smil:cyc.smil/playlist.m3u8",
+              "status": "working"
+            },
+            {
+              "url": "http://media.smc-host.com:1935/cycnow.com/cyc2/playlist.m3u8",
               "status": "working"
             }
           ],
@@ -23905,6 +24287,25 @@
           ]
         },
         {
+          "id": "HarvestUSA.in",
+          "name": "Harvest USA",
+          "logo": null,
+          "category": "Religious",
+          "languages": [
+            "eng"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvestusa/d57ffba6564caea2fee3f4085f19a098.sdp/playlist.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Harvest USA"
+          ]
+        },
+        {
           "id": "HebronTV.in",
           "name": "Hebron TV",
           "logo": "https://i0.wp.com/hebrontv.in/wp-content/uploads/2023/11/hebron-.png?w=512",
@@ -23983,9 +24384,9 @@
           "logo": "https://i.imgur.com/VYorU1L.png",
           "category": "Religious",
           "languages": [
+            "eng",
             "hin",
-            "tam",
-            "eng"
+            "tam"
           ],
           "is_punjabi": false,
           "streams": [
@@ -24362,12 +24763,12 @@
           "is_punjabi": false,
           "streams": [
             {
-              "url": "https://samitaorigin.tangotv.in/OMTV/SAMITAORIGIN/index.m3u8",
+              "url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8",
               "status": "working"
             },
             {
-              "url": "https://mumt01.tangotv.in/O5aw8Zn3OMTV/index.m3u8",
-              "status": "unverified"
+              "url": "https://samitaorigin.tangotv.in/OMTV/SAMITAORIGIN/index.m3u8",
+              "status": "working"
             }
           ],
           "aliases": [
@@ -24614,25 +25015,6 @@
           ],
           "aliases": [
             "Sadhna"
-          ]
-        },
-        {
-          "id": "SadhnaNewsMadhyaPradeshChhattisgarh.in",
-          "name": "Sadhna News Madhya Pradesh/Chhattisgarh",
-          "logo": "https://i.imgur.com/799WMit.png",
-          "category": "News",
-          "languages": [
-            "hin"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://mumt04.tangotv.in/m18aqlK4SADHNEWSPMRAJ/index.m3u8",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "Sadhna News Madhya Pradesh/Chhattisgarh"
           ]
         },
         {
@@ -25212,8 +25594,8 @@
           "logo": null,
           "category": "Religious",
           "languages": [
-            "eng",
-            "urd"
+            "urd",
+            "eng"
           ],
           "is_punjabi": false,
           "streams": [
@@ -25303,32 +25685,13 @@
           ]
         },
         {
-          "id": "HarvestUSA.in",
-          "name": "Harvest USA",
-          "logo": null,
-          "category": "Religious",
-          "languages": [
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvestusa/d57ffba6564caea2fee3f4085f19a098.sdp/playlist.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Harvest USA"
-          ]
-        },
-        {
           "id": "JTBSClassic.in",
           "name": "JTBS Classic",
           "logo": "https://jtbsclassic.dpdns.org/logo.png",
           "category": "Religious",
           "languages": [
-            "ben",
-            "eng"
+            "eng",
+            "ben"
           ],
           "is_punjabi": false,
           "streams": [
@@ -25339,6 +25702,25 @@
           ],
           "aliases": [
             "JTBS Classic"
+          ]
+        },
+        {
+          "id": "SadhnaNewsMadhyaPradeshChhattisgarh.in",
+          "name": "Sadhna News Madhya Pradesh/Chhattisgarh",
+          "logo": "https://i.imgur.com/799WMit.png",
+          "category": "News",
+          "languages": [
+            "hin"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://mumt04.tangotv.in/m18aqlK4SADHNEWSPMRAJ/index.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "Sadhna News Madhya Pradesh/Chhattisgarh"
           ]
         },
         {
@@ -25814,6 +26196,25 @@
           ],
           "aliases": [
             "Isai Aruvi"
+          ]
+        },
+        {
+          "id": "KalikaTV.in",
+          "name": "Kalika TV",
+          "logo": "https://i.imgur.com/XWXFoJA.png",
+          "category": "Music",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "http://server.applelive.in/kalikatv/kalikatv.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Kalika TV"
           ]
         },
         {
@@ -26408,25 +26809,6 @@
           ]
         },
         {
-          "id": "KalikaTV.in",
-          "name": "Kalika TV",
-          "logo": "https://i.imgur.com/XWXFoJA.png",
-          "category": "Music",
-          "languages": [
-            "mal"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "http://server.applelive.in/kalikatv/kalikatv.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Kalika TV"
-          ]
-        },
-        {
           "id": "ShemarooFilmiGaane.in",
           "name": "Shemaroo Filmi Gaane",
           "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/channel/0d5b07555b2d4415aa9f145273095ed7.png",
@@ -26552,8 +26934,8 @@
           "logo": "https://i.imgur.com/xFm2co6.png",
           "category": "Kids",
           "languages": [
-            "swa",
-            "eng"
+            "eng",
+            "swa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -26629,14 +27011,14 @@
           "logo": "https://i.ibb.co/MDH1NJZX/IMG-2449.jpg",
           "category": "Animation",
           "languages": [
-            "yue",
-            "msa",
-            "fil",
-            "eng",
             "jpn",
-            "zho",
+            "msa",
+            "yue",
+            "ind",
+            "fil",
             "tha",
-            "ind"
+            "eng",
+            "zho"
           ],
           "is_punjabi": false,
           "streams": [
@@ -26701,9 +27083,9 @@
           "logo": "https://i.imgur.com/ekF5cAi.png",
           "category": "Kids",
           "languages": [
+            "eng",
             "uzb",
-            "rus",
-            "eng"
+            "rus"
           ],
           "is_punjabi": false,
           "streams": [
@@ -26760,11 +27142,11 @@
           "logo": "https://images.pluto.tv/channels/61c09b48d6d97900076e91c5/colorLogoPNG.png",
           "category": "Kids",
           "languages": [
-            "eng",
             "swe",
-            "dan",
             "fin",
-            "nor"
+            "dan",
+            "nor",
+            "eng"
           ],
           "is_punjabi": false,
           "streams": [
@@ -26816,25 +27198,6 @@
           ]
         },
         {
-          "id": "BVG.in",
-          "name": "BVG",
-          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/BVG.png",
-          "category": "Education",
-          "languages": [
-            "hin"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://mumt05.tangotv.in/87NeALx2BVG/index.m3u8",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "BVG"
-          ]
-        },
-        {
           "id": "BabySharkTV.us",
           "name": "Baby Shark TV",
           "logo": "https://i.imgur.com/SbBKr8L.png",
@@ -26867,21 +27230,21 @@
           "logo": "https://i.imgur.com/WxLHBwu.png",
           "category": "Kids",
           "languages": [
-            "deu",
-            "tur",
-            "eng",
-            "fra",
-            "ron",
-            "zho",
-            "jpn",
-            "heb",
             "pol",
+            "jpn",
+            "kor",
+            "deu",
+            "spa",
             "por",
+            "heb",
+            "ron",
+            "ara",
             "rus",
             "hun",
-            "spa",
-            "ara",
-            "kor"
+            "eng",
+            "fra",
+            "zho",
+            "tur"
           ],
           "is_punjabi": false,
           "streams": [
@@ -26904,14 +27267,14 @@
           "logo": "https://i.imgur.com/4BDJ5FT.png",
           "category": "Kids",
           "languages": [
+            "pol",
+            "spa",
+            "por",
             "ita",
-            "tur",
+            "heb",
             "eng",
             "fra",
-            "heb",
-            "pol",
-            "por",
-            "spa"
+            "tur"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27049,8 +27412,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Boomerang_2014_logo.svg/960px-Boomerang_2014_logo.svg.png",
           "category": "Kids",
           "languages": [
-            "fra",
-            "eng"
+            "eng",
+            "fra"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27069,8 +27432,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Boomerang_2014_logo.svg/960px-Boomerang_2014_logo.svg.png",
           "category": "Kids",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27080,7 +27443,7 @@
             },
             {
               "url": "http://212.5.144.156:8080/boomerang/index.m3u8",
-              "status": "unverified"
+              "status": "working"
             }
           ],
           "aliases": [
@@ -27236,8 +27599,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
           "category": "Animation",
           "languages": [
-            "jpn",
-            "eng"
+            "eng",
+            "jpn"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27256,8 +27619,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
           "category": "Animation",
           "languages": [
-            "urd",
-            "eng"
+            "eng",
+            "urd"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27276,9 +27639,9 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
           "category": "Animation",
           "languages": [
-            "spa",
+            "eng",
             "por",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27288,7 +27651,7 @@
             },
             {
               "url": "http://212.5.144.156:8080/cartoon/index.m3u8",
-              "status": "unverified"
+              "status": "working"
             }
           ],
           "aliases": [
@@ -27301,9 +27664,9 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
           "category": "Animation",
           "languages": [
-            "tha",
+            "eng",
             "vie",
-            "eng"
+            "tha"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27330,15 +27693,15 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
           "category": "Animation",
           "languages": [
+            "pol",
             "deu",
+            "bul",
+            "dan",
+            "ron",
+            "rus",
             "ces",
             "eng",
-            "bul",
             "fra",
-            "ron",
-            "dan",
-            "pol",
-            "rus",
             "hun"
           ],
           "is_punjabi": false,
@@ -27366,11 +27729,15 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
           "category": "Animation",
           "languages": [
-            "spa",
-            "por"
+            "por",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
+            {
+              "url": "http://15.204.246.24:8080/CartoonNetworkHD/index.m3u8",
+              "status": "working"
+            },
             {
               "url": "http://45.173.12.70:8000/play/a0fj",
               "status": "working"
@@ -27378,10 +27745,6 @@
             {
               "url": "http://158.172.217.18:8000/play/a03a/index.m3u8",
               "status": "working"
-            },
-            {
-              "url": "http://15.204.246.24:8080/CartoonNetworkHD/index.m3u8",
-              "status": "unverified"
             }
           ],
           "aliases": [
@@ -27394,8 +27757,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cartoonito_-_Logo_2021.svg/960px-Cartoonito_-_Logo_2021.svg.png",
           "category": "Animation",
           "languages": [
-            "vie",
-            "eng"
+            "eng",
+            "vie"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27418,16 +27781,16 @@
           "logo": "https://i.imgur.com/9MrzLb1.png",
           "category": "Kids",
           "languages": [
-            "deu",
-            "ces",
-            "bul",
-            "eng",
-            "ron",
-            "dan",
             "pol",
+            "deu",
+            "bul",
+            "dan",
+            "ron",
+            "ell",
             "rus",
-            "hun",
-            "ell"
+            "ces",
+            "eng",
+            "hun"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27454,8 +27817,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cartoonito_-_Logo_2021.svg/960px-Cartoonito_-_Logo_2021.svg.png",
           "category": "Animation",
           "languages": [
-            "spa",
-            "por"
+            "por",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27493,8 +27856,8 @@
           "logo": "https://images.pluto.tv/channels/609ae66b359b270007869ff1/colorLogoPNG_1733160636316.png",
           "category": "Animation",
           "languages": [
-            "spa",
-            "por"
+            "por",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27571,8 +27934,8 @@
           "logo": "https://i.imgur.com/2FlIQUO.png",
           "category": "Animation",
           "languages": [
-            "jap",
-            "eng"
+            "eng",
+            "jap"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27710,14 +28073,34 @@
           ]
         },
         {
+          "id": "DiscoveryChannel.us",
+          "name": "Discovery Channel",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png",
+          "category": "Entertainment",
+          "languages": [
+            "eng",
+            "spa"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "http://212.5.144.156:8080/discovery/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Discovery Channel"
+          ]
+        },
+        {
           "id": "DiscoveryChannelLatinAmerica.us",
           "name": "Discovery Channel Latin America",
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png",
           "category": "Entertainment",
           "languages": [
-            "spa",
+            "eng",
             "por",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27759,11 +28142,15 @@
           "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Discovery_Kids_2021_2D_sin_wordmark.svg/960px-Discovery_Kids_2021_2D_sin_wordmark.svg.png",
           "category": "Kids",
           "languages": [
-            "spa",
-            "por"
+            "por",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
+            {
+              "url": "http://15.204.246.24:8080/DiscoveryKidsHD/index.m3u8",
+              "status": "working"
+            },
             {
               "url": "http://38.224.231.176:8000/play/a01j/index.m3u8",
               "status": "working"
@@ -27771,10 +28158,6 @@
             {
               "url": "http://38.134.250.110:8000/play/a003/index.m3u8",
               "status": "working"
-            },
-            {
-              "url": "http://15.204.246.24:8080/DiscoveryKidsHD/index.m3u8",
-              "status": "unverified"
             }
           ],
           "aliases": [
@@ -27793,12 +28176,12 @@
           "is_punjabi": false,
           "streams": [
             {
-              "url": "http://87.120.179.187:8000/play/a010",
+              "url": "http://213.91.179.28:8000/play/a059",
               "status": "working"
             },
             {
-              "url": "http://213.91.179.28:8000/play/a059",
-              "status": "working"
+              "url": "http://87.120.179.187:8000/play/a010",
+              "status": "unverified"
             }
           ],
           "aliases": [
@@ -27811,8 +28194,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg",
           "category": "Kids",
           "languages": [
-            "jpn",
-            "eng"
+            "eng",
+            "jpn"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27851,8 +28234,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/2024_Disney_Channel_text_logo.svg/960px-2024_Disney_Channel_text_logo.svg.png",
           "category": "Kids",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27871,8 +28254,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/2015_Disney_XD_logo.svg/960px-2015_Disney_XD_logo.svg.png",
           "category": "Kids",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27952,8 +28335,8 @@
           "logo": null,
           "category": "Animation",
           "languages": [
-            "spa",
-            "por"
+            "por",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -27999,10 +28382,10 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GUBBARE/images/LOGO_HD/image.png",
           "category": "Kids",
           "languages": [
+            "eng",
             "hin",
-            "tel",
             "tam",
-            "eng"
+            "tel"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28067,9 +28450,9 @@
           "logo": "https://provider-static.plex.tv/epg/cms/production/cff7361f-e0ba-4aeb-9251-9530f4eb1d80/FilmRise_Anime_1500x1000_Light_Logo.png",
           "category": "Animation",
           "languages": [
+            "eng",
             "jap",
-            "deu",
-            "eng"
+            "deu"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28172,10 +28555,10 @@
           "logo": "https://i.imgur.com/FxDBbpz.jpeg",
           "category": "Kids",
           "languages": [
+            "eng",
             "ara",
-            "zho",
             "urd",
-            "eng"
+            "zho"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28300,8 +28683,8 @@
           ]
         },
         {
-          "id": "HistoryAsia.us",
-          "name": "History Asia",
+          "id": "History.us",
+          "name": "History",
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/500px-History_%282021%29.svg.png",
           "category": "Documentary",
           "languages": [
@@ -28310,12 +28693,12 @@
           "is_punjabi": false,
           "streams": [
             {
-              "url": "https://freem3u.xyz/api/live/play.m3u8?vid=9856",
+              "url": "http://212.5.144.156:8080/history/index.m3u8",
               "status": "working"
             }
           ],
           "aliases": [
-            "History Asia"
+            "History"
           ]
         },
         {
@@ -28324,10 +28707,10 @@
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HISTORY_TV18/images/LOGO_HD/image.png",
           "category": "Documentary",
           "languages": [
+            "eng",
             "hin",
-            "tel",
             "tam",
-            "eng"
+            "tel"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28387,13 +28770,32 @@
           ]
         },
         {
+          "id": "InvestigationDiscovery.us",
+          "name": "Investigation Discovery",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
+          "category": "Documentary",
+          "languages": [
+            "eng"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "http://212.5.144.156:8080/id/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Investigation Discovery"
+          ]
+        },
+        {
           "id": "IuniorTV.it",
           "name": "Iunior TV",
           "logo": "https://i.imgur.com/FBOJnfT.png",
           "category": "Kids",
           "languages": [
-            "ita",
-            "eng"
+            "eng",
+            "ita"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28416,8 +28818,8 @@
           "logo": "https://i.imgur.com/ODhkYyx.png",
           "category": "Kids",
           "languages": [
-            "hun",
-            "eng"
+            "eng",
+            "hun"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28431,23 +28833,34 @@
           ]
         },
         {
-          "id": "JimJam.ro",
-          "name": "JimJam",
+          "id": "JimJamEurope.uk",
+          "name": "JimJam Europe",
           "logo": "https://i.imgur.com/ODhkYyx.png",
           "category": "Kids",
           "languages": [
-            "ron",
-            "eng"
+            "por",
+            "heb",
+            "ces",
+            "eng",
+            "slk"
           ],
           "is_punjabi": false,
           "streams": [
             {
-              "url": "https://rundle.tv/proxy5.php?src=https%3A%2F%2Fsaruman1.tharen001.cfd%2Fjimy%2Fusergenq3n0lz7kr-got.htm",
+              "url": "http://212.5.144.156:8080/jimjam/index.m3u8",
               "status": "working"
+            },
+            {
+              "url": "http://158.160.149.81:8080/269/index.m3u8",
+              "status": "unverified"
+            },
+            {
+              "url": "http://stream.mcquack.net/150/index.m3u8",
+              "status": "unverified"
             }
           ],
           "aliases": [
-            "JimJam"
+            "JimJam Europe"
           ]
         },
         {
@@ -28616,8 +29029,8 @@
           "logo": "https://yt3.googleusercontent.com/CRP3YudPa55QypbDnIvuh3erLZTsn2HK8ESR-2fJFFiLJVf7US2CKQELCKK_UowmHA3wCjAdxg=s512-c-k-c0x00ffffff-no-rj",
           "category": "Documentary",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28732,8 +29145,8 @@
           "logo": "https://i.imgur.com/PVt8OPN.png",
           "category": "Kids",
           "languages": [
-            "ara",
-            "eng"
+            "eng",
+            "ara"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28779,8 +29192,8 @@
           "logo": "https://www.newsfromme.com/wp-content/uploads/2024/05/metvtoons01.jpg",
           "category": "Animation",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28818,8 +29231,8 @@
           "logo": "https://i.imgur.com/qIoipDq.png",
           "category": "Kids",
           "languages": [
-            "tur",
-            "eng"
+            "eng",
+            "tur"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28888,10 +29301,10 @@
           "logo": "https://static.wikia.nocookie.net/logopedia/images/2/25/Mr._Bean_Animated_Series_stacked_logo.png",
           "category": "Animation",
           "languages": [
-            "fra",
-            "spa",
+            "eng",
             "ita",
-            "eng"
+            "fra",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28918,9 +29331,9 @@
           "logo": "https://i.imgur.com/M8X3Kvc.png",
           "category": "Animation",
           "languages": [
-            "deu",
+            "eng",
             "por",
-            "eng"
+            "deu"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28947,8 +29360,8 @@
           "logo": "https://images.pluto.tv/channels/64c92fea3c3344000869e8a9/colorLogoPNG.png",
           "category": "Animation",
           "languages": [
-            "spa",
-            "por"
+            "por",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -28985,15 +29398,34 @@
           ]
         },
         {
+          "id": "NationalGeographic.us",
+          "name": "National Geographic",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+          "category": "Documentary",
+          "languages": [
+            "eng"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "http://212.5.144.156:8080/natgeo/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "National Geographic"
+          ]
+        },
+        {
           "id": "NatureTime.ca",
           "name": "NatureTime",
           "logo": "https://naturetimetv.com/wp-content/uploads/2023/05/NatureTime_white_Primary.png",
           "category": "Documentary",
           "languages": [
-            "fra",
-            "spa",
+            "eng",
             "por",
-            "eng"
+            "fra",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29039,8 +29471,8 @@
           "logo": "https://i.imgur.com/6p3eFgf.png",
           "category": "Kids",
           "languages": [
-            "ita",
-            "eng"
+            "eng",
+            "ita"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29063,8 +29495,8 @@
           "logo": "https://images.pluto.tv/channels/5f121460b73ac6000719fbaf/colorLogoPNG_1748348856602.png",
           "category": "Kids",
           "languages": [
-            "spa",
-            "por"
+            "por",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29087,9 +29519,9 @@
           "logo": "https://i.imgur.com/KT4tdQs.png",
           "category": "Kids",
           "languages": [
-            "spa",
+            "eng",
             "por",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29150,8 +29582,8 @@
           "logo": "https://i.imgur.com/E84jnP8.png",
           "category": "Kids",
           "languages": [
-            "deu",
-            "eng"
+            "eng",
+            "deu"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29169,13 +29601,33 @@
           ]
         },
         {
+          "id": "Nickelodeon.ro",
+          "name": "Nickelodeon",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Nickelodeon_2009_logo.svg/960px-Nickelodeon_2009_logo.svg.png",
+          "category": "Kids",
+          "languages": [
+            "eng",
+            "ron"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "http://91.235.165.117:8001/play/a05z/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Nickelodeon"
+          ]
+        },
+        {
           "id": "NickelodeonArabia.ae",
           "name": "Nickelodeon Arabia",
           "logo": "https://i.imgur.com/E84jnP8.png",
           "category": "Kids",
           "languages": [
-            "ara",
-            "eng"
+            "eng",
+            "ara"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29278,8 +29730,8 @@
           "logo": "https://images.pluto.tv/channels/60f5fabf0721880007cd50e3/colorLogoPNG_1767888207915.png",
           "category": "Kids",
           "languages": [
-            "spa",
-            "por"
+            "por",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29302,8 +29754,8 @@
           "logo": "https://images.pluto.tv/channels/645951c0e94c38000802d2cb/colorLogoPNG_1767888119852.png",
           "category": "Kids",
           "languages": [
-            "spa",
-            "por"
+            "por",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29351,6 +29803,25 @@
           "streams": [
             {
               "url": "http://92.114.85.87:8013/play/a008/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Nicktoons"
+          ]
+        },
+        {
+          "id": "Nicktoons.ro",
+          "name": "Nicktoons",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Nicktoons_UK_Logo_2014.png",
+          "category": "Kids",
+          "languages": [
+            "eng"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "http://91.235.165.117:8001/play/a061/index.m3u8",
               "status": "working"
             }
           ],
@@ -29483,10 +29954,10 @@
           "logo": "https://images.pluto.tv/channels/5f7790b3ed0c88000720b241/colorLogoPNG_1731837233662.png",
           "category": "Animation",
           "languages": [
-            "fra",
-            "spa",
             "eng",
-            "jap"
+            "fra",
+            "jap",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29513,8 +29984,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/PBS_Kids_logo_%282022%29.svg/960px-PBS_Kids_logo_%282022%29.svg.png",
           "category": "Education",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29689,10 +30160,10 @@
           "logo": "https://images.pluto.tv/channels/62a2e8d8a1c8650007e95bac/colorLogoPNG.png",
           "category": "Animation",
           "languages": [
-            "spa",
-            "jap",
+            "eng",
             "por",
-            "eng"
+            "jap",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29738,8 +30209,8 @@
           "logo": "https://images.pluto.tv/channels/67ed8f7e443f0671bc2b2368/colorLogoPNG.png",
           "category": "Animation",
           "languages": [
-            "jap",
-            "eng"
+            "eng",
+            "jap"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29777,8 +30248,8 @@
           "logo": "https://images.pluto.tv/channels/5f12141b146d760007934ea7/colorLogoPNG.png",
           "category": "Kids",
           "languages": [
-            "spa",
-            "por"
+            "por",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29801,10 +30272,10 @@
           "logo": "https://images.pluto.tv/channels/61c09a78bd194c0008decc28/colorLogoPNG_1748329348443.png",
           "category": "Kids",
           "languages": [
+            "eng",
             "dan",
-            "nor",
             "swe",
-            "eng"
+            "nor"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29831,8 +30302,8 @@
           "logo": "https://images.pluto.tv/channels/5f1214a637c6fd00079c652f/colorLogoPNG.png",
           "category": "Kids",
           "languages": [
-            "spa",
-            "por"
+            "por",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29916,8 +30387,8 @@
           "logo": "https://images.pluto.tv/channels/611e6a9b4bb5790007a6f0f8/colorLogoPNG.png",
           "category": "Animation",
           "languages": [
-            "fra",
-            "eng"
+            "eng",
+            "fra"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29959,8 +30430,8 @@
           "logo": "https://images.pluto.tv/channels/67f5095a3481170e6843d95d/colorLogoPNG_1748955339418.png",
           "category": "Kids",
           "languages": [
-            "swe",
-            "eng"
+            "eng",
+            "swe"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29979,8 +30450,8 @@
           "logo": "https://images.pluto.tv/channels/61c0b6f028e94c000782684a/colorLogoPNG_1749627909756.png",
           "category": "Kids",
           "languages": [
-            "swe",
-            "eng"
+            "eng",
+            "swe"
           ],
           "is_punjabi": false,
           "streams": [
@@ -29999,9 +30470,9 @@
           "logo": "https://images.pluto.tv/channels/61c09938e0d3a700072b68b1/colorLogoPNG_1749627293329.png",
           "category": "Kids",
           "languages": [
+            "eng",
             "dan",
-            "nor",
-            "eng"
+            "nor"
           ],
           "is_punjabi": false,
           "streams": [
@@ -30024,10 +30495,10 @@
           "logo": "https://images.pluto.tv/channels/67f3fb1cdea1c5e0d588ac1b/colorLogoPNG_1748270797322.png",
           "category": "Kids",
           "languages": [
+            "eng",
             "dan",
-            "nor",
             "swe",
-            "eng"
+            "nor"
           ],
           "is_punjabi": false,
           "streams": [
@@ -30254,15 +30725,15 @@
           "logo": "https://i.imgur.com/MhlO1dB.png",
           "category": "Animation",
           "languages": [
-            "ori",
-            "kan",
-            "mal",
-            "hin",
-            "eng",
-            "tam",
-            "ben",
             "tel",
-            "mar"
+            "mar",
+            "mal",
+            "kan",
+            "ori",
+            "ben",
+            "hin",
+            "tam",
+            "eng"
           ],
           "is_punjabi": false,
           "streams": [
@@ -30300,10 +30771,10 @@
           "logo": "https://images.pluto.tv/channels/660bff28516d260008479e23/colorLogoPNG.png",
           "category": "Animation",
           "languages": [
+            "eng",
             "dan",
-            "nor",
             "swe",
-            "eng"
+            "nor"
           ],
           "is_punjabi": false,
           "streams": [
@@ -30349,10 +30820,10 @@
           "logo": "https://images.pluto.tv/channels/664f132c8ea5560008ce4d86/colorLogoPNG.png",
           "category": "Animation",
           "languages": [
+            "eng",
             "dan",
-            "nor",
             "swe",
-            "eng"
+            "nor"
           ],
           "is_punjabi": false,
           "streams": [
@@ -30379,10 +30850,10 @@
           "logo": "https://images.pluto.tv/channels/65d87a66ec9fda0008a5ac11/colorLogoPNG.png",
           "category": "Animation",
           "languages": [
+            "eng",
             "dan",
-            "nor",
             "swe",
-            "eng"
+            "nor"
           ],
           "is_punjabi": false,
           "streams": [
@@ -30580,10 +31051,10 @@
           "logo": "https://images.pluto.tv/channels/664f0eaa8ce31100088036bd/colorLogoPNG.png",
           "category": "Animation",
           "languages": [
+            "eng",
             "dan",
-            "nor",
             "swe",
-            "eng"
+            "nor"
           ],
           "is_punjabi": false,
           "streams": [
@@ -30724,8 +31195,8 @@
           "logo": "https://i.imgur.com/eE9FzEP.png",
           "category": "Kids",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -30820,8 +31291,8 @@
           "logo": "https://images.pluto.tv/channels/61c0ba0816e2fd00086cb6b1/colorLogoPNG.png",
           "category": "Kids",
           "languages": [
-            "swe",
-            "eng"
+            "eng",
+            "swe"
           ],
           "is_punjabi": false,
           "streams": [
@@ -30840,9 +31311,9 @@
           "logo": "https://images.pluto.tv/channels/61c09ac98a80a4000703f992/colorLogoPNG.png",
           "category": "Kids",
           "languages": [
+            "eng",
             "dan",
-            "nor",
-            "eng"
+            "nor"
           ],
           "is_punjabi": false,
           "streams": [
@@ -31145,9 +31616,9 @@
           "logo": "https://i.imgur.com/3yXRbQy.png",
           "category": "Animation",
           "languages": [
-            "spa",
+            "eng",
             "por",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -31293,8 +31764,8 @@
           "category": "Animation",
           "languages": [
             "hin",
-            "tel",
-            "tam"
+            "tam",
+            "tel"
           ],
           "is_punjabi": false,
           "streams": [
@@ -31359,6 +31830,25 @@
           ],
           "aliases": [
             "Yu-Gi-Oh!"
+          ]
+        },
+        {
+          "id": "ZBCartoon.in",
+          "name": "ZB Cartoon",
+          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/zbcatun.png",
+          "category": "Kids",
+          "languages": [
+            "ben"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://server.zillarbarta.com/zbcatun/video.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "ZB Cartoon"
           ]
         },
         {
@@ -31473,6 +31963,25 @@
           ]
         },
         {
+          "id": "BVG.in",
+          "name": "BVG",
+          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/BVG.png",
+          "category": "Education",
+          "languages": [
+            "hin"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://mumt05.tangotv.in/87NeALx2BVG/index.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "BVG"
+          ]
+        },
+        {
           "id": "CBBC.uk",
           "name": "CBBC",
           "logo": "https://i.imgur.com/tk8G4CU.png",
@@ -31543,11 +32052,11 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
           "category": "Animation",
           "languages": [
-            "eng",
             "swe",
-            "nld",
             "por",
-            "nor"
+            "nld",
+            "nor",
+            "eng"
           ],
           "is_punjabi": false,
           "streams": [
@@ -31565,33 +32074,13 @@
           ]
         },
         {
-          "id": "DiscoveryChannel.us",
-          "name": "Discovery Channel",
-          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png",
-          "category": "Entertainment",
-          "languages": [
-            "spa",
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "http://212.5.144.156:8080/discovery/index.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Discovery Channel"
-          ]
-        },
-        {
           "id": "DisneyChannel.fr",
           "name": "Disney Channel",
           "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg",
           "category": "Kids",
           "languages": [
-            "fra",
-            "eng"
+            "eng",
+            "fra"
           ],
           "is_punjabi": false,
           "streams": [
@@ -31629,13 +32118,21 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2024_Disney_Jr._Logo.svg/960px-2024_Disney_Jr._Logo.svg.png",
           "category": "Kids",
           "languages": [
-            "spa",
-            "eng"
+            "eng",
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
             {
               "url": "http://tvsen5.aynascope.net/disney/index.m3u8",
+              "status": "unverified"
+            },
+            {
+              "url": "http://tvsen7.aynascope.net/disney/index.m3u8",
+              "status": "unverified"
+            },
+            {
+              "url": "http://tvsen7.aynascope.net/disneyjr/index.m3u8",
               "status": "unverified"
             }
           ],
@@ -31672,9 +32169,9 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/0/01/Doraemon_Merch_EN_Logo.svg",
           "category": "Animation",
           "languages": [
+            "eng",
             "hin",
-            "spa",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -31693,8 +32190,8 @@
           "logo": null,
           "category": "Animation",
           "languages": [
-            "vie",
-            "eng"
+            "eng",
+            "vie"
           ],
           "is_punjabi": false,
           "streams": [
@@ -31712,8 +32209,8 @@
           ]
         },
         {
-          "id": "History.us",
-          "name": "History",
+          "id": "HistoryAsia.us",
+          "name": "History Asia",
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/500px-History_%282021%29.svg.png",
           "category": "Documentary",
           "languages": [
@@ -31722,62 +32219,32 @@
           "is_punjabi": false,
           "streams": [
             {
-              "url": "http://212.5.144.156:8080/history/index.m3u8",
+              "url": "https://freem3u.xyz/api/live/play.m3u8?vid=9856",
               "status": "unverified"
             }
           ],
           "aliases": [
-            "History"
+            "History Asia"
           ]
         },
         {
-          "id": "InvestigationDiscovery.us",
-          "name": "Investigation Discovery",
-          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png",
-          "category": "Documentary",
-          "languages": [
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "http://212.5.144.156:8080/id/index.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Investigation Discovery"
-          ]
-        },
-        {
-          "id": "JimJamEurope.uk",
-          "name": "JimJam Europe",
+          "id": "JimJam.ro",
+          "name": "JimJam",
           "logo": "https://i.imgur.com/ODhkYyx.png",
           "category": "Kids",
           "languages": [
-            "ces",
-            "slk",
             "eng",
-            "heb",
-            "por"
+            "ron"
           ],
           "is_punjabi": false,
           "streams": [
             {
-              "url": "http://212.5.144.156:8080/jimjam/index.m3u8",
-              "status": "unverified"
-            },
-            {
-              "url": "http://158.160.149.81:8080/269/index.m3u8",
-              "status": "unverified"
-            },
-            {
-              "url": "http://stream.mcquack.net/150/index.m3u8",
+              "url": "https://rundle.tv/proxy5.php?src=https%3A%2F%2Fsaruman1.tharen001.cfd%2Fjimy%2Fusergenq3n0lz7kr-got.htm",
               "status": "unverified"
             }
           ],
           "aliases": [
-            "JimJam Europe"
+            "JimJam"
           ]
         },
         {
@@ -31828,9 +32295,9 @@
           "logo": "https://i.imgur.com/qJSvxE2.png",
           "category": "Kids",
           "languages": [
-            "lit",
             "eng",
             "lav",
+            "lit",
             "rus",
             "est"
           ],
@@ -31851,8 +32318,8 @@
           "logo": "https://i.imgur.com/mJWBVH1.png",
           "category": "Kids",
           "languages": [
-            "eng",
-            "urd"
+            "urd",
+            "eng"
           ],
           "is_punjabi": false,
           "streams": [
@@ -31923,25 +32390,6 @@
           ]
         },
         {
-          "id": "NationalGeographic.us",
-          "name": "National Geographic",
-          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
-          "category": "Documentary",
-          "languages": [
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "http://212.5.144.156:8080/natgeo/index.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "National Geographic"
-          ]
-        },
-        {
           "id": "NickJr.de",
           "name": "Nick Jr.",
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nick_Jr._logo_2023_(outline).svg/960px-Nick_Jr._logo_2023_(outline).svg.png",
@@ -31973,6 +32421,10 @@
             {
               "url": "http://212.5.144.156:8080/nickjr/index.m3u8",
               "status": "unverified"
+            },
+            {
+              "url": "http://tvsen7.aynascope.net/nickjr/index.m3u8",
+              "status": "unverified"
             }
           ],
           "aliases": [
@@ -31985,8 +32437,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nick_Jr._logo_2023_(outline).svg/960px-Nick_Jr._logo_2023_(outline).svg.png",
           "category": "Kids",
           "languages": [
-            "ind",
-            "eng"
+            "eng",
+            "ind"
           ],
           "is_punjabi": false,
           "streams": [
@@ -32005,8 +32457,8 @@
           "logo": "https://i.imgur.com/E84jnP8.png",
           "category": "Kids",
           "languages": [
-            "mri",
-            "eng"
+            "eng",
+            "mri"
           ],
           "is_punjabi": false,
           "streams": [
@@ -32044,33 +32496,13 @@
           ]
         },
         {
-          "id": "Nickelodeon.ro",
-          "name": "Nickelodeon",
-          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Nickelodeon_2009_logo.svg/960px-Nickelodeon_2009_logo.svg.png",
-          "category": "Kids",
-          "languages": [
-            "ron",
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "http://178.76.68.60:7442/64/mpegts",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Nickelodeon"
-          ]
-        },
-        {
           "id": "Nickelodeon.ru",
           "name": "Nickelodeon",
           "logo": "https://i.imgur.com/w8iE8dV.png",
           "category": "Kids",
           "languages": [
-            "rus",
-            "eng"
+            "eng",
+            "rus"
           ],
           "is_punjabi": false,
           "streams": [
@@ -32108,8 +32540,8 @@
           "logo": "https://i.imgur.com/E84jnP8.png",
           "category": "Kids",
           "languages": [
-            "ind",
-            "eng"
+            "eng",
+            "ind"
           ],
           "is_punjabi": false,
           "streams": [
@@ -32120,25 +32552,6 @@
           ],
           "aliases": [
             "Nickelodeon Asia"
-          ]
-        },
-        {
-          "id": "Nicktoons.ro",
-          "name": "Nicktoons",
-          "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Nicktoons_UK_Logo_2014.png",
-          "category": "Kids",
-          "languages": [
-            "eng"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "http://178.76.68.60:7442/80/mpegts",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "Nicktoons"
           ]
         },
         {
@@ -32166,9 +32579,9 @@
           "logo": "https://image.tmdb.org/t/p/original/fIYWvHIeqc1A9D4PyayFkgjRxCh.png",
           "category": "Animation",
           "languages": [
+            "eng",
             "hin",
-            "spa",
-            "eng"
+            "spa"
           ],
           "is_punjabi": false,
           "streams": [
@@ -32206,8 +32619,8 @@
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_2019_logo.svg/960px-TeenNick_2019_logo.svg.png",
           "category": "Kids",
           "languages": [
-            "deu",
-            "eng"
+            "eng",
+            "deu"
           ],
           "is_punjabi": false,
           "streams": [
@@ -32256,25 +32669,6 @@
           ],
           "aliases": [
             "YAAAS!"
-          ]
-        },
-        {
-          "id": "ZBCartoon.in",
-          "name": "ZB Cartoon",
-          "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/zbcatun.png",
-          "category": "Kids",
-          "languages": [
-            "ben"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://server.zillarbarta.com/zbcatun/video.m3u8",
-              "status": "unverified"
-            }
-          ],
-          "aliases": [
-            "ZB Cartoon"
           ]
         }
       ]
@@ -32393,6 +32787,10 @@
               "status": "working"
             },
             {
+              "url": "https://fta.ektv.in/live/203/master.m3u8",
+              "status": "working"
+            },
+            {
               "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/308556d9fd1246adb479ef012a39bbfe/index.m3u8",
               "status": "working"
             }
@@ -32438,6 +32836,10 @@
           ],
           "is_punjabi": false,
           "streams": [
+            {
+              "url": "https://fta.ektv.in/live/172/master.m3u8",
+              "status": "working"
+            },
             {
               "url": "https://mumbai-edge.smartplaytv.in/ddbihar/index.m3u8",
               "status": "working"
@@ -32512,6 +32914,10 @@
           "is_punjabi": false,
           "streams": [
             {
+              "url": "https://fta.ektv.in/live/575/master.m3u8",
+              "status": "working"
+            },
+            {
               "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/afd2e335b0ba40eb9bdf1096118c6ede/index.m3u8",
               "status": "working"
             }
@@ -32562,6 +32968,10 @@
               "status": "working"
             },
             {
+              "url": "https://fta.ektv.in/live/248/master.m3u8",
+              "status": "working"
+            },
+            {
               "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/8a59a828e80c49d0958925950cec0204/index.m3u8",
               "status": "working"
             }
@@ -32582,6 +32992,10 @@
           "streams": [
             {
               "url": "https://mumbai-edge.smartplaytv.in/ddmadhyapradesh/index.m3u8",
+              "status": "working"
+            },
+            {
+              "url": "https://fta.ektv.in/live/578/master.m3u8",
               "status": "working"
             },
             {
@@ -32649,6 +33063,10 @@
           ],
           "is_punjabi": false,
           "streams": [
+            {
+              "url": "https://fta.ektv.in/live/263/master.m3u8",
+              "status": "working"
+            },
             {
               "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/70d4f6874fa64032a685e3123520f07d/index.m3u8",
               "status": "working"
@@ -33122,10 +33540,6 @@
             {
               "url": "https://fta.ektv.in/live/591/master.m3u8",
               "status": "working"
-            },
-            {
-              "url": "https://tvsen3.aynaott.com/yRMLky2j/index.m3u8",
-              "status": "working"
             }
           ],
           "aliases": [
@@ -33221,7 +33635,7 @@
             },
             {
               "url": "https://viimediacdn.wiseplayout.com/viimedia/master.m3u8",
-              "status": "unverified"
+              "status": "working"
             }
           ],
           "aliases": [
@@ -33490,6 +33904,10 @@
               "status": "working"
             },
             {
+              "url": "https://fta.ektv.in/live/197/master.m3u8",
+              "status": "working"
+            },
+            {
               "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/7ff57cc9046b4c188b51a0d506f36e7f/index.m3u8",
               "status": "working"
             }
@@ -33532,6 +33950,10 @@
           "is_punjabi": false,
           "streams": [
             {
+              "url": "https://fta.ektv.in/live/368/master.m3u8",
+              "status": "working"
+            },
+            {
               "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/558fdb9aebb54bb5bbbf0ced03686148/index.m3u8",
               "status": "working"
             }
@@ -33546,11 +33968,15 @@
           "logo": "https://yt3.googleusercontent.com/TMl5_x4s5QmOQczAtF9Yc4S-l2APomVtQy_diHuDvxLaF70UwFzXgfwTNw8j1adNPKBItex1o5k=s900-c-k-c0x00ffffff-no-rj",
           "category": "General",
           "languages": [
-            "kok",
-            "mar"
+            "mar",
+            "kok"
           ],
           "is_punjabi": false,
           "streams": [
+            {
+              "url": "https://fta.ektv.in/live/367/master.m3u8",
+              "status": "working"
+            },
             {
               "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/e5b9db1cc184406bb97159da2f120f91/index.m3u8",
               "status": "working"
@@ -33570,6 +33996,10 @@
           ],
           "is_punjabi": false,
           "streams": [
+            {
+              "url": "https://fta.ektv.in/live/384/master.m3u8",
+              "status": "working"
+            },
             {
               "url": "https://mumbai-edge.smartplaytv.in/ddodiya/index.m3u8",
               "status": "working"
@@ -33593,6 +34023,10 @@
           ],
           "is_punjabi": false,
           "streams": [
+            {
+              "url": "https://fta.ektv.in/live/187/master.m3u8",
+              "status": "working"
+            },
             {
               "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/66dcc3ebe182447ba42837e746cf0c7c/index.m3u8",
               "status": "working"
@@ -33642,6 +34076,10 @@
             {
               "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/abf46b14847e45499f4a47f3a9afe93d/index.m3u8",
               "status": "working"
+            },
+            {
+              "url": "https://fta.ektv.in/live/679/master.m3u8",
+              "status": "working"
             }
           ],
           "aliases": [
@@ -33677,6 +34115,10 @@
           ],
           "is_punjabi": false,
           "streams": [
+            {
+              "url": "https://fta.ektv.in/live/678/master.m3u8",
+              "status": "working"
+            },
             {
               "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/c89fa6d6f5864ac29670d6f91cb7e32a/index.m3u8",
               "status": "working"
@@ -33737,29 +34179,6 @@
           ]
         },
         {
-          "id": "FashionTV.in",
-          "name": "FashionTV",
-          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fashion_TV_logo.svg/960px-Fashion_TV_logo.svg.png",
-          "category": "Lifestyle",
-          "languages": [
-            "fra"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "http://163.61.226.31:9981/stream/channelid/448803688?profile=pass",
-              "status": "working"
-            },
-            {
-              "url": "http://163.61.226.31:9981/stream/channelid/943090988?profile=pass",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "FashionTV"
-          ]
-        },
-        {
           "id": "JeevanTV.in",
           "name": "Jeevan TV",
           "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Jeevan_TV.png",
@@ -33797,6 +34216,10 @@
               "status": "working"
             },
             {
+              "url": "https://fta.ektv.in/live/676/master.m3u8",
+              "status": "working"
+            },
+            {
               "url": "https://mumt04.tangotv.in/m18aqlK4JONAKTV/index.m3u8",
               "status": "working"
             }
@@ -33811,8 +34234,8 @@
           "logo": "https://ktvbangla.com/wp-content/uploads/2025/10/cropped-Tribe-TV-REDLogo_High-RES.jpg",
           "category": "General",
           "languages": [
-            "ben",
-            "sat"
+            "sat",
+            "ben"
           ],
           "is_punjabi": false,
           "streams": [
@@ -34337,6 +34760,25 @@
           ]
         },
         {
+          "id": "ShikshaTV.in",
+          "name": "Shiksha TV",
+          "logo": "https://play-lh.googleusercontent.com/1ibQhkMCsnXaI9LOiZH-Iyw8rM8CMVJEZAlbFphWuZApSPIp-eZsjltDlN6rqJzIonQ",
+          "category": "Culture",
+          "languages": [
+            "ben"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "http://103.89.46.106:8080/hls/shikshatvhd/index.m3u8",
+              "status": "working"
+            }
+          ],
+          "aliases": [
+            "Shiksha TV"
+          ]
+        },
+        {
           "id": "SirippoliTV.in",
           "name": "Sirippoli TV",
           "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SIRIPPOLI/images/LOGO_HD/image.png",
@@ -34444,10 +34886,6 @@
             {
               "url": "https://em4qj6nedyvg-hls-live.wmncdn.net/liveunit/89b1e919eed04e59383cf820d644c20e.sdp/playlist.m3u8",
               "status": "working"
-            },
-            {
-              "url": "https://em4qj6nedyvg-hls-live.wmncdn.net/utv/ab2de115318ae40bdd434e193a2f2e7f.sdp/playlist.m3u8",
-              "status": "working"
             }
           ],
           "aliases": [
@@ -34493,25 +34931,6 @@
           ]
         },
         {
-          "id": "WayanadVision.in",
-          "name": "Wayanad Vision",
-          "logo": "https://i.imgur.com/yF2C4Dt.png",
-          "category": "General",
-          "languages": [
-            "mal"
-          ],
-          "is_punjabi": false,
-          "streams": [
-            {
-              "url": "https://online.wayanadvision.in/hls/wayanadvision.m3u8",
-              "status": "working"
-            }
-          ],
-          "aliases": [
-            "Wayanad Vision"
-          ]
-        },
-        {
           "id": "AMNTV.in",
           "name": "AMN TV",
           "logo": "https://amntv.in/wp-content/uploads/2025/04/amntv-logo.png",
@@ -34531,22 +34950,26 @@
           ]
         },
         {
-          "id": "ShikshaTV.in",
-          "name": "Shiksha TV",
-          "logo": "https://play-lh.googleusercontent.com/1ibQhkMCsnXaI9LOiZH-Iyw8rM8CMVJEZAlbFphWuZApSPIp-eZsjltDlN6rqJzIonQ",
-          "category": "Culture",
+          "id": "FashionTV.in",
+          "name": "FashionTV",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fashion_TV_logo.svg/960px-Fashion_TV_logo.svg.png",
+          "category": "Lifestyle",
           "languages": [
-            "ben"
+            "fra"
           ],
           "is_punjabi": false,
           "streams": [
             {
-              "url": "http://103.89.46.106:8080/hls/shikshatvhd/index.m3u8",
+              "url": "http://163.61.226.31:9981/stream/channelid/448803688?profile=pass",
+              "status": "unverified"
+            },
+            {
+              "url": "http://163.61.226.31:9981/stream/channelid/943090988?profile=pass",
               "status": "unverified"
             }
           ],
           "aliases": [
-            "Shiksha TV"
+            "FashionTV"
           ]
         },
         {
@@ -34566,6 +34989,25 @@
           ],
           "aliases": [
             "Starnet"
+          ]
+        },
+        {
+          "id": "WayanadVision.in",
+          "name": "Wayanad Vision",
+          "logo": "https://i.imgur.com/yF2C4Dt.png",
+          "category": "General",
+          "languages": [
+            "mal"
+          ],
+          "is_punjabi": false,
+          "streams": [
+            {
+              "url": "https://online.wayanadvision.in/hls/wayanadvision.m3u8",
+              "status": "unverified"
+            }
+          ],
+          "aliases": [
+            "Wayanad Vision"
           ]
         },
         {
